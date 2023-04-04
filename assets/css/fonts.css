@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'abc_monument_grotesk_unlicBlk';
+    src: url('/assets/fonts/abcmonumentgrotesk-black-trial-webfont.woff2') format('woff2'),
+         url('/assets/fonts/abcmonumentgrotesk-black-trial-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'abc_monument_grotesk_unlBlkIt';
+    src: url('/assets/fonts/abcmonumentgrotesk-blackitalic-trial-webfont.woff2') format('woff2'),
+         url('/assets/fonts/abcmonumentgrotesk-blackitalic-trial-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'abc_monument_grotesk_unliceBd';
+    src: url('/assets/fonts/abcmonumentgrotesk-bold-trial-webfont.woff2') format('woff2'),
+         url('/assets/fonts/abcmonumentgrotesk-bold-trial-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'abc_monument_grotesk_unliBdIt';
+    src: url('/assets/fonts/abcmonumentgrotesk-bolditalic-trial-webfont.woff2') format('woff2'),
+         url('/assets/fonts/abcmonumentgrotesk-bolditalic-trial-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'abc_monument_grotesk_unliceHv';
+    src: url('/assets/fonts/abcmonumentgrotesk-heavy-trial-webfont.woff2') format('woff2'),
+         url('/assets/fonts/abcmonumentgrotesk-heavy-trial-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'abc_monument_grotesk_unliHvIt';
+    src: url('/assets/fonts/abcmonumentgrotesk-heavyitalic-trial-webfont.woff2') format('woff2'),
+         url('/assets/fonts/abcmonumentgrotesk-heavyitalic-trial-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'abc_monument_grotesk_unliceLt';
+    src: url('/assets/fonts/abcmonumentgrotesk-light-trial-webfont.woff2') format('woff2'),
+         url('/assets/fonts/abcmonumentgrotesk-light-trial-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'abc_monument_grotesk_unliLtIt';
+    src: url('/assets/fonts/abcmonumentgrotesk-lightitalic-trial-webfont.woff2') format('woff2'),
+         url('/assets/fonts/abcmonumentgrotesk-lightitalic-trial-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'abc_monument_grotesk_unliceMd';
+    src: url('/assets/fonts/abcmonumentgrotesk-medium-trial-webfont.woff2') format('woff2'),
+         url('/assets/fonts/abcmonumentgrotesk-medium-trial-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'abc_monument_grotesk_unliMdIt';
+    src: url('/assets/fonts/abcmonumentgrotesk-mediumitalic-trial-webfont.woff2') format('woff2'),
+         url('/assets/fonts/abcmonumentgrotesk-mediumitalic-trial-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'abc_monument_grotesk_unliceRg';
+    src: url('/assets/fonts/abcmonumentgrotesk-regular-trial-webfont.woff2') format('woff2'),
+         url('/assets/fonts/abcmonumentgrotesk-regular-trial-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'abc_monument_grotesk_unliRgIt';
+    src: url('/assets/fonts/abcmonumentgrotesk-regularitalic-trial-webfont.woff2') format('woff2'),
+         url('/assets/fonts/abcmonumentgrotesk-regularitalic-trial-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
