@@ -2,8 +2,31 @@
     --my-variable: #14c420;
 }
 
+body{
+    padding: 10px;
+    font-family: 'abc_monument_grotesk_unliceRg';
+    background-color: #121212;
+    color: whitesmoke;
+}
+
+canvas{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -10;
+}
+hr {
+    height: 1.5px;
+    background-color: var(--my-variable);
+    border: none;
+}
 #hello {
     color: var(--my-variable);
+}
+
+#background {
+    height: 60px;
+    width: 60px;
 }
 
 .project {
@@ -20,7 +43,7 @@
 
 .project a:link {
   text-decoration: none;
-  color: black;
+  color: whitesmoke;
 }
 
 .project a:hover {
@@ -43,6 +66,7 @@
 
 .Previews{
     width:60%;
+    background-color: aqua;
 }
 
 .header {
@@ -52,10 +76,6 @@
   margin-bottom: 10px;
 }
 
-body{
-    padding: 10px;
-    font-family: 'abc_monument_grotesk_unliceRg';
-}
 .header > div:nth-child(1){
     width: 40%;
 }
