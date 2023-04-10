@@ -33,7 +33,7 @@ window.onload = helloMessage();
 
 var colorPicker = new iro.ColorPicker("#picker", {
     // Set the size of the color picker
-    width: 100,
+    width: 125,
     // Set the initial color to pure red
     color: "#" +randomColor,
     layout: [

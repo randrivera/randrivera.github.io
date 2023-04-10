@@ -1,12 +1,12 @@
 :root {
     --my-variable: #14c420;
-    --background-color: whitesmoke;
-    --text-color: #121212;
+    --background-color: #121212;
+    --text-color: whitesmoke;
 }
 
 [data-theme="dark"]{
-	--background-color: #121212;
-    --text-color: whitesmoke;
+	--background-color: whitesmoke;
+    --text-color: #121212;
 }
 
 body{
@@ -59,49 +59,58 @@ hr {
 }
 
 .container{
+
     width:100vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     column-gap: 20px;
-    min-height: 90vh;
 }
 
-.Projects{
-    width:40%;
+.Projects {
+    width:25%;
+}
+
+img {
+    width: 100%;
 }
 
 
-.Previews{
-    width:60%;
-    background-color: aqua;
+.Content{
+    width:75%;
+    max-height: 90vh;
+    /* background-color: aqua; */
+    overflow-y: scroll;
 }
 
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 10px;
+  z-index: 10;
+  background-color: var(--background-color);
+
+  font-size: 1.15em;
 }
 
 .header > div:nth-child(1){
-    width: 40%;
+    width: 25%;
 }
 .header > div:nth-child(2){
-    width: 30%;
-    padding-left: 20px;
+    padding-left: 30px;
+    width: 55%;
 }
 
 .header > div:nth-child(3){
-    width: 30%;
+    width: 20%;
     text-align: right;
 }
 
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 56px;
+    height: 30px;
   }
   
   .switch input { 
@@ -118,6 +127,7 @@ hr {
     right: 0;
     bottom: 0;
     background-color: #ccc;
+    opacity: 80%;
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -125,8 +135,8 @@ hr {
   .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
+    height: 22px;
+    width: 22px;
     left: 4px;
     bottom: 4px;
     background-color: white;
@@ -135,11 +145,12 @@ hr {
   }
   
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color: var(--my-variable);
+    opacity: 100%;
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px var(--my-variable);
   }
   
   input:checked + .slider:before {
@@ -157,3 +168,16 @@ hr {
     border-radius: 50%;
   }
 
+  .sticky {
+    position:sticky;
+    top: 10px;
+  }
+
+  .bold{
+    font-family: 'abc_monument_grotesk_unliceMd';
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 20px;
+  }
