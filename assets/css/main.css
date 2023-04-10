@@ -1,18 +1,70 @@
-.hello{
-    height:40vh;
-    background-color: red;
-
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    
+:root {
+    --my-variable: #14c420;
 }
 
-.welcome-text {
-    width: 100%;
-    text-align: left;
-    margin-left: 6vw;
+#hello {
+    color: var(--my-variable);
+}
 
+.project {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    text-transform: uppercase;
+}
+
+.project div:nth-child(2) {
+  text-align:right;
+}
+
+.project a:link {
+  text-decoration: none;
+  color: black;
+}
+
+.project a:hover {
     font-family: 'abc_monument_grotesk_unliceMd';
-    font-size: 30px;
+    color: var(--my-variable);
+}
+
+.container{
+    width:100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+.Projects{
+    width:40%;
+}
+
+
+.Previews{
+    width:60%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+body{
+    padding: 10px;
+    font-family: 'abc_monument_grotesk_unliceRg';
+}
+.header > div:nth-child(1){
+    width: 40%;
+}
+.header > div:nth-child(2){
+    width: 30%;
+    padding-left: 20px;
+}
+
+.header > div:nth-child(3){
+    width: 30%;
+    text-align: right;
 }
