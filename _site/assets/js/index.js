@@ -60,3 +60,8 @@ var colorPicker = new iro.ColorPicker("#picker", {
     console.log(color.hexString);
     r.style.setProperty('--my-variable', color.hexString);
   });
+
+  function switchModee() {
+    var element = document.body;
+    element.classList.toggle("light-mode");
+ }

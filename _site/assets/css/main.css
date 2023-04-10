@@ -57,6 +57,7 @@ hr {
     flex-direction: row;
     justify-content: space-between;
     column-gap: 20px;
+    min-height: 90vh;
 }
 
 .Projects{
@@ -88,3 +89,8 @@ hr {
     width: 30%;
     text-align: right;
 }
+
+.light-mode {
+    color: #121212;
+    background-color: whitesmoke;
+  }

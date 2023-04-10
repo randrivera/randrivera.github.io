@@ -31,18 +31,6 @@ function helloMessage() {
 window.onload = helloMessage();
 
 
-// function setup(){
-//     createCanvas(windowWidth, windowHeight);
-//     colorPicker = select("#background");
-// }
-
-// function draw() {
-//     let root = document.documentElement;
-//     let color = colorPicker.value();
-//     root.style.setProperty('--my-variable', color);
-
-// }
-
 var colorPicker = new iro.ColorPicker("#picker", {
     // Set the size of the color picker
     width: 100,
@@ -57,6 +45,22 @@ var colorPicker = new iro.ColorPicker("#picker", {
 
   colorPicker.on('color:change', function(color) {
     // log the current color as a HEX string
-    console.log(color.hexString);
+    // console.log(color.hexString);
     r.style.setProperty('--my-variable', color.hexString);
   });
+
+
+
+  document.addEventListener("DOMContentLoaded", function(event) {
+    let checkbox = document.querySelector('input[type="checkbox"]');
+
+    // Get our button switcher
+    let themeSwitcher = document.getElementById("mode");
+
+    checkbox.addEventListener('change', function () {
+      let currentTheme = document.documentElement.getAttribute("data-theme");
+      // Switch between `dark` and `light`
+      let switchToTheme = currentTheme === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", switchToTheme);
+    }
+  )});
