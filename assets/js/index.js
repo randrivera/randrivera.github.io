@@ -1,4 +1,3 @@
-// let txt = prompt("Welcome new friend!", "please enter your name here");
 let hello = document.getElementById("hello");
 let type = document.querySelector("#type-message")
 
@@ -17,7 +16,6 @@ let rbackground = [
   
   let button = document.querySelector("#enterBtn");
   button.addEventListener("click", function(){
-    myFunction_set();
     let txt = document.querySelector("#collectName").value;
     hello.innerHTML = "Hi " + txt + "! ♥";
 
@@ -31,10 +29,9 @@ let rbackground = [
   
 function myFunction_set() {
     r.style.setProperty('--my-variable', '#'+ randomColor);	
-    // document.getElementById("background").value = "#"+randomColor;
-
 }
 
+window.onload = myFunction_set();
 
 var colorPicker = new iro.ColorPicker("#picker", {
     // Set the size of the color picker

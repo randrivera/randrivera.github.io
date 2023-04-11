@@ -221,9 +221,6 @@ img {
     transition: 1s ease-in-out;
 }
 
-/* #projone:hover .previews {
-    display:none;
-} */
 
   
 .nameInput {
@@ -285,7 +282,8 @@ button {
     border-radius: 50%;
     height: 30px;
     width: 30px;
-    background: var(--text-color);
+    /* background: var(--text-color); */
+    border: 3px solid var(--text-color);
   }
   .eye:after { /*pupil*/
     position: absolute;
@@ -293,7 +291,7 @@ button {
     right: 10px;
     width: 10px;
     height: 10px;
-    background: var(--background-color);
+    background: var(--my-variable);
     border-radius: 50%;
     content: " ";
   }
