@@ -64,10 +64,15 @@ hr {
     justify-content: space-between;
     flex-wrap: nowrap;
     text-transform: uppercase;
+
+    word-break: break-all; 
+
+    
 }
 
 .project div:nth-child(2) {
   text-align:right;
+  
 }
 
 .project a:link {
@@ -309,4 +314,11 @@ button {
 
     bottom: 5px;
     position: relative;
+}
+
+.active {
+  font-family: 'abc_monument_grotesk_unliceMd';
+  color: var(--my-variable);
+  transition: .4s;
+
 }

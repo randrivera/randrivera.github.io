@@ -1,0 +1,56 @@
+.projInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 10vw;
+}
+
+.projHeader {
+    font-family: 'abc_monument_grotesk_unliceBd';
+    text-transform: uppercase;
+    font-size: 2.5em;
+}
+
+.projBio {
+    font-family: 'abc_monument_grotesk_unliceLt';
+    letter-spacing: 0.01em;
+    line-height: 1.4em;
+}
+
+.Content {
+    overflow-y: scroll !important;
+}
+
+.marquee {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -moz-animation: scroll-left 2s linear infinite;
+    -webkit-animation: scroll-left 2s linear infinite;
+    animation: scroll-left 15s linear infinite;
+}
+
+@keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
