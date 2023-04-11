@@ -20,7 +20,7 @@ var colorPicker = new iro.ColorPicker("#picker", {
     // Set the size of the color picker
     width: 125,
     // Set the initial color to pure red
-    color: sessionStorage.getItem("userColor"),
+    color: "#" +randomColor,
     layout: [
         { 
           component: iro.ui.Wheel,
