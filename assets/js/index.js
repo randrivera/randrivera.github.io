@@ -110,16 +110,16 @@ var colorPicker = new iro.ColorPicker("#picker", {
 
   for (let i=0; i<projects.length; i++){
     projects[i].addEventListener("mouseenter", function(){
-      console.log(`${scroller.scrollTop}`);
+      // console.log(`${scroller.scrollTop}`);
     
-      console.log(`-${targetImg.clientHeight}`);
-      // target.style.top = "0px";
+      // console.log(`-${targetImg.clientHeight}`);
+      // subtract how much user has already scrolled on their own to the scroll distance
       target.style.top = `-${targetImg.clientHeight*i}` - `-${scroller.scrollTop}` + "px";
     });
 
     projects[i].addEventListener("mouseleave", function(){
     
-      console.log(`-${targetImg.clientHeight}`);
+      // console.log(`-${targetImg.clientHeight}`);
       target.style.top = "0px";
     });
   }
