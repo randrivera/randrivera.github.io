@@ -102,15 +102,19 @@ var colorPicker = new iro.ColorPicker("#picker", {
   projects[8] = document.querySelector("#projnine");
 
 
+  //div in which all the preview images live in
   let target = document.getElementById("target");
   let targetImg = document.querySelector("#target img");
+  const scroller = document.querySelector(".Content");
+
 
   for (let i=0; i<projects.length; i++){
     projects[i].addEventListener("mouseenter", function(){
+      console.log(`${scroller.scrollTop}`);
     
       console.log(`-${targetImg.clientHeight}`);
       // target.style.top = "0px";
-      target.style.top = `-${targetImg.clientHeight*i}px`;
+      target.style.top = `-${targetImg.clientHeight*i}` - `-${scroller.scrollTop}` + "px";
     });
 
     projects[i].addEventListener("mouseleave", function(){
