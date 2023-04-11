@@ -35,13 +35,6 @@ function myFunction_set() {
 
 }
 
-// function helloMessage() {
-//     myFunction_set();
-//     hello.innerHTML = "Hi " + txt + "! ♥";
-// }
-  
-// window.onload = helloMessage();
-
 
 var colorPicker = new iro.ColorPicker("#picker", {
     // Set the size of the color picker
