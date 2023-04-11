@@ -11,7 +11,7 @@
     font-size: 2.5em;
 }
 
-.projBio {
+.projBio, .projOther > span:nth-child(3) {
     font-family: 'abc_monument_grotesk_unliceLt';
     letter-spacing: 0.01em;
     line-height: 1.4em;
