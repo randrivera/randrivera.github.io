@@ -1,3 +1,4 @@
+
 //nameScreen
 let nameInput = document.querySelector(".nameInput");
 //enter button
@@ -56,9 +57,6 @@ var colorPicker = new iro.ColorPicker("#picker", {
         },
     ]
   });
-
-  //init data for userColor
-  r.style.setProperty('--my-variable', sessionStorage.getItem("userColor"));
 
 
   colorPicker.on('color:change', function(color) {
