@@ -116,6 +116,12 @@ var colorPicker = new iro.ColorPicker("#picker", {
       // subtract how much user has already scrolled on their own to the scroll distance
       target.style.top = `-${targetImg.clientHeight*i}` - `-${scroller.scrollTop}` + "px";
     });
+
+    projects[i].addEventListener("mouseleave", function(){
+    
+      // console.log(`-${targetImg.clientHeight}`);
+      target.style.top = "0px";
+    });
   }
 
   //following mouse eyes in nameScreen
