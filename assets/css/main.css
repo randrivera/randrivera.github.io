@@ -310,3 +310,8 @@ button {
     bottom: 5px;
     position: relative;
 }
+
+.active {
+  font-family: 'abc_monument_grotesk_unliceMd';
+  color: var(--my-variable);
+}

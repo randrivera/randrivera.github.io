@@ -15,40 +15,6 @@ let rbackground = [
   let nameInput = document.querySelector(".nameInput");
   
   hello.innerHTML = "Hi " + sessionStorage.getItem("userName") + "! ♥";
-  
-  let button = document.querySelector("#enterBtn");
-  button.addEventListener("click", function(){
-    let txt = document.querySelector("#collectName").value
-    sessionStorage.setItem("userName", txt);
-
-    hello.innerHTML = "Hi " + sessionStorage.getItem("userName") + "! ♥";
-
-    nameInput.style.opacity = "0";
-    setTimeout(function()
-      {nameInput.style.display = "none";
-    }, 1000);
-  })
-
-  //checks if a name is already stored and prevents the name popup if so
-  function checkStorage(){
-    if (sessionStorage.getItem("userName")){
-      nameInput.style.display = "none";
-    } else {
-      null
-    }
-  }
-  window.onload = checkStorage();
-  // window.onload = function(){
-  //   r.style.setProperty('--my-variable', '#'+ randomColor);	
-  // }
-
-
-  
-// function myFunction_set() {
-    // r.style.setProperty('--my-variable', '#'+ randomColor);	
-// }
-
-// window.onload = myFunction_set();
 
 var colorPicker = new iro.ColorPicker("#picker", {
     // Set the size of the color picker
@@ -72,6 +38,8 @@ var colorPicker = new iro.ColorPicker("#picker", {
     r.style.setProperty('--my-variable', sessionStorage.getItem("userColor"));
 
   });
+
+
 
   document.documentElement.setAttribute("data-theme", sessionStorage.getItem("userMode"));
 
@@ -121,7 +89,7 @@ var colorPicker = new iro.ColorPicker("#picker", {
 
   $(".nameInput").mousemove(function(event) {
     var eye = $(".eye");
-    // console.log('eye', eye)
+    console.log('eye', eye)
     var x = (eye.offset().left) + (eye.width() / 2);
     var y = (eye.offset().top) + (eye.height() / 2);
     var rad = Math.atan2(event.pageX - x, event.pageY - y);
