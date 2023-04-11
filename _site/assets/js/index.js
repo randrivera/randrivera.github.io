@@ -58,6 +58,7 @@ var colorPicker = new iro.ColorPicker("#picker", {
     ]
   });
 
+  r.style.setProperty('--my-variable', sessionStorage.getItem("userColor"));
 
   colorPicker.on('color:change', function(color) {
     //add current color HEX code to userColor storage
