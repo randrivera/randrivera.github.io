@@ -1,0 +1,5 @@
+# ignore everything in this directory
+
+.Gemfile.lock
+.Gemfile
+_archival/
