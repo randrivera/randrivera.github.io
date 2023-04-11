@@ -1,59 +1,54 @@
-let hello = document.getElementById("hello");
-let type = document.querySelector("#type-message")
+//nameScreen
+let nameInput = document.querySelector(".nameInput");
+//enter button
+let button = document.querySelector("#enterBtn");
 
-let rbackground = [
-    'F30909',
-    'F37E09',
-    '7EF309',
-    '0931F3',
-    'CB09F3',
-   
-  ];
-  
-  let r = document.querySelector(':root');
-  let randomColor = rbackground[Math.floor(Math.random()*rbackground.length)]
-  let nameInput = document.querySelector(".nameInput");
-  
+//hello message in header
+let hello = document.getElementById("hello")
+
+button.addEventListener("click", function(){
+  //grab value from text input
+  let txt = document.querySelector("#collectName").value
+  //store value for userName
+  sessionStorage.setItem("userName", txt);
+
+  //change hello message name to have userName
   hello.innerHTML = "Hi " + sessionStorage.getItem("userName") + "! ♥";
-  
-  let button = document.querySelector("#enterBtn");
-  button.addEventListener("click", function(){
-    let txt = document.querySelector("#collectName").value
-    sessionStorage.setItem("userName", txt);
 
-    hello.innerHTML = "Hi " + sessionStorage.getItem("userName") + "! ♥";
-
-    nameInput.style.opacity = "0";
-    setTimeout(function()
-      {nameInput.style.display = "none";
+  //hide nameScreen then display:none it afterwards so it does not interfere with other interactions
+  nameInput.style.opacity = "0";
+  setTimeout(function()
+    {nameInput.style.display = "none";
     }, 1000);
-  })
+})
 
-  //checks if a name is already stored and prevents the name popup if so
-  function checkStorage(){
-    if (sessionStorage.getItem("userName")){
-      nameInput.style.display = "none";
-    } else {
-      null
-    }
+//checks if a name is already stored and prevents the name popup if so
+function checkStorage(){
+  if (sessionStorage.getItem("userName")){
+    hello.innerHTML = "Hi " + sessionStorage.getItem("userName") + "! ♥";
+    nameInput.style.display = "none";
+  } else {
+    null
   }
-  window.onload = checkStorage();
-  // window.onload = function(){
-  //   r.style.setProperty('--my-variable', '#'+ randomColor);	
-  // }
+}
 
+window.onload = checkStorage();
 
-  
-// function myFunction_set() {
-    // r.style.setProperty('--my-variable', '#'+ randomColor);	
-// }
-
-// window.onload = myFunction_set();
+//create custom colorPicker using iro.js
+let r = document.querySelector(':root');
+let rbackground = [
+  'F30909',
+  'F37E09',
+  '7EF309',
+  '0931F3',
+  'CB09F3', 
+];
+let randomColor = rbackground[Math.floor(Math.random()*rbackground.length)];
 
 var colorPicker = new iro.ColorPicker("#picker", {
     // Set the size of the color picker
     width: 125,
-    // Set the initial color to pure red
+    // Set the initial color to a random color
     color: "#" +randomColor,
     layout: [
         { 
@@ -62,17 +57,19 @@ var colorPicker = new iro.ColorPicker("#picker", {
     ]
   });
 
+  //init data for userColor
   r.style.setProperty('--my-variable', sessionStorage.getItem("userColor"));
 
 
   colorPicker.on('color:change', function(color) {
-    // log the current color as a HEX string
-    // console.log(color.hexString);
+    //add current color HEX code to userColor storage
     sessionStorage.setItem("userColor", color.hexString);
+    //reset data for userColor
     r.style.setProperty('--my-variable', sessionStorage.getItem("userColor"));
 
   });
 
+  //dark + light mode code
   document.documentElement.setAttribute("data-theme", sessionStorage.getItem("userMode"));
 
   document.addEventListener("DOMContentLoaded", function(event) {
@@ -88,7 +85,11 @@ var colorPicker = new iro.ColorPicker("#picker", {
     }
   )});
   
-  //Christ helped me with this one <3
+
+  // Christ (Chris Panicker - panicker.design) helped me with this one <3
+  // On the homepage, hovering over the title moves the corresponding preview image to the top
+  
+  // all the project previews
   let projects = [];
   projects[0] = document.querySelector("#projone");
   projects[1] = document.querySelector("#projtwo");
@@ -119,6 +120,7 @@ var colorPicker = new iro.ColorPicker("#picker", {
     });
   }
 
+  //following mouse eyes in nameScreen
   $(".nameInput").mousemove(function(event) {
     var eye = $(".eye");
     // console.log('eye', eye)
