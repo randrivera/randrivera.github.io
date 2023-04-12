@@ -8,7 +8,7 @@
     <link href="/assets/css/fonts.css" rel="stylesheet">
 	<link href="/assets/css/main.css" rel="stylesheet">
   <link href="/assets/css/project.css" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="assets/images/rand_favicon.png">
+  <link rel="icon" type="image/x-icon" href="/assets/images/rand_favicon.png">
 
 </head>
 
@@ -120,10 +120,17 @@
     </div>
     <hr>
   </div>
+  <div id="picker"></div>
   <div class="footer">
-      <div id="picker"></div>
-      <div>site fully coded by rand</div>
+      <div class="contacts">
+        <a>playground</a>
+        <a>about me</a>
+        <a>see me</a>
+        <a>talk to me</a>
+      </div>
+      <span class="codedBy">site fully coded by rand ☺<br>@randrivera2023</span>
   </div>
+  
 
     </div>
     <div class="Content">
@@ -152,13 +159,13 @@
 
   
 <script type="text/javascript">
-	let allFiles = [];
+	let allFiles = ['homepage_previews-01.png', 'homepage_previews-02.png', 'homepage_previews-03.png'];
 	let gallery = document.querySelector("#gallery")
 
 	for(let i=0; i<allFiles.length; i++){
 		if(allFiles[i].includes(".mov")||allFiles[i].includes(".mp4")){
 			let vid = document.createElement("video");
-			vid.src="../assets/images//" + allFiles[i];
+			vid.src="../assets/images/previews/" + allFiles[i];
 			vid.classList.add("media");
 			vid.controls=true;
 			vid.muted=true;
@@ -167,7 +174,7 @@
 			gallery.append(vid)
 		} else{
 			let img = document.createElement("img");
-			img.src = "../assets/images//"+ allFiles[i];
+			img.src = "../assets/images/previews/"+ allFiles[i];
 			img.classList.add("media");
 			gallery.append(img)
 		}

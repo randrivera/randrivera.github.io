@@ -1,25 +1,28 @@
 let hello = document.getElementById("hello");
 let type = document.querySelector("#type-message")
 
-let rbackground = [
-    'F30909',
-    'F37E09',
-    '7EF309',
-    '0931F3',
-    'CB09F3',
-   
-  ];
+
   
   let r = document.querySelector(':root');
-  let randomColor = rbackground[Math.floor(Math.random()*rbackground.length)]
   let nameInput = document.querySelector(".nameInput");
   
   hello.innerHTML = "Hi " + sessionStorage.getItem("userName") + "! ♥";
 
+
+
+//create custom colorPicker using iro.js
+let rbackground = [
+  'F30909',
+  'F37E09',
+  '7EF309',
+  '0931F3',
+  'CB09F3', 
+];
+let randomColor = rbackground[Math.floor(Math.random()*rbackground.length)];
+
 var colorPicker = new iro.ColorPicker("#picker", {
-    // Set the size of the color picker
-    width: 125,
-    // Set the initial color to pure red
+    
+    width: 200,
     color: "#" +randomColor,
     layout: [
         { 
@@ -30,15 +33,13 @@ var colorPicker = new iro.ColorPicker("#picker", {
 
   r.style.setProperty('--my-variable', sessionStorage.getItem("userColor"));
 
-
   colorPicker.on('color:change', function(color) {
-    // log the current color as a HEX string
-    // console.log(color.hexString);
+    //add current color HEX code to userColor storage
     sessionStorage.setItem("userColor", color.hexString);
+    //reset data for userColor
     r.style.setProperty('--my-variable', sessionStorage.getItem("userColor"));
 
   });
-
 
 
   document.documentElement.setAttribute("data-theme", sessionStorage.getItem("userMode"));

@@ -75,12 +75,12 @@ hr {
   
 }
 
-.project a:link {
+.Projects a:link {
   text-decoration: none;
   color: var(--text-color);
 }
 
-.project a:hover {
+.Projects a:hover {
     font-family: 'abc_monument_grotesk_unliceMd';
     color: var(--my-variable);
 }
@@ -331,5 +331,28 @@ button {
   font-family: 'abc_monument_grotesk_unliceMd';
   color: var(--my-variable);
   transition: .4s;
+}
+
+.codedBy {
+  font-size: 0.8em;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  text-decoration: underline;
+  text-decoration-color: var(--my-variable);
+  text-align: left;
+  transition: .4s;
+}
+
+.contacts a:hover {
+  color:var(--my-variable);
 
 }
+
+
+#picker {
+  align-self: center;
+}
+
