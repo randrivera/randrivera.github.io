@@ -356,3 +356,19 @@ button {
   align-self: center;
 }
 
+.projSwitch {
+  position: sticky;
+  bottom: 0px;
+  background-color: var(--background-color);
+  padding-top: 8px;
+  display: flex;
+  justify-content: space-between;
+
+  text-transform: uppercase;
+  margin-top: 5px;
+  
+}
+
+.projSwitch a:hover {
+  color: var(--my-variable);
+}

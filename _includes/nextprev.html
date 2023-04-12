@@ -1,0 +1,33 @@
+<script type="text/javascript">
+	let path = window.location.pathname;
+	let page = path.split("/").pop();
+	let projects2 = ["typeoftoday.html", "columbia-records-refresh.html", "emoticon.html", "tide.html", "soundboard.html", "talking-2-kewl-ppl.html", "mitosis.html", "roadsign-americana.html", "legacy.html"];
+	let projectTitles2 = ["TYPE OF TODAY #1", "Columbia Records Refresh", "Emoticon", "Tide", "Soundboard", "Talking 2 Kewl PPL 101", "Mitosis", "Roadsign Americana", "Legacy"];
+
+	let nextButton = document.querySelector("#next");
+	let prevButton = document.querySelector("#prev");
+
+	for(let i=0; i<projects2.length; i++){
+		if(page===projects2[i]){
+			if(i===0){
+				nextButton.href = `./${projects2[i+1]}`;
+				prevButton.href = `./${projects2[projects2.length-1]}`;
+	
+				nextButton.innerHTML = `NEXT: ${projectTitles2[i+1]}`;
+				prevButton.innerHTML = `PREV: ${projectTitles2[projects2.length-1]}`;
+			} else if(i>=projects2.length-1){
+				nextButton.href = `./${projects2[0]}`;
+				prevButton.href = `./${projects2[i-1]}`;
+	
+				nextButton.innerHTML = `NEXT: ${projectTitles2[0]}`;
+				prevButton.innerHTML = `PREV: ${projectTitles2[i-1]}`;
+			}else{
+				nextButton.href = `./${projects2[i+1]}`;
+				prevButton.href = `./${projects2[i-1]}`;
+	
+				nextButton.innerHTML = `NEXT: ${projectTitles2[i+1]}`;
+				prevButton.innerHTML = `PREV: ${projectTitles2[i-1]}`;
+			}
+		}
+	}
+</script>
