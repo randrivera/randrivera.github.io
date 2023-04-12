@@ -14,21 +14,12 @@
 
 <body>
   <div class="header sticky">
-    <div class="bold"><a href="/index.html">RAND RIVERA</a></div>
-    <div class="hello">
-      <div class="welcome-text bold"><span id="hello">Hi! ♥ </span></div> 
-    </div>
-    <div>
-      <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-      </label>
-    </div>
+    {% include header.html %}
   </div>
   <hr>
 
   <div class="container">
-    <div class="Projects">
+    <div class="Nav">
       {% include navigation.html %}
     </div>
     <div class="Content">
@@ -50,10 +41,12 @@
         </div>
         <br>
         {{content}}
+        <span id ="gallery"></span>
     </div>
   </div>
 
 
+  {% include imageGallery.html %}
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
   <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
