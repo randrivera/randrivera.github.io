@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Designs - Talking 2 Kewl PPL</title>	
+  <title>Designs - Title</title>	
 	<!-- Link to the relevant stylesheet -->
     <link href="/assets/css/fonts.css" rel="stylesheet">
 	<link href="/assets/css/main.css" rel="stylesheet">
@@ -134,44 +134,21 @@
 
     </div>
     <div class="Content">
-      <div class="projHeader marquee">
-        <p>Talking 2 Kewl PPL</p>
-      </div>
-      <div class="projInfo">
-            <div class="projBio">
-                <hr>
-                A unique take on a prompt asking "What is home to you". For me, home is the comfortability I get around friends. This zine is meant to express that feeling through the unique ways I communicate with them. As a result is a comical and graphic booklet filled with tips and tricks in "talking to kewl people" just like me. <br><br> Accompanied is a sticker sheet meant to serve as a fly-in for the zine
-            </div>
-            <div class="projOther">
-                <hr>
-                <span class="bold">
-                    YEAR
-                </span>
-                <span>2022</span>
-            </div>
-        </div>
-        <br>
-        
-        <span id ="gallery"></span>
-        <div class="projSwitch">
-          <a id="prev">TEST
-          </a>
-          <a id="next">TEST
-          </a>
-        </div>
+      Currently fixing hehe.
+
     </div>
   </div>
 
 
   
 <script type="text/javascript">
-	let allFiles = ['homepage_previews-01.png', 'homepage_previews-02.png', 'homepage_previews-03.png'];
+	let allFiles = [];
 	let gallery = document.querySelector("#gallery")
 
 	for(let i=0; i<allFiles.length; i++){
 		if(allFiles[i].includes(".mov")||allFiles[i].includes(".mp4")){
 			let vid = document.createElement("video");
-			vid.src="../assets/images/previews/" + allFiles[i];
+			vid.src="../assets/images//" + allFiles[i];
 			vid.classList.add("media");
 			vid.controls=true;
 			vid.muted=true;
@@ -180,7 +157,7 @@
 			gallery.append(vid)
 		} else{
 			let img = document.createElement("img");
-			img.src = "../assets/images/previews/"+ allFiles[i];
+			img.src = "../assets/images//"+ allFiles[i];
 			img.classList.add("media");
 			gallery.append(img)
 		}
