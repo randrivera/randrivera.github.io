@@ -23,7 +23,7 @@
 
 .marquee {
     height: 50px;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
 }
 
