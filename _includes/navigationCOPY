@@ -1,0 +1,106 @@
+  <div class="Projects">
+    <div class="project">
+      <div>
+        <a href="/projects/typeoftoday.html" rel="history" id="projone">ToT: Designers on Design ↗</a>
+      </div>
+      <div>
+        <span>Editorial/<br>Newspaper Design</span>
+      </div>
+    </div>
+    <hr>
+
+    <div class="project">
+      <div>
+        <a href="/projects/tide.html" rel="history" id="projtwo">Tide ↗</a>
+      </div>
+      <div>
+        <span>Web Design/<br>Brand Identity</span>
+      </div>
+    </div>
+    <hr>
+    
+    <div class="project">
+      <div>
+        <a href="/projects/columbia-records-refresh.html" rel="history" id="projthree">Columbia Records Refresh ↗</a>
+      </div>
+      <div>
+        <span>Brand Identity/<br>Motion</span>
+      </div>
+    </div>
+    <hr>
+    
+    <div class="project">
+      <div>
+        <a href="/projects/emoticon.html" rel="history" id="projfour">Emoticon ↗</a>
+      </div>
+      <div>
+        <span>Brand Identity/<br>Motion</span>
+      </div>
+    </div>
+    <hr>
+    
+    <div class="project">
+      <div>
+        <a href="/projects/soundboard.html" rel="history" id="projfive">Soundboard ↗</a>
+      </div>
+      <div>
+        <span>Coding</span>
+      </div>
+    </div>
+    <hr>
+    
+    <div class="project">
+      <div>
+        <a href="/projects/talking-2-kewl-ppl.html" rel="history" id="projsix">Talking 2 Kewl PPL 101 ↗</a>
+      </div>
+      <div>
+        <span>Zine/<br>Sticker Design</span>
+      </div>
+    </div>
+    <hr>
+
+    <div class="project">
+      <div>
+        <a href="/projects/mitosis.html" rel="history" id="projseven">Mitosis ↗</a>
+      </div>
+      <div>
+        <span>Typeface Design</span>
+      </div>
+    </div>
+    <hr>
+
+    <div class="project">
+      <div>
+        <a href="/projects/roadsign-americana.html" rel="history" id="projeight">Roadsign Americana ↗</a>
+      </div>
+      <div>
+        <span>Typography/<br>Coding</span>
+      </div>
+    </div>
+    <hr>
+
+    <div class="project">
+      <div>
+        <a href="/projects/legacy.html" rel="history" id="projnine">Legacy ↗</a>
+      </div>
+      <div>
+        <span>Editorial/<br>Brand Identity</span>
+      </div>
+    </div>
+    <hr>
+  </div>
+
+
+  <div id="picker">
+    <span class="pickMe" data-splitting>pick your favorite color!</span>
+  </div>
+  <div class="footer">
+      <div class="contacts">
+        <a href="/playground.html">let's play</a>
+        <a href="/about.html">about me</a>
+        <a href="https://www.instagram.com/randrivera" target="_blank">see me</a>
+        <a href="mailto:rand.k.rivera@gmail.com">talk to me</a>
+      </div>
+      <span class="codedBy">site fully coded by rand ☺<br>@rkrivera2023</span>
+  </div>
+  

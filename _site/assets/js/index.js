@@ -35,7 +35,7 @@ function checkStorage(){
 
 window.onload = checkStorage();
 
-//create custom colorPicker using iro.js
+//change color on every click!
 let r = document.querySelector(':root');
 let rbackground = [
   'F30909',
@@ -44,25 +44,11 @@ let rbackground = [
   '0931F3',
   'CB09F3', 
 ];
-let randomColor = rbackground[Math.floor(Math.random()*rbackground.length)];
 
-var colorPicker = new iro.ColorPicker("#picker", {
-    
-    width: 200,
-    color: "#" +randomColor,
-    layout: [
-        { 
-          component: iro.ui.Wheel,
-        },
-    ]
-  });
-
-  r.style.setProperty('--my-variable', sessionStorage.getItem("userColor"));
-
-  colorPicker.on('color:change', function(color) {
-    //add current color HEX code to userColor storage
-    sessionStorage.setItem("userColor", color.hexString);
-    //reset data for userColor
+  document.addEventListener("click", function(){
+    let randomColor = rbackground[Math.floor(Math.random()*rbackground.length)];
+    console.log("clicked");
+    sessionStorage.setItem("userColor", "#"+randomColor);
     r.style.setProperty('--my-variable', sessionStorage.getItem("userColor"));
 
   });

@@ -7,7 +7,7 @@
 
 html {
     cursor: url('/assets/images/custom-cursor.svg') 10 10, auto;
-    font-size: 16px;
+    font-size: 1.7vh;
 }
 
 a:hover, button {
@@ -52,25 +52,7 @@ hr {
     width: 60px;
 }
 
-.navHeader{
-  font-family: 'abc_monument_grotesk_unliceMd';
-  color: var(--my-variable);
-  transition: .4s;
-  margin-bottom: 3px;
-
-}
-
-#playground {
-  animation: rainbow-colors;
-  -webkit-animation-duration: 3.5s;
-  animation-duration: 3.5s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-}
-
-.project, .awards {
+.project {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -79,23 +61,13 @@ hr {
 
     word-break: break-all; 
 
-    margin-bottom: 5px;
-    margin-left: 8px;  
+    
 }
 
 .project div:nth-child(2) {
   text-align:right;
-  opacity: 50%;
-  text-transform: capitalize;
   
 }
-
-.awards div:nth-child(2) span {
-  text-align: right;
-  text-transform: capitalize;
-}
-
-
 
 .Projects a:link {
   text-decoration: none;
@@ -103,15 +75,10 @@ hr {
 
 }
 
-.italic {
-  font-size: 85%;
-  font-family: 'abc_monument_grotesk_unliRgIt';
-}
-
 .Projects a:hover {
-   text-decoration: underline;
-   text-decoration-color: var(--my-variable);
-  color: var(--my-variable);
+    color: var(--my-variable);
+    font-family: 'abc_monument_grotesk_unliceMd';
+    transition: 0.2s;
   }
 
 .container{
@@ -125,9 +92,8 @@ hr {
 .Nav {
     width:25%;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
-    gap: 20px;
+    justify-content: space-between;
     /* background-color:yellow; */
 }
 
@@ -372,22 +338,23 @@ button {
 .contacts {
   display: flex;
   flex-direction: column;
+  text-decoration: underline;
+  text-decoration-color: var(--my-variable);
   text-align: left;
   transition: .4s;
-  margin-left: 5px;
 }
 
 .contacts a:hover {
   color:var(--my-variable);
-  text-decoration: underline;
-  text-decoration-color: var(--my-variable);
 
 }
 
 
 #picker {
+  align-self: center;
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 @keyframes bounce {

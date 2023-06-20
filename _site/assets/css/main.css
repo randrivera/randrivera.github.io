@@ -7,7 +7,7 @@
 
 html {
     cursor: url('/assets/images/custom-cursor.svg') 10 10, auto;
-    font-size: 1.7vh;
+    font-size: 16px;
 }
 
 a:hover, button {
@@ -33,7 +33,6 @@ body{
 }
 
 
-
 hr {
     height: 1.75px;
     background-color: var(--my-variable);
@@ -53,7 +52,25 @@ hr {
     width: 60px;
 }
 
-.project {
+.navHeader{
+  font-family: 'abc_monument_grotesk_unliceMd';
+  color: var(--my-variable);
+  transition: .4s;
+  margin-bottom: 3px;
+
+}
+
+#playground {
+  animation: rainbow-colors;
+  -webkit-animation-duration: 3.5s;
+  animation-duration: 3.5s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.project, .awards {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -62,23 +79,40 @@ hr {
 
     word-break: break-all; 
 
-    
+    margin-bottom: 5px;
+    margin-left: 8px;  
 }
 
 .project div:nth-child(2) {
   text-align:right;
+  opacity: 50%;
+  text-transform: capitalize;
   
 }
+
+.awards div:nth-child(2) span {
+  text-align: right;
+  text-transform: capitalize;
+}
+
+
 
 .Projects a:link {
   text-decoration: none;
   color: var(--text-color);
+
+}
+
+.italic {
+  font-size: 85%;
+  font-family: 'abc_monument_grotesk_unliRgIt';
 }
 
 .Projects a:hover {
-    font-family: 'abc_monument_grotesk_unliceMd';
-    color: var(--my-variable);
-}
+   text-decoration: underline;
+   text-decoration-color: var(--my-variable);
+  color: var(--my-variable);
+  }
 
 .container{
     /* width:100vw; */
@@ -91,8 +125,9 @@ hr {
 .Nav {
     width:25%;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
     /* background-color:yellow; */
 }
 
@@ -337,20 +372,64 @@ button {
 .contacts {
   display: flex;
   flex-direction: column;
-  text-decoration: underline;
-  text-decoration-color: var(--my-variable);
   text-align: left;
   transition: .4s;
+  margin-left: 5px;
 }
 
 .contacts a:hover {
   color:var(--my-variable);
+  text-decoration: underline;
+  text-decoration-color: var(--my-variable);
 
 }
 
 
 #picker {
-  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-20px);
+		-ms-transform:     translateY(-20px);
+		transform:         translateY(-20px)
+	}
+	60% {
+		-webkit-transform: translateY(-5px);
+		-ms-transform:     translateY(-5px);
+		transform:         translateY(-5px)
+	}
+}
+
+@keyframes rainbow-colors {
+  0% { color: hsl(0turn, 90%, 65%); }
+  25% { color: hsl(.25turn, 90%, 65%); }
+  50% { color: hsl(.5turn, 90%, 65%); }
+  75% { color: hsl(.75turn, 90%, 65%); }
+  100% { color: hsl(1turn, 90%, 65%); }
+}
+
+.pickMe {
+  animation: bounce, rainbow-colors;
+  -webkit-animation-duration: 2s, 3.5s;
+  animation-duration: 2s 3.5s;
+  -webkit-animation-timing-function: ease-in-out, linear;
+  animation-timing-function: ease-in-out, linear;
+  animation-iteration-count: infinite, infinite;
+  -webkit-animation-iteration-count: infinite, infinite;
+}
+
+#picker:hover > .pickMe{
+  animation: none;  /* color: var(--my-variable); */
+  color: var(--my-variable) !important;
+  transition: .4s !important;
 }
 
 .projSwitch {
