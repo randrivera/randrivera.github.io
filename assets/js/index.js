@@ -7,6 +7,9 @@ let button = document.querySelector("#enterBtn");
 //hello message in header
 let hello = document.getElementById("hello");
 
+let r = document.querySelector(':root');
+
+
 
 button.addEventListener("click", function(){
   //grab value from text input
@@ -31,13 +34,12 @@ function checkStorage(){
     nameInput.style.display = "none";
   } else {
     null
-  }
+  };
 }
 
 window.onload = checkStorage();
 
 //change color on every click!
-let r = document.querySelector(':root');
 let rbackground = [
   'F30909',
   'F37E09',
@@ -158,7 +160,9 @@ const defaults = {
     shapes: ["circle"],
   });
   })
-})
+});
+
+
 
 
   
