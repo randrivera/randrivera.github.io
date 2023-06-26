@@ -46,13 +46,6 @@ r.style.setProperty('--my-variable', sessionStorage.getItem("userColor"));
     }
   )});
 
-  window.addEventListener("resize", function(event){
-    let numberTest = parseInt(`${targetDiv.clientWidth}`);
-    console.log(numberTest);
-    r.style.setProperty('--div-length', numberTest + "px");
-
-  })
-
 
   const defaults = {
     spread: 120,

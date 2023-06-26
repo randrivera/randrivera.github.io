@@ -202,7 +202,7 @@
 	for(let i=0; i<allFiles.length; i++){
 		if(allFiles[i].includes(".mov")||allFiles[i].includes(".mp4")){
 			let vid = document.createElement("video");
-			vid.src="../assets/images/tide/" + allFiles[i];
+			vid.dataset.src="../assets/images/tide/" + allFiles[i];
 			vid.classList.add("media");
 			vid.controls=false;
 			vid.muted=true;
@@ -211,12 +211,44 @@
 			gallery.append(vid)
 		} else{
 			let img = document.createElement("img");
-			img.src = "../assets/images/tide/"+ allFiles[i];
+			img.dataset.src = "../assets/images/tide/"+ allFiles[i];
 			img.classList.add("media");
 			gallery.append(img)
 		}
 
 	}
+
+	const images = document.querySelectorAll("[data-src]");
+
+	function preloadImage(img) {
+		const src = img.getAttribute("data-src");
+		if(!src){
+			return;
+		}
+		img.src = src;
+
+	}
+
+	const imgOptions = {
+		threshold: 0,
+		rootMargin: "0px 0px 100px 0px"
+	};
+
+	const imgObserver = new IntersectionObserver((entries, 
+	imgObserver) => {
+		entries.forEach(entry => {
+			if (!entry.isIntersecting) {
+				return;
+			} else {
+				preloadImage(entry.target);
+				imgObserver.unobserve(entry.target);
+			}
+		})
+}, imgOptions);
+
+images.forEach(image => {
+	imgObserver.observe(image);
+});
 </script>
   <script type="text/javascript">
 	let path = window.location.pathname;
