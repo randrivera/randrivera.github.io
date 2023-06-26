@@ -130,20 +130,22 @@ function randomNumberColor(){
 
 
 const defaults = {
-  spread: 160,
-  ticks: 50,
+  spread: 120,
+  ticks: 30,
   gravity: 0,
-  decay: 0.94,
+  decay: 0.99,
   startVelocity: 50,
   shapes: ["star"],
 };
 
- document.querySelector("#confettiButt").addEventListener("click", function(){
-  console.log("confetti time");
+
+ document.querySelectorAll('.awards').forEach(item => {
+  item.addEventListener('mouseover', event => {
+    console.log("confetti time");
   confetti({
     ...defaults,
     colors: sessionStorage.getItem("userColor"),
-    particleCount: 40,
+    particleCount: 20,
     scalar: 1.2,
     shapes: ["star"],
   });
@@ -155,7 +157,8 @@ const defaults = {
     scalar: 0.75,
     shapes: ["circle"],
   });
- });
+  })
+})
 
 
   

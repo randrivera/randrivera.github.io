@@ -73,3 +73,36 @@ r.style.setProperty('--my-variable', sessionStorage.getItem("userColor"));
     });
   });
 
+  const defaults = {
+    spread: 120,
+    ticks: 30,
+    gravity: 0,
+    decay: 0.99,
+    startVelocity: 50,
+    shapes: ["star"],
+  };
+  
+  
+   document.querySelectorAll('.awards').forEach(item => {
+    item.addEventListener('mouseover', event => {
+      console.log("confetti time");
+    confetti({
+      ...defaults,
+      colors: sessionStorage.getItem("userColor"),
+      particleCount: 20,
+      scalar: 1.2,
+      shapes: ["star"],
+    });
+  
+    confetti({
+      ...defaults,
+      colors: sessionStorage.getItem("userColor"),
+      particleCount: 10,
+      scalar: 0.75,
+      shapes: ["circle"],
+    });
+    })
+  })
+  
+  
+
