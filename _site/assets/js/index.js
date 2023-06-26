@@ -5,7 +5,8 @@ let nameInput = document.querySelector(".nameInput");
 let button = document.querySelector("#enterBtn");
 
 //hello message in header
-let hello = document.getElementById("hello")
+let hello = document.getElementById("hello");
+
 
 button.addEventListener("click", function(){
   //grab value from text input
@@ -51,7 +52,6 @@ function randomNumberColor(){
 
   document.addEventListener("click", function(){
     let randomColor = rbackground[Math.floor(Math.random()*rbackground.length)];
-    console.log("clicked");
     sessionStorage.setItem("userColor", "#"+randomColor);
     r.style.setProperty('--my-variable', sessionStorage.getItem("userColor"));
 
@@ -127,5 +127,35 @@ function randomNumberColor(){
       'transform': 'rotate(' + rot + 'deg)'
     });
   });
+
+
+const defaults = {
+  spread: 160,
+  ticks: 50,
+  gravity: 0,
+  decay: 0.94,
+  startVelocity: 50,
+  shapes: ["star"],
+};
+
+ document.querySelector("#confettiButt").addEventListener("click", function(){
+  console.log("confetti time");
+  confetti({
+    ...defaults,
+    colors: sessionStorage.getItem("userColor"),
+    particleCount: 40,
+    scalar: 1.2,
+    shapes: ["star"],
+  });
+
+  confetti({
+    ...defaults,
+    colors: sessionStorage.getItem("userColor"),
+    particleCount: 10,
+    scalar: 0.75,
+    shapes: ["circle"],
+  });
+ });
+
 
   
