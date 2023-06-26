@@ -431,3 +431,26 @@ a:hover > .awards div {
   text-decoration-color: var(--my-variable);
 }
 
+.bio p {
+  display: inline-block;
+  margin: 0;
+}
+
+.bio p:hover {
+  color: var(--my-variable);
+  animation: bouncingText .4s ease;
+
+}
+
+@keyframes bouncingText {
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(-12px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+  
+}

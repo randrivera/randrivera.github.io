@@ -17,6 +17,9 @@ let rbackground = [
   'CB09F3', 
 ];
 
+r.style.setProperty('--my-variable', sessionStorage.getItem("userColor"));
+
+
   document.addEventListener("click", function(){
     let randomColor = rbackground[Math.floor(Math.random()*rbackground.length)];
     console.log("clicked");
@@ -30,9 +33,6 @@ let rbackground = [
   document.documentElement.setAttribute("data-theme", sessionStorage.getItem("userMode"));
 
   document.addEventListener("DOMContentLoaded", function(event) {
-    let numberTest = parseInt(`${targetDiv.clientWidth}`);
-    console.log(numberTest);
-    r.style.setProperty('--div-length', numberTest + "px");
 
     let checkbox = document.querySelector('input[type="checkbox"]');
     checkbox.addEventListener('change', function () {
