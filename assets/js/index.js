@@ -45,6 +45,10 @@ let rbackground = [
   'CB09F3', 
 ];
 
+function randomNumberColor(){
+
+}
+
   document.addEventListener("click", function(){
     let randomColor = rbackground[Math.floor(Math.random()*rbackground.length)];
     console.log("clicked");
@@ -123,3 +127,5 @@ let rbackground = [
       'transform': 'rotate(' + rot + 'deg)'
     });
   });
+
+  

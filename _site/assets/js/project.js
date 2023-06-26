@@ -72,4 +72,4 @@ let rbackground = [
       'transform': 'rotate(' + rot + 'deg)'
     });
   });
-  
+

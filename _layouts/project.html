@@ -23,23 +23,18 @@
       {% include navigation.html %}
     </div>
     <div class="Content">
-      <div class="projHeader marquee">
-        <p>{{page.projTitle}}</p>
-      </div>
       <div class="projInfo">
-            <div class="projBio">
-                <hr>
-                {{page.projBio}}
-            </div>
-            <div class="projOther">
-                <hr>
-                <span class="bold">
-                    YEAR
-                </span>
-                <span>{{page.projYear}}</span>
-            </div>
+        <div class="projTitle bold">
+          <hr>
+          {{page.projTitle}}
         </div>
-        <br>
+
+        <div class="projBio">
+          <hr>
+          {{page.projBio}}
+        </div>
+      </div>
+      <br>
         {{content}}
         <span id ="gallery"></span>
         <div class="projSwitch">
@@ -48,6 +43,7 @@
           <a id="next">TEST
           </a>
         </div>
+        
     </div>
   </div>
 

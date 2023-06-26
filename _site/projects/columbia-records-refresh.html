@@ -114,28 +114,36 @@
   </div>
 
   <div>
-    <span class="navHeader" id="playground">PLAYGROUND </span>
+    <a href="playground.html"> <span class="navHeader" id="playground">PLAYGROUND</span></a>
   </div>
 
   <div>
-    <div class="navHeader">WHO AM I?</div>
+    <div class="navHeader" id="WHOAMI">WHO AM I?</div>
+    <div id="headshot">
+      <img src="/assets/images/headshot_edited-39.jpg">
+    </div>
     <div style="margin-left:8px;">Rand is a 𓅰 NYC-based ⁺˚⋆｡multi-disciplinary｡°✩₊ designer currently entering his final year at The New School pursuing a ✎ BAFA dual-degree in Communication Design + Screen Studies. 
       <br><br>
       He is also currently interning at <a href="sundayafternoon.us" style="text-decoration: underline; color:var(--my-variable); transition: .4s;">Sunday Afternoon</a> as a junior designer.
-      He believes highly in experimentation ᵕ̈, aka doing shit ৻(  •̀ ᗜ •́  ৻), as a young designer he is constantly looking for new things to explore in the field of graphic design ✮</div>
+      He believes highly in experimentation ᵕ̈, aka doing shit ৻(  •̀ ᗜ •́  ৻), as a young designer he is constantly looking for new things to explore in the field of graphic design ✮
+    </div>
   </div>
 
   <div>
     <div class="navHeader">AWARDS</div>
-    <div class="awards">
-      <div>
-        <span rel="history">YOUNG ONES ADC</span>
+    <a href="https://www.oneclub.org/awards/youngones/-award/46623/type-of-today-1" target="_blank">
+      <div class="awards">
+        <div>
+          <span rel="history">YOUNG ONES ADC</span>
+        </div>
+        <div>
+          <span>Silver Cube Winner</span>
+        </div>​
+        <div>2023</div>
       </div>
-      <div>
-        <span>Silver Cube Winner</span>
-      </div>​
-      <div>2023</div>
-    </div>
+    </a>
+
+    <a href="https://www.oneclub.org/awards/youngones/-award/46621/columbia-records-refresh" target="_blank">
     <div class="awards">
       <div>
         <span rel="history">YOUNG ONES ADC</span>
@@ -145,13 +153,14 @@
       </div>​
       <div>2023</div>
     </div>
+    </a>
   </div>
 
   <div class>
     <div class="navHeader">CONTACT</div>
     <div class="contacts">
         <a href="https://www.instagram.com/randrivera" target="_blank">@randrivera</a>
-        <a href="https://www.instagram.com/randrivera" target="_blank">/randrivera</a>
+        <a href="https://www.linkedin.com/in/randrivera" target="_blank">/randrivera</a>
         <a href="mailto:rand.k.rivera@gmail.com">rand.k.rivera@gmail.com</a>
      </div>
   </div>
@@ -159,23 +168,18 @@
 
     </div>
     <div class="Content">
-      <div class="projHeader marquee">
-        <p>Columbia Records Refresh</p>
-      </div>
       <div class="projInfo">
-            <div class="projBio">
-                <hr>
-                The proposed Columbia Records Refresh concept draws inspiration from the iconic vinyl logo used by the label in the 1970s. This refreshed identity takes advantage of the current resurgence of disco and house in contemporary music. The intention is to modernize the identity while retaining its historic roots, the era in which disco and house music was popularized. To achieve this, the brand identity is bold, colorful, and vibrant. <br><br> The logo has been redrawn, updating it for more modern uses, and is complemented with a custom typeface that can be used throughout the system. The large, blocky letterforms allow for fun, playful compositions through stacking. Additionally, a logo video has been created to showcase the logo in motion, providing a dynamic and engaging visual to promote the new look. <br><br> To further promote the new brand identity, a series of static and kinetic advertising posters have been developed. These posters are bold and colorful, creating a striking visual impact that captures the essence of the brand. They incorporate the new logo, halftone image treatment, and vibrant colors and showcase signed artists to create a cohesive and visually striking campaign. The rebranding effort extends to Columbia Records' social media platforms, where curated posts and stories have been created based on the current Columbia Records instagram feed..
-            </div>
-            <div class="projOther">
-                <hr>
-                <span class="bold">
-                    YEAR
-                </span>
-                <span>2022</span>
-            </div>
+        <div class="projTitle bold">
+          <hr>
+          Columbia Records Refresh
         </div>
-        <br>
+
+        <div class="projBio">
+          <hr>
+          The proposed Columbia Records Refresh concept draws inspiration from the iconic vinyl logo used by the label in the 1970s. This refreshed identity takes advantage of the current resurgence of disco and house in contemporary music. The intention is to modernize the identity while retaining its historic roots, the era in which disco and house music was popularized. To achieve this, the brand identity is bold, colorful, and vibrant. <br><br> The logo has been redrawn, updating it for more modern uses, and is complemented with a custom typeface that can be used throughout the system. The large, blocky letterforms allow for fun, playful compositions through stacking. Additionally, a logo video has been created to showcase the logo in motion, providing a dynamic and engaging visual to promote the new look. <br><br> To further promote the new brand identity, a series of static and kinetic advertising posters have been developed. These posters are bold and colorful, creating a striking visual impact that captures the essence of the brand. They incorporate the new logo, halftone image treatment, and vibrant colors and showcase signed artists to create a cohesive and visually striking campaign. The rebranding effort extends to Columbia Records' social media platforms, where curated posts and stories have been created based on the current Columbia Records instagram feed.
+        </div>
+      </div>
+      <br>
         
         <span id ="gallery"></span>
         <div class="projSwitch">
@@ -184,13 +188,14 @@
           <a id="next">TEST
           </a>
         </div>
+        
     </div>
   </div>
 
 
   
 <script type="text/javascript">
-	let allFiles = ['homepage_previews-01.png', 'homepage_previews-02.png', 'homepage_previews-03.png'];
+	let allFiles = [];
 	let gallery = document.querySelector("#gallery")
 
 	for(let i=0; i<allFiles.length; i++){

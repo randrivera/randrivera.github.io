@@ -114,28 +114,36 @@
   </div>
 
   <div>
-    <span class="navHeader" id="playground">PLAYGROUND </span>
+    <a href="playground.html"> <span class="navHeader" id="playground">PLAYGROUND</span></a>
   </div>
 
   <div>
-    <div class="navHeader">WHO AM I?</div>
+    <div class="navHeader" id="WHOAMI">WHO AM I?</div>
+    <div id="headshot">
+      <img src="/assets/images/headshot_edited-39.jpg">
+    </div>
     <div style="margin-left:8px;">Rand is a 𓅰 NYC-based ⁺˚⋆｡multi-disciplinary｡°✩₊ designer currently entering his final year at The New School pursuing a ✎ BAFA dual-degree in Communication Design + Screen Studies. 
       <br><br>
       He is also currently interning at <a href="sundayafternoon.us" style="text-decoration: underline; color:var(--my-variable); transition: .4s;">Sunday Afternoon</a> as a junior designer.
-      He believes highly in experimentation ᵕ̈, aka doing shit ৻(  •̀ ᗜ •́  ৻), as a young designer he is constantly looking for new things to explore in the field of graphic design ✮</div>
+      He believes highly in experimentation ᵕ̈, aka doing shit ৻(  •̀ ᗜ •́  ৻), as a young designer he is constantly looking for new things to explore in the field of graphic design ✮
+    </div>
   </div>
 
   <div>
     <div class="navHeader">AWARDS</div>
-    <div class="awards">
-      <div>
-        <span rel="history">YOUNG ONES ADC</span>
+    <a href="https://www.oneclub.org/awards/youngones/-award/46623/type-of-today-1" target="_blank">
+      <div class="awards">
+        <div>
+          <span rel="history">YOUNG ONES ADC</span>
+        </div>
+        <div>
+          <span>Silver Cube Winner</span>
+        </div>​
+        <div>2023</div>
       </div>
-      <div>
-        <span>Silver Cube Winner</span>
-      </div>​
-      <div>2023</div>
-    </div>
+    </a>
+
+    <a href="https://www.oneclub.org/awards/youngones/-award/46621/columbia-records-refresh" target="_blank">
     <div class="awards">
       <div>
         <span rel="history">YOUNG ONES ADC</span>
@@ -145,13 +153,14 @@
       </div>​
       <div>2023</div>
     </div>
+    </a>
   </div>
 
   <div class>
     <div class="navHeader">CONTACT</div>
     <div class="contacts">
         <a href="https://www.instagram.com/randrivera" target="_blank">@randrivera</a>
-        <a href="https://www.instagram.com/randrivera" target="_blank">/randrivera</a>
+        <a href="https://www.linkedin.com/in/randrivera" target="_blank">/randrivera</a>
         <a href="mailto:rand.k.rivera@gmail.com">rand.k.rivera@gmail.com</a>
      </div>
   </div>
@@ -159,23 +168,18 @@
 
     </div>
     <div class="Content">
-      <div class="projHeader marquee">
-        <p>Legacy</p>
-      </div>
       <div class="projInfo">
-            <div class="projBio">
-                <hr>
-                A concept for a cd booklet design for the release of a new Beyonce album. This new studio album will be a remastering of all her previous albums — a complete discography album, in other words. Similar to the visual films released connected to her studio albums, this book is meant replace that for this album, trying to provide the same level of context and depth as the films. The book is to encompass her journey as a musician and as a legacy, having her brand as “Beyonce” living within the pages. <br><br> With that said, it was key to make sure the references and visuals used celebrated black excellencey. For example, it was important in choosing typefaces that was designed by black type designers. In the book it uses "Carrie" and "Bayard" from Vocal Type Co.
-            </div>
-            <div class="projOther">
-                <hr>
-                <span class="bold">
-                    YEAR
-                </span>
-                <span>2021</span>
-            </div>
+        <div class="projTitle bold">
+          <hr>
+          Legacy
         </div>
-        <br>
+
+        <div class="projBio">
+          <hr>
+          A concept for a cd booklet design for the release of a new Beyonce album. This new studio album will be a remastering of all her previous albums — a complete discography album, in other words. Similar to the visual films released connected to her studio albums, this book is meant replace that for this album, trying to provide the same level of context and depth as the films. The book is to encompass her journey as a musician and as a legacy, having her brand as “Beyonce” living within the pages. <br><br> With that said, it was key to make sure the references and visuals used celebrated black excellencey. For example, it was important in choosing typefaces that was designed by black type designers. In the book it uses "Carrie" and "Bayard" from Vocal Type Co.
+        </div>
+      </div>
+      <br>
         
         <span id ="gallery"></span>
         <div class="projSwitch">
@@ -184,13 +188,14 @@
           <a id="next">TEST
           </a>
         </div>
+        
     </div>
   </div>
 
 
   
 <script type="text/javascript">
-	let allFiles = ['homepage_previews-01.png', 'homepage_previews-02.png', 'homepage_previews-03.png'];
+	let allFiles = [];
 	let gallery = document.querySelector("#gallery")
 
 	for(let i=0; i<allFiles.length; i++){

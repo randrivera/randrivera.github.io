@@ -20,7 +20,7 @@ a {
 }
 
 [data-theme="dark"]{
-	--background-color: whitesmoke;
+	--background-color: #f8f8f8;
     --text-color: #121212;
 }
 
@@ -95,8 +95,6 @@ hr {
   text-transform: capitalize;
 }
 
-
-
 .Projects a:link {
   text-decoration: none;
   color: var(--text-color);
@@ -125,7 +123,6 @@ hr {
 .Nav {
     width:25%;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
     gap: 20px;
     /* background-color:yellow; */
@@ -171,8 +168,8 @@ img {
 .switch {
     position: relative;
     display: inline-block;
-    width: 56px;
-    height: 30px;
+    width: 40px;
+    height: 24px;
   }
   
   .switch input { 
@@ -197,8 +194,8 @@ img {
   .slider:before {
     position: absolute;
     content: "";
-    height: 22px;
-    width: 22px;
+    height: 16px;
+    width: 16px;
     left: 4px;
     bottom: 4px;
     background-color: white;
@@ -216,9 +213,9 @@ img {
   }
   
   input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
   }
   
   /* Rounded sliders */
@@ -374,7 +371,7 @@ button {
   flex-direction: column;
   text-align: left;
   transition: .4s;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .contacts a:hover {
@@ -390,23 +387,6 @@ button {
   flex-direction: column;
 }
 
-@keyframes bounce {
-	0%, 100%, 20%, 50%, 80% {
-		-webkit-transform: translateY(0);
-		-ms-transform:     translateY(0);
-		transform:         translateY(0)
-	}
-	40% {
-		-webkit-transform: translateY(-20px);
-		-ms-transform:     translateY(-20px);
-		transform:         translateY(-20px)
-	}
-	60% {
-		-webkit-transform: translateY(-5px);
-		-ms-transform:     translateY(-5px);
-		transform:         translateY(-5px)
-	}
-}
 
 @keyframes rainbow-colors {
   0% { color: hsl(0turn, 90%, 65%); }
@@ -416,21 +396,6 @@ button {
   100% { color: hsl(1turn, 90%, 65%); }
 }
 
-.pickMe {
-  animation: bounce, rainbow-colors;
-  -webkit-animation-duration: 2s, 3.5s;
-  animation-duration: 2s 3.5s;
-  -webkit-animation-timing-function: ease-in-out, linear;
-  animation-timing-function: ease-in-out, linear;
-  animation-iteration-count: infinite, infinite;
-  -webkit-animation-iteration-count: infinite, infinite;
-}
-
-#picker:hover > .pickMe{
-  animation: none;  /* color: var(--my-variable); */
-  color: var(--my-variable) !important;
-  transition: .4s !important;
-}
 
 .projSwitch {
   position: sticky;
@@ -442,9 +407,27 @@ button {
 
   text-transform: uppercase;
   margin-top: 5px;
-  
 }
 
 .projSwitch a:hover {
   color: var(--my-variable);
 }
+
+#headshot {
+  display: none;
+}
+
+#WHOAMI:hover + #headshot {
+  display: block;
+}
+
+#WHOAMI {
+  width: fit-content;
+}
+
+a:hover > .awards div {
+  color:var(--my-variable);
+  text-decoration: underline;
+  text-decoration-color: var(--my-variable);
+}
+

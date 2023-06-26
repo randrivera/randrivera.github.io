@@ -114,28 +114,36 @@
   </div>
 
   <div>
-    <span class="navHeader" id="playground">PLAYGROUND </span>
+    <a href="playground.html"> <span class="navHeader" id="playground">PLAYGROUND</span></a>
   </div>
 
   <div>
-    <div class="navHeader">WHO AM I?</div>
+    <div class="navHeader" id="WHOAMI">WHO AM I?</div>
+    <div id="headshot">
+      <img src="/assets/images/headshot_edited-39.jpg">
+    </div>
     <div style="margin-left:8px;">Rand is a 𓅰 NYC-based ⁺˚⋆｡multi-disciplinary｡°✩₊ designer currently entering his final year at The New School pursuing a ✎ BAFA dual-degree in Communication Design + Screen Studies. 
       <br><br>
       He is also currently interning at <a href="sundayafternoon.us" style="text-decoration: underline; color:var(--my-variable); transition: .4s;">Sunday Afternoon</a> as a junior designer.
-      He believes highly in experimentation ᵕ̈, aka doing shit ৻(  •̀ ᗜ •́  ৻), as a young designer he is constantly looking for new things to explore in the field of graphic design ✮</div>
+      He believes highly in experimentation ᵕ̈, aka doing shit ৻(  •̀ ᗜ •́  ৻), as a young designer he is constantly looking for new things to explore in the field of graphic design ✮
+    </div>
   </div>
 
   <div>
     <div class="navHeader">AWARDS</div>
-    <div class="awards">
-      <div>
-        <span rel="history">YOUNG ONES ADC</span>
+    <a href="https://www.oneclub.org/awards/youngones/-award/46623/type-of-today-1" target="_blank">
+      <div class="awards">
+        <div>
+          <span rel="history">YOUNG ONES ADC</span>
+        </div>
+        <div>
+          <span>Silver Cube Winner</span>
+        </div>​
+        <div>2023</div>
       </div>
-      <div>
-        <span>Silver Cube Winner</span>
-      </div>​
-      <div>2023</div>
-    </div>
+    </a>
+
+    <a href="https://www.oneclub.org/awards/youngones/-award/46621/columbia-records-refresh" target="_blank">
     <div class="awards">
       <div>
         <span rel="history">YOUNG ONES ADC</span>
@@ -145,13 +153,14 @@
       </div>​
       <div>2023</div>
     </div>
+    </a>
   </div>
 
   <div class>
     <div class="navHeader">CONTACT</div>
     <div class="contacts">
         <a href="https://www.instagram.com/randrivera" target="_blank">@randrivera</a>
-        <a href="https://www.instagram.com/randrivera" target="_blank">/randrivera</a>
+        <a href="https://www.linkedin.com/in/randrivera" target="_blank">/randrivera</a>
         <a href="mailto:rand.k.rivera@gmail.com">rand.k.rivera@gmail.com</a>
      </div>
   </div>
@@ -159,23 +168,18 @@
 
     </div>
     <div class="Content">
-      <div class="projHeader marquee">
-        <p>Roadsign Americana</p>
-      </div>
       <div class="projInfo">
-            <div class="projBio">
-                <hr>
-                Taking inspiration from the quirkiness and oddities in old business/shop roadsigns found across America and creating a new typeface that brings back the spirit in logos and brands stuck in a "Helvetica, sans-serif world" <br><br> This coded site is two part: the first part makes the user "Americana-ify" these logos using the slider, only allowing to move forward if the slider is at peak "Americana"; the second part is a text generator that utilizes the typefaces allowing the user to make their own logos <br><br> try it out yourself <a href="https://river330.github.io/coreint2/roadsigns/index.html">here</a>
-            </div>
-            <div class="projOther">
-                <hr>
-                <span class="bold">
-                    YEAR
-                </span>
-                <span>2022</span>
-            </div>
+        <div class="projTitle bold">
+          <hr>
+          Roadsign Americana
         </div>
-        <br>
+
+        <div class="projBio">
+          <hr>
+          Taking inspiration from the quirkiness and oddities in old business/shop roadsigns found across America and creating a new typeface that brings back the spirit in logos and brands stuck in a "Helvetica, sans-serif world" <br><br> This coded site is two part: the first part makes the user "Americana-ify" these logos using the slider, only allowing to move forward if the slider is at peak "Americana"; the second part is a text generator that utilizes the typefaces allowing the user to make their own logos <br><br> try it out yourself <a href="https://river330.github.io/coreint2/roadsigns/index.html">here</a>
+        </div>
+      </div>
+      <br>
         
         <span id ="gallery"></span>
         <div class="projSwitch">
@@ -184,13 +188,14 @@
           <a id="next">TEST
           </a>
         </div>
+        
     </div>
   </div>
 
 
   
 <script type="text/javascript">
-	let allFiles = ['homepage_previews-01.png', 'homepage_previews-02.png', 'homepage_previews-03.png'];
+	let allFiles = [];
 	let gallery = document.querySelector("#gallery")
 
 	for(let i=0; i<allFiles.length; i++){
