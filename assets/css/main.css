@@ -57,7 +57,7 @@ hr {
   color: var(--my-variable);
   transition: .4s;
   margin-bottom: 3px;
-
+  width: fit-content;
 }
 
 #playground {
@@ -454,3 +454,4 @@ a:hover > .awards div {
   }
   
 }
+
