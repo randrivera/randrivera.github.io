@@ -182,6 +182,7 @@
       </div>
       <br>
         
+        <br>
         <span id ="gallery"></span>
         <div class="projSwitch">
           <a id="prev">TEST
@@ -194,8 +195,7 @@
   </div>
 
 
-  
-<script type="text/javascript">
+  <script type="text/javascript">
 	let allFiles = [];
 	let gallery = document.querySelector("#gallery")
 
@@ -204,7 +204,7 @@
 			let vid = document.createElement("video");
 			vid.src="../assets/images/previews/" + allFiles[i];
 			vid.classList.add("media");
-			vid.controls=true;
+			vid.controls=false;
 			vid.muted=true;
 			vid.autoplay=true;
 			vid.loop=true;
