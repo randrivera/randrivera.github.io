@@ -151,6 +151,7 @@ video {
   flex-direction: row;
   justify-content: space-between;
   z-index: 10;
+  padding-top: 5px;
   background-color: var(--background-color);
 
   font-size: 1.15em;
@@ -233,7 +234,7 @@ video {
 
   .sticky {
     position:sticky;
-    top: 10px;
+    top: 0px;
   }
 
   .bold{
