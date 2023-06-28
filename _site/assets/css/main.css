@@ -460,3 +460,8 @@ a:hover > .awards div {
   
 }
 
+#WHOAMI:hover::after {
+	display: inline;
+	content: attr(data-hidden);
+	font-family: 'abc_monument_grotesk_unliLtIt';
+}
