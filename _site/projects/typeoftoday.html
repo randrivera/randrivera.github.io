@@ -184,25 +184,27 @@
         
         <br>
         <span id ="gallery"></span>
-        <div class="projSwitch">
-          <a id="prev">TEST
-          </a>
-          <a id="next">TEST
-          </a>
+        <div class="nextBefore">
+          <hr>
+          <div class="projSwitch">
+            <a id="prev">TEST
+            </a>
+            <a id="next">TEST
+            </a>
+          </div>
         </div>
-        
     </div>
   </div>
 
 
   <script type="text/javascript">
-	let allFiles = [];
+	let allFiles = ['01_tot.jpg', '01_tot.mp4', '03_tot.jpg', '04_tot.jpg', '05_tot.jpg', '07_tot.png', '08_tot.png'];
 	let gallery = document.querySelector("#gallery")
 
 	for(let i=0; i<allFiles.length; i++){
 		if(allFiles[i].includes(".mov")||allFiles[i].includes(".mp4")){
 			let vid = document.createElement("video");
-			vid.dataset.src="../assets/images/previews/" + allFiles[i];
+			vid.dataset.src="../assets/images/tot/" + allFiles[i];
 			vid.classList.add("media");
 			vid.controls=false;
 			vid.muted=true;
@@ -211,7 +213,7 @@
 			gallery.append(vid)
 		} else{
 			let img = document.createElement("img");
-			img.dataset.src = "../assets/images/previews/"+ allFiles[i];
+			img.dataset.src = "../assets/images/tot/"+ allFiles[i];
 			img.classList.add("media");
 			gallery.append(img)
 		}
