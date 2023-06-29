@@ -198,25 +198,22 @@
 
 
   <script type="text/javascript">
-	let allFiles = ['01_TIDE.gif', '02_TIDE.jpg', '03_TIDE.png', '04_TIDE.gif', '05_TIDE.gif', '06_TIDE.mp4', '07_TIDE.mp4', '08_TIDE.mp4', '09_TIDE.mp4', '10_TIDE.mp4', '11_TIDE.mp4', '14_TIDE.jpg', '15_TIDE.mp4', '16_TIDE.jpg', '17_TIDE.png', '18_TIDE.jpg', '19_TIDE.jpg'];
+	let allFiles = ['soundboard.mp4'];
 	let gallery = document.querySelector("#gallery")
 
 	for(let i=0; i<allFiles.length; i++){
 		if(allFiles[i].includes(".mov")||allFiles[i].includes(".mp4")){
-			let vid = document.createElement("source");
-			let vidContainer = document.createElement("video");
-
-			vid.src="../assets/images/tide/" + allFiles[i];
-			vidContainer.classList.add("media");
-			vidContainer.classList.add("video");
-			vidContainer.controls=false;
-			vidContainer.muted=true;
-			vidContainer.loop=true;
-			vidContainer.append(vid);
-			gallery.append(vidContainer);
+			let vid = document.createElement("video");
+			vid.src="../assets/images/soundboard/" + allFiles[i];
+			vid.classList.add("media");
+			vid.classList.add("video");
+			vid.controls=false;
+			vid.muted=true;
+			vid.loop=true;
+			gallery.append(vid);
 		} else{
 			let img = document.createElement("img");
-			img.dataset.src = "../assets/images/tide/"+ allFiles[i];
+			img.dataset.src = "../assets/images/soundboard/"+ allFiles[i];
 			img.classList.add("media");
 			gallery.append(img)
 		}
@@ -265,12 +262,8 @@ function playPauseVideo() {
                 let observer = new IntersectionObserver(
                     (entries) => {
                         entries.forEach((entry) => {
-                            if (
-                                entry.intersectionRatio !== 1 &&
-                                !video.paused
-                            ) {
+                            if (!entry.isIntersecting && !video.paused) {
                                 video.pause();
-								console.log("paused");
                             } else if (video.paused) {
                                 video.play();
                             }
