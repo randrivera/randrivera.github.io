@@ -184,14 +184,17 @@
 
 	for(let i=0; i<allFiles.length; i++){
 		if(allFiles[i].includes(".mov")||allFiles[i].includes(".mp4")){
-			let vid = document.createElement("video");
-			vid.dataset.src="../assets/images//" + allFiles[i];
-			vid.classList.add("media");
-			vid.controls=false;
-			vid.muted=true;
-			vid.autoplay=true;
-			vid.loop=true;
-			gallery.append(vid)
+			let vid = document.createElement("source");
+			let vidContainer = document.createElement("video");
+
+			vid.src="../assets/images//" + allFiles[i];
+			vidContainer.classList.add("media");
+			vidContainer.classList.add("video");
+			vidContainer.controls=false;
+			vidContainer.muted=true;
+			vidContainer.loop=true;
+			vidContainer.append(vid);
+			gallery.append(vidContainer);
 		} else{
 			let img = document.createElement("img");
 			img.dataset.src = "../assets/images//"+ allFiles[i];
@@ -201,7 +204,7 @@
 
 	}
 
-	const images = document.querySelectorAll("[data-src]");
+const images = document.querySelectorAll("[data-src]");
 
 	
 	const imgOptions = {
@@ -209,7 +212,7 @@
 		rootMargin: "100px"
 	};
 
-	const imgObserver = new IntersectionObserver((entries, 
+const imgObserver = new IntersectionObserver((entries, 
 	imgObserver) => {
 		entries.forEach(entry => {
 			if (entry.isIntersecting) {
@@ -232,6 +235,38 @@ function preloadImage(img) {
 	img.src = src;
 
 }
+
+function playPauseVideo() {
+    let videos = document.querySelectorAll("video");
+    videos.forEach((video) => {
+        // Play is a promise so we need to check we have it
+        let playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.then((_) => {
+                let observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (
+                                entry.intersectionRatio !== 1 &&
+                                !video.paused
+                            ) {
+                                video.pause();
+								console.log("paused");
+                            } else if (video.paused) {
+                                video.play();
+                            }
+                        });
+                    },
+                    { threshold: 0.2}
+                );
+                observer.observe(video);
+            });
+        }
+    });
+}
+
+// And you would kick this off where appropriate with:
+playPauseVideo();
 
 </script>
 
