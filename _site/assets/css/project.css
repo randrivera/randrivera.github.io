@@ -21,6 +21,16 @@
     overflow-y: scroll !important;
 }
 
+@media only screen and (max-width: 768px) {
+.projInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 10px;
+    margin-top: 10px;;
+}
+}
+
 
 
 

@@ -2,6 +2,7 @@
   .desktopOnly {
   display: none !important;
 }
+
 .mobile {
   display: inline;
 }
@@ -143,6 +144,7 @@ width: 100%;
   justify-content: space-between;
   column-gap: 20px;
 }
+
 .navHeader{
   font-family: 'abc_monument_grotesk_unliceMd';
   color: var(--my-variable);
