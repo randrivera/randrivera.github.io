@@ -91,3 +91,24 @@ const defaults = {
   });
   })
 });
+
+let arrows = document.querySelector(".arrows");
+let amIOn = false;
+
+arrows.addEventListener("click", function(){
+  let navMobile = document.querySelector(".navMobile");
+
+
+  if (amIOn == false){
+  navMobile.classList.add("show");
+  arrows.innerHTML="↑↑↑";
+  amIOn = true;
+  } else if (amIOn == true){
+  navMobile.classList.remove("show");
+  arrows.innerHTML="↓↓↓";
+  amIOn = false;
+  }
+  console.log(amIOn);
+})
+
+

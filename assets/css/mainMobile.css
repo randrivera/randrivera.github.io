@@ -100,15 +100,23 @@ width: 100%;
   font-size: 1.15em;
 }
 .header > div:nth-child(1){
-    width: 60%;
+    width: 40%;
 }
 /* .header > div:nth-child(2){
     width: 20%;
     padding-left: 0px;
 } */
+
 .header > div:nth-child(4){
-    width: 20%;
+  color: var(--my-variable);
+}
+.header > div:nth-child(4):hover {
+  cursor: url('/assets/images/custom-cursor_hover.svg') 10 10, auto;
+
+}
+.header > div:nth-child(5){
     text-align: right;
+    width: fit-content;
 }
 .sticky {
   position:sticky;
@@ -131,11 +139,15 @@ width: 100%;
 
 /*Navigation CSS*/
 .navMobile {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 20px;
   /* background-color:yellow; */
 }
+.show {
+  display: flex;
+}
+
 .container{
   /* width:100vw; */
   width: 100%;

@@ -87,8 +87,7 @@ width: 100%;
     padding-left: 30px;
     width: 55%;
 }
-.header > div:nth-child(4){
-    width: 20%;
+.header > div:nth-child(5){
     text-align: right;
 }
 #hello {
