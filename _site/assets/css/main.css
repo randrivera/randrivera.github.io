@@ -1,5 +1,5 @@
-.mobileNav{
-  display: none;;
+.mobile {
+  display: none;
 }
 :root {
     --my-variable: #14c420;
@@ -83,11 +83,11 @@ width: 100%;
 .header > div:nth-child(1){
     width: 25%;
 }
-.header > div:nth-child(2){
+.header > div:nth-child(3){
     padding-left: 30px;
     width: 55%;
 }
-.header > div:nth-child(3){
+.header > div:nth-child(4){
     width: 20%;
     text-align: right;
 }
