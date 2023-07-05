@@ -6,11 +6,11 @@ let button = document.querySelector("#enterBtn");
 
 //hello message in header
 let hello = document.getElementById("hello");
-
 let r = document.querySelector(':root');
 
+r.style.setProperty('--my-variable', sessionStorage.getItem("userColor"));
 
-
+//enter name interaction
 button.addEventListener("click", function(){
   //grab value from text input
   let txt = document.querySelector("#collectName").value
@@ -48,24 +48,27 @@ let rbackground = [
   'CB09F3', 
 ];
 
-function randomNumberColor(){
 
-}
-
-  document.addEventListener("click", function(){
+//every click changes the key color
+document.addEventListener("click", function(){
+    //picks a random color from rbackground[]
     let randomColor = rbackground[Math.floor(Math.random()*rbackground.length)];
+    //sets the storage color as the random color from above
     sessionStorage.setItem("userColor", "#"+randomColor);
+    //make the variable color the stored color
     r.style.setProperty('--my-variable', sessionStorage.getItem("userColor"));
-
   });
 
-  //dark + light mode code
-  document.documentElement.setAttribute("data-theme", sessionStorage.getItem("userMode"));
+//dark + light mode code
 
-  document.addEventListener("DOMContentLoaded", function(event) {
+//sets the mode to the stored userMode
+document.documentElement.setAttribute("data-theme", sessionStorage.getItem("userMode"));
+
+//checks for dark/light mode switches
+document.addEventListener("DOMContentLoaded", function(event) {
     let checkbox = document.querySelector('input[type="checkbox"]');
-    checkbox.addEventListener('change', function () {
 
+    checkbox.addEventListener('change', function () {
       let currentTheme = document.documentElement.getAttribute("data-theme");
       // Switch between `dark` and `light`
       let switchToTheme = currentTheme === "dark" ? "light" : "dark";
@@ -73,13 +76,14 @@ function randomNumberColor(){
 
       document.documentElement.setAttribute("data-theme", sessionStorage.getItem("userMode"));
     }
-  )});
+
+)});
   
 
-  // Christ (Chris Panicker - panicker.design) helped me with this one <3
-  // On the homepage, hovering over the title moves the corresponding preview image to the top
+// Christ (Chris Panicker - panicker.design) helped me with this one <3
+// On the homepage, hovering over the title moves the corresponding preview image to the top
   
-  // all the project previews
+// all the project previews
   let projects = [];
   projects[0] = document.querySelector("#projone");
   projects[1] = document.querySelector("#projtwo");
@@ -92,7 +96,7 @@ function randomNumberColor(){
   projects[8] = document.querySelector("#projnine");
 
 
-  //div in which all the preview images live in
+//div in which all the preview images live in
   let target = document.getElementById("target");
   let targetImg = document.querySelector("#target img");
   const scroller = document.querySelector(".Content");
@@ -114,7 +118,7 @@ function randomNumberColor(){
     });
   }
 
-  //following mouse eyes in nameScreen
+//following mouse eyes in nameScreen
   $(".nameInput").mousemove(function(event) {
     var eye = $(".eye");
     // console.log('eye', eye)
@@ -130,7 +134,7 @@ function randomNumberColor(){
     });
   });
 
-
+//award fireworks code
 const defaults = {
   spread: 120,
   ticks: 30,
@@ -140,7 +144,7 @@ const defaults = {
   shapes: ["star"],
 };
 
-
+//on hover, make fireworks!
  document.querySelectorAll('.awards').forEach(item => {
   item.addEventListener('mouseover', event => {
     console.log("confetti time");
