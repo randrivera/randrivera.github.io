@@ -209,6 +209,18 @@ a:hover > .awards div {
   display: inline-block;
   margin: 0;
 }
+@keyframes bouncingText {
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(-12px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+  
+  }
 .bio p:hover {
   color: var(--my-variable);
   animation: bouncingText .4s ease;
