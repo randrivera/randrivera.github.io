@@ -344,7 +344,7 @@
 	for(let i=0; i<allFiles.length; i++){
 		if(allFiles[i].includes(".mov")||allFiles[i].includes(".mp4")){
 			let vid = document.createElement("video");
-			vid.src="../assets/images/tide/" + allFiles[i];
+			vid.src="/assets/images/tide/" + allFiles[i];
 			vid.classList.add("media");
 			vid.classList.add("video");
 			vid.controls=false;

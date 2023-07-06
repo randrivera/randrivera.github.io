@@ -84,7 +84,7 @@ width: 100%;
     width: 25%;
 }
 .header > div:nth-child(3){
-    padding-left: 30px;
+    padding-left: 0px;
     width: 55%;
 }
 .header > div:nth-child(5){
@@ -319,6 +319,7 @@ input:checked + .slider:before {
   bottom: -1px;
   padding-top: 5px;
 }
+
 
 
 /* Hide scrollbar for Chrome, Safari and Opera */
