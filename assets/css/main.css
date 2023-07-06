@@ -82,14 +82,26 @@ width: 100%;
 }
 .header > div:nth-child(1){
     width: 25%;
+    align-self: center;
 }
-.header > div:nth-child(3){
+.header > div:nth-child(2){
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.extras > div:nth-child(2) {
+  padding-left: 10px;
+}
+
+/* .header > div:nth-child(3){
     padding-left: 0px;
     width: 55%;
 }
 .header > div:nth-child(5){
     text-align: right;
-}
+} */
 #hello {
     color: var(--my-variable);
     -webkit-transition: .4s;

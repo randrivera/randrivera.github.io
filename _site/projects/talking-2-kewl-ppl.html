@@ -16,14 +16,16 @@
 <body>
   <div class="header sticky">
     <div class="bold"><a href="/index.html">RAND RIVERA</a></div>
-<div class="hamburger mobile"><a href="/playground.html"> <span class="navHeader" id="playground">PLAYGROUND</span></a></div>
-<div class="welcome-text bold desktopOnly"><span id="hello">Hi! ♥ </span></div> 
-<div class="arrows mobile">↓↓↓</div>
-<div>
-  <label class="switch">
-    <input type="checkbox">
-    <span class="slider round"></span>
-  </label>
+<div class="extras">
+  <div class="hamburger mobile"><a href="/playground.html"> <span class="navHeader" id="playground">PLAYGROUND</span></a></div>
+  <div class="welcome-text bold desktopOnly"><span id="hello">Hi! ♥ </span></div> 
+  <div class="arrows mobile">↓↓↓</div>
+  <div>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label>
+  </div>
 </div>
   </div>
   <hr>
@@ -342,7 +344,7 @@
 	let gallery = document.querySelector("#gallery")
 
 	for(let i=0; i<allFiles.length; i++){
-		if(allFiles[i].includes(".mov")||allFiles[i].includes(".mp4")){
+		if(allFiles[i].includes(".mov")||allFiles[i].includes(".mp4") && !allFiles[i].includes("_HERO")){
 			let vid = document.createElement("video");
 			vid.src="/assets/images/kewl-ppl/" + allFiles[i];
 			vid.classList.add("media");
@@ -351,6 +353,14 @@
 			vid.muted=true;
 			vid.loop=true;
 			gallery.append(vid);
+		} else if(allFiles[i].includes("_HERO")){
+			let hero = document.createElement("video");
+			hero.src="/assets/images/kewl-ppl/" + allFiles[i];
+			hero.classList.add("media");
+			// hero.classList.add("video");
+			hero.controls=true;
+			// hero.muted=true;
+			gallery.append(hero);
 		} else{
 			let img = document.createElement("img");
 			img.dataset.src = "../assets/images/kewl-ppl/"+ allFiles[i];
