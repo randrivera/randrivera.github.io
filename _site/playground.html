@@ -7,6 +7,7 @@
 	<!-- Link to the relevant stylesheet -->
     <link href="/assets/css/fonts.css" rel="stylesheet">
 	<link href="/assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/mainMobile.css" rel="stylesheet">
   <link href="/assets/css/project.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="/assets/images/rand_favicon.png">
 
@@ -18,9 +19,9 @@
 <body>
   <div class="header sticky">
     <div class="bold"><a href="/index.html">RAND RIVERA</a></div>
-<div class="hello">
-  <div class="welcome-text bold"><span id="hello">Hi! ♥ </span></div> 
-</div>
+<div class="hamburger mobile"><a href="/playground.html"> <span class="navHeader" id="playground">PLAYGROUND</span></a></div>
+<div class="welcome-text bold desktopOnly"><span id="hello">Hi! ♥ </span></div> 
+<div class="arrows mobile">↓↓↓</div>
 <div>
   <label class="switch">
     <input type="checkbox">
@@ -31,7 +32,7 @@
   <hr>
 
   <div class="container">
-    <div class="Nav">
+    <div class="Nav desktopOnly">
         <div class="Projects">
     <div class="navHeader">CASE STUDIES</div>
     <div class="project">
@@ -117,7 +118,7 @@
   </div>
 
   <div>
-    <a href="playground.html"> <span class="navHeader" id="playground">PLAYGROUND</span></a>
+    <a href="/playground.html"> <span class="navHeader" id="playground">PLAYGROUND</span></a>
   </div>
 
   <div>
@@ -185,7 +186,7 @@
 	for(let i=0; i<allFiles.length; i++){
 		if(allFiles[i].includes(".mov")||allFiles[i].includes(".mp4")){
 			let vid = document.createElement("video");
-			vid.src="../assets/images//" + allFiles[i];
+			vid.src="/assets/images//" + allFiles[i];
 			vid.classList.add("media");
 			vid.classList.add("video");
 			vid.controls=false;
@@ -298,6 +299,6 @@ playPauseVideo();
 </script>
 
 
-  <script src="/assets/js/index.js"></script>
+  <script src="/assets/js/project.js"></script>
 </body>
 </html>

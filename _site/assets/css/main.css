@@ -1,13 +1,28 @@
+.mobile {
+  display: none;
+}
 :root {
     --my-variable: #14c420;
     --background-color: #121212;
     --text-color: whitesmoke;
+}
 
+[data-theme="dark"]{
+	--background-color: #f8f8f8;
+    --text-color: #121212;
 }
 
 html {
     cursor: url('/assets/images/custom-cursor.svg') 10 10, auto;
     font-size: 16px;
+}
+
+body{
+  padding: 10px;
+  font-family: 'abc_monument_grotesk_unliceRg';
+  background-color: var(--background-color);
+  color: var(--text-color);
+
 }
 
 a:hover, button {
@@ -19,20 +34,6 @@ a {
     text-decoration: none;
 }
 
-[data-theme="dark"]{
-	--background-color: #f8f8f8;
-    --text-color: #121212;
-}
-
-body{
-    padding: 10px;
-    font-family: 'abc_monument_grotesk_unliceRg';
-    background-color: var(--background-color);
-    color: var(--text-color);
-
-}
-
-
 hr {
     height: 1.75px;
     background-color: var(--my-variable);
@@ -41,17 +42,81 @@ hr {
     transition: .4s;
 }
 
+.italic {
+  font-size: 85%;
+  font-family: 'abc_monument_grotesk_unliRgIt';
+}
+.bold{
+  font-family: 'abc_monument_grotesk_unliceMd';
+}
+
+/* making img + videos full width */
+img {
+  width: 100%;
+}
+video {
+width: 100%;
+}
+
+/* Right Side Content CSS */
+.Content{
+  width:75%;
+  max-height: 90vh;
+  /* background-color: aqua; */
+  overflow-y: scroll;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+
+/*Header CSS*/
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 10;
+  padding-top: 5px;
+  background-color: var(--background-color);
+
+  font-size: 1.15em;
+}
+.header > div:nth-child(1){
+    width: 25%;
+}
+.header > div:nth-child(3){
+    padding-left: 0px;
+    width: 55%;
+}
+.header > div:nth-child(5){
+    text-align: right;
+}
 #hello {
     color: var(--my-variable);
     -webkit-transition: .4s;
     transition: .4s;
 }
-
-#background {
-    height: 60px;
-    width: 60px;
+.sticky {
+  position:sticky;
+  top: 0px;
 }
 
+
+/*Navigation CSS*/
+.Nav {
+  width:25%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* background-color:yellow; */
+}
+.container{
+  /* width:100vw; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 20px;
+}
 .navHeader{
   font-family: 'abc_monument_grotesk_unliceMd';
   color: var(--my-variable);
@@ -59,7 +124,14 @@ hr {
   margin-bottom: 3px;
   width: fit-content;
 }
-
+/*changing color playground text*/
+@keyframes rainbow-colors {
+  0% { color: hsl(0turn, 90%, 65%); }
+  25% { color: hsl(.25turn, 90%, 65%); }
+  50% { color: hsl(.5turn, 90%, 65%); }
+  75% { color: hsl(.75turn, 90%, 65%); }
+  100% { color: hsl(1turn, 90%, 65%); }
+}
 #playground {
   animation: rainbow-colors;
   -webkit-animation-duration: 3.5s;
@@ -69,7 +141,6 @@ hr {
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
 }
-
 .project, .awards {
     display: flex;
     flex-direction: row;
@@ -82,108 +153,95 @@ hr {
     margin-bottom: 5px;
     margin-left: 8px;  
 }
-
 .project div:nth-child(2) {
   text-align:right;
   opacity: 50%;
   text-transform: capitalize;
   
 }
-
 .awards div:nth-child(2) span {
   text-align: right;
   text-transform: capitalize;
 }
-
 .Projects a:link {
   text-decoration: none;
   color: var(--text-color);
 
 }
-
-.italic {
-  font-size: 85%;
-  font-family: 'abc_monument_grotesk_unliRgIt';
-}
-
 .Projects a:hover {
    text-decoration: underline;
    text-decoration-color: var(--my-variable);
   color: var(--my-variable);
-  }
-
-.container{
-    /* width:100vw; */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    column-gap: 20px;
 }
-
-.Nav {
-    width:25%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    /* background-color:yellow; */
-}
-
-img {
-    width: 100%;
-}
-
-video {
-  width: 100%;
-}
-
-
-.Content{
-    width:75%;
-    max-height: 90vh;
-    /* background-color: aqua; */
-    overflow-y: scroll;
-    /* display: flex;
-    flex-direction: column; */
-}
-
-.header {
+.contacts {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  z-index: 10;
-  padding-top: 5px;
-  background-color: var(--background-color);
+  flex-direction: column;
+  text-align: left;
+  transition: .4s;
+  margin-left: 10px;
+}
+.contacts a:hover {
+  color:var(--my-variable);
+  text-decoration: underline;
+  text-decoration-color: var(--my-variable);
 
-  font-size: 1.15em;
+}
+#headshot {
+  display: none;
+}
+#WHOAMI:hover + #headshot {
+  display: block;
+}
+#WHOAMI {
+  width: fit-content;
+}
+#WHOAMI:hover::after {
+	display: inline;
+	content: attr(data-hidden);
+	font-family: 'abc_monument_grotesk_unliLtIt';
+}
+a:hover > .awards div {
+  color:var(--my-variable);
+  text-decoration: underline;
+  text-decoration-color: var(--my-variable);
+}
+.bio p {
+  display: inline-block;
+  margin: 0;
+}
+@keyframes bouncingText {
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(-12px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+  
+  }
+.bio p:hover {
+  color: var(--my-variable);
+  animation: bouncingText .4s ease;
+
 }
 
-.header > div:nth-child(1){
-    width: 25%;
-}
-.header > div:nth-child(2){
-    padding-left: 30px;
-    width: 55%;
-}
 
-.header > div:nth-child(3){
-    width: 20%;
-    text-align: right;
-}
 
+/*dark/light mode switch CSS*/
 .switch {
     position: relative;
     display: inline-block;
     width: 40px;
     height: 24px;
-  }
-  
-  .switch input { 
+}  
+.switch input { 
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
-  .slider {
+}
+.slider {
     position: absolute;
     cursor: url('/assets/images/custom-cursor_hover.svg') 10 10, auto;
     top: 0;
@@ -194,9 +252,8 @@ video {
     opacity: 80%;
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  .slider:before {
+}  
+.slider:before {
     position: absolute;
     content: "";
     height: 16px;
@@ -206,42 +263,30 @@ video {
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  input:checked + .slider {
+}
+input:checked + .slider {
     background-color: var(--my-variable);
     opacity: 100%;
-  }
-  
-  input:focus + .slider {
+}
+input:focus + .slider {
     box-shadow: 0 0 1px var(--my-variable);
-  }
-  
-  input:checked + .slider:before {
+}  
+input:checked + .slider:before {
     -webkit-transform: translateX(16px);
     -ms-transform: translateX(16px);
     transform: translateX(16px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
+}
+/* Rounded sliders */
+.slider.round {
     border-radius: 34px;
-  }
-  
-  .slider.round:before {
+}
+.slider.round:before {
     border-radius: 50%;
-  }
+}
 
-  .sticky {
-    position:sticky;
-    top: 0px;
-  }
 
-  .bold{
-    font-family: 'abc_monument_grotesk_unliceMd';
-  }
 
-  .footer {
+.footer {
 
     display: flex;
     flex-direction: row;
@@ -251,19 +296,43 @@ video {
     align-items: end;
 
     word-break: break-all;
-  }
+}
+.codedBy {
+  font-size: 0.8em;
+}
 
-  /* Hide scrollbar for Chrome, Safari and Opera */
+/* nextBefore buttons CSS below project pages*/
+.projSwitch {
+  display: flex;
+  justify-content: space-between;
+
+  text-transform: uppercase;
+}
+.projSwitch a:hover {
+  color: var(--my-variable);
+  text-decoration: underline;
+  text-decoration-color: var(--my-variable);
+}
+.nextBefore {
+  background-color: var(--background-color);
+  position: sticky;
+  bottom: -1px;
+  padding-top: 5px;
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
 .example::-webkit-scrollbar {
     display: none;
   }
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .example {
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
 
+
+/* homepage previews CSS*/
 .previews {
     position: relative;
     top: 0;
@@ -271,7 +340,7 @@ video {
 }
 
 
-  
+/* nameScreen CSS*/ 
 .nameInput {
     position: absolute;
     z-index:20;
@@ -288,14 +357,12 @@ video {
 
 
 }
-
 .nameInput span:nth-child(3){
     font-family: 'abc_monument_grotesk_unliceMd';
     font-size: 1.1em;
     color: var(--my-variable);
     text-transform: uppercase;
 }
-
 .nameInput input[type=text] {
     margin: 10px;
     padding: 2px;
@@ -306,8 +373,7 @@ video {
 
     text-align: center;
 }
-
-
+/* enter bttn*/
 button {
     font-family: 'abc_monument_grotesk_unliceRg';
     padding: 4px;
@@ -317,16 +383,12 @@ button {
     text-transform: uppercase;
     border-radius: 8px;
 }
-
-.move-area{/*normally use body*/
+.move-area {/*normally use body*/
     width: 100vw;
     height: 100vh;
     padding: 10% 45%;
-  }
-  .container {
-    width: 100%;
-  }
-  .eye {
+}
+.eye {
     position: relative;
     display: inline-block;
     border-radius: 50%;
@@ -334,8 +396,8 @@ button {
     width: 30px;
     /* background: var(--text-color); */
     border: 3px solid var(--text-color);
-  }
-  .eye:after { /*pupil*/
+}
+.eye:after { /*pupil*/
     position: absolute;
     bottom: 17px;
     right: 10px;
@@ -344,9 +406,8 @@ button {
     background: var(--my-variable);
     border-radius: 50%;
     content: " ";
-  }
-
-  .half-circle {
+}
+.half-circle {
     width: 70px;
     height: 30px;
     background-color: none;
@@ -361,111 +422,3 @@ button {
     position: relative;
 }
 
-.active {
-  font-family: 'abc_monument_grotesk_unliceMd';
-  color: var(--my-variable);
-  transition: .4s;
-}
-
-.codedBy {
-  font-size: 0.8em;
-}
-
-.contacts {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  transition: .4s;
-  margin-left: 10px;
-}
-
-.contacts a:hover {
-  color:var(--my-variable);
-  text-decoration: underline;
-  text-decoration-color: var(--my-variable);
-
-}
-
-
-#picker {
-  display: flex;
-  flex-direction: column;
-}
-
-
-@keyframes rainbow-colors {
-  0% { color: hsl(0turn, 90%, 65%); }
-  25% { color: hsl(.25turn, 90%, 65%); }
-  50% { color: hsl(.5turn, 90%, 65%); }
-  75% { color: hsl(.75turn, 90%, 65%); }
-  100% { color: hsl(1turn, 90%, 65%); }
-}
-
-
-.projSwitch {
-  display: flex;
-  justify-content: space-between;
-
-  text-transform: uppercase;
-}
-
-.projSwitch a:hover {
-  color: var(--my-variable);
-  text-decoration: underline;
-  text-decoration-color: var(--my-variable);
-}
-
-.nextBefore {
-  background-color: var(--background-color);
-  position: sticky;
-  bottom: -1px;
-  padding-top: 5px;
-}
-
-#headshot {
-  display: none;
-}
-
-#WHOAMI:hover + #headshot {
-  display: block;
-}
-
-#WHOAMI {
-  width: fit-content;
-}
-
-a:hover > .awards div {
-  color:var(--my-variable);
-  text-decoration: underline;
-  text-decoration-color: var(--my-variable);
-}
-
-.bio p {
-  display: inline-block;
-  margin: 0;
-}
-
-.bio p:hover {
-  color: var(--my-variable);
-  animation: bouncingText .4s ease;
-
-}
-
-@keyframes bouncingText {
-  0%{
-    transform: translateY(0px);
-  }
-  50%{
-    transform: translateY(-12px);
-  }
-  100%{
-    transform: translateY(0px);
-  }
-  
-}
-
-#WHOAMI:hover::after {
-	display: inline;
-	content: attr(data-hidden);
-	font-family: 'abc_monument_grotesk_unliLtIt';
-}

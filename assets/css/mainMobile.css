@@ -1,6 +1,12 @@
-.mobile {
-  display: none;
+@media only screen and (max-width: 768px) {
+  .desktopOnly {
+  display: none !important;
 }
+
+.mobile {
+  display: inline;
+}
+
 :root {
     --my-variable: #14c420;
     --background-color: #121212;
@@ -14,7 +20,7 @@
 
 html {
     cursor: url('/assets/images/custom-cursor.svg') 10 10, auto;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 body{
@@ -60,13 +66,26 @@ width: 100%;
 
 /* Right Side Content CSS */
 .Content{
-  width:75%;
+  width:100%;
   max-height: 90vh;
   /* background-color: aqua; */
   overflow-y: scroll;
   /* display: flex;
   flex-direction: column; */
 }
+
+/* Mobile Preview Desc*/
+
+.previewDesc {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.previewDesc > span:nth-child(2){
+  opacity: 50%;
+}
+
 
 
 /*Header CSS*/
@@ -81,34 +100,54 @@ width: 100%;
   font-size: 1.15em;
 }
 .header > div:nth-child(1){
-    width: 25%;
+    width: 40%;
 }
-.header > div:nth-child(3){
+/* .header > div:nth-child(2){
+    width: 20%;
     padding-left: 0px;
-    width: 55%;
+} */
+
+.header > div:nth-child(4){
+  color: var(--my-variable);
+}
+.header > div:nth-child(4):hover {
+  cursor: url('/assets/images/custom-cursor_hover.svg') 10 10, auto;
+
 }
 .header > div:nth-child(5){
     text-align: right;
-}
-#hello {
-    color: var(--my-variable);
-    -webkit-transition: .4s;
-    transition: .4s;
+    width: fit-content;
 }
 .sticky {
   position:sticky;
   top: 0px;
 }
+.hamburger{
+  display: flex;
+  align-items: center;
+}
+.hamburger > button {
+  font-family: 'abc_monument_grotesk_unliceRg';
+  background-color: var(--my-variable);
+  color: var(--text-color);
+  transition: .4s;
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
 
 
 /*Navigation CSS*/
-.Nav {
-  width:25%;
-  display: flex;
+.navMobile {
+  display: none;
   flex-direction: column;
   gap: 20px;
   /* background-color:yellow; */
 }
+.show {
+  display: flex;
+}
+
 .container{
   /* width:100vw; */
   width: 100%;
@@ -117,6 +156,7 @@ width: 100%;
   justify-content: space-between;
   column-gap: 20px;
 }
+
 .navHeader{
   font-family: 'abc_monument_grotesk_unliceMd';
   color: var(--my-variable);
@@ -209,18 +249,6 @@ a:hover > .awards div {
   display: inline-block;
   margin: 0;
 }
-@keyframes bouncingText {
-  0%{
-    transform: translateY(0px);
-  }
-  50%{
-    transform: translateY(-12px);
-  }
-  100%{
-    transform: translateY(0px);
-  }
-  
-  }
 .bio p:hover {
   color: var(--my-variable);
   animation: bouncingText .4s ease;
@@ -420,5 +448,8 @@ button {
 
     bottom: 5px;
     position: relative;
+}
+
+
 }
 

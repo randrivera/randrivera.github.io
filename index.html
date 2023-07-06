@@ -9,11 +9,12 @@
 	<!-- Link to the relevant stylesheet -->
   <link href="assets/css/fonts.css" rel="stylesheet">
 	<link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/mainMobile.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="assets/images/rand_favicon.png">
 </head>
 
 <body>
-  <div class="nameInput">
+  <div class="nameInput desktopOnly">
       <div class='.container'>
         <div class='eye'></div>
         <div class='eye'></div>
@@ -30,21 +31,62 @@
   </div>
   <hr>
 
+
+  <div class="navMobile mobile">
+    {% include navigationMobile.html %}
+  </div>
+  
   <div class="container">
-    <div class="Nav">
+    <div class="Nav desktopOnly">
       {% include navigation.html %}
     </div> 
     <div class="Content">
       <div class="previews" id="target">
         <a href="/projects/typeoftoday.html"><img src="/assets/images/previews/homepage_previews-01.png"></a>
+        <div class="previewDesc mobile">
+          <span>Type of Today</span>
+          <span>Editorial Design</span>
+        </div>
         <a href="/projects/tide.html"><img src="/assets/images/previews/homepage_previews-02.gif"></a>
+        <div class="previewDesc mobile">
+          <span>TIDE</span>
+          <span>Web Design/Brand Identity</span>
+        </div>
         <a href="/projects/columbia-records-refresh.html"><img src="/assets/images/previews/homepage_previews-03.png"></a>
+        <div class="previewDesc mobile">
+          <span>Columbia Records Rebrand</span>
+          <span>Brand Identity</span>
+        </div>
         <a href="/projects/emoticon.html"><img src="/assets/images/previews/homepage_previews-04.png"></a>
+        <div class="previewDesc mobile">
+          <span>Emoticon</span>
+          <span>Brand Identity</span>
+        </div>
         <a href="/projects/soundboard.html"><img src="/assets/images/previews/homepage_previews-05.png"></a>
+        <div class="previewDesc mobile">
+          <span>Soundboard</span>
+          <span>Coding</span>
+        </div>
         <a href="/projects/talking-2-kewl-ppl.html"><img src="/assets/images/previews/homepage_previews-04.png"></a>
+        <div class="previewDesc mobile">
+          <span>Talking 2 Kewl PPL</span>
+          <span>Editorial Design</span>
+        </div>
         <a href="/projects/mitosis.html"><img src="/assets/images/previews/homepage_previews-05.png"></a>
+        <div class="previewDesc mobile">
+          <span>MITOSIS</span>
+          <span>Typeface Design</span>
+        </div>
         <a href="/projects/roadsign-americana.html"><img src="/assets/images/previews/homepage_previews-08.png"></a>
+        <div class="previewDesc mobile">
+          <span>Roadsign Americana</span>
+          <span>Typography/Coding</span>
+        </div>
         <a href="/projects/legacy.html"><img src="/assets/images/previews/homepage_previews-02.gif"></a>
+        <div class="previewDesc mobile">
+          <span>Legacy</span>
+          <span>Editorial/Brand Identity</span>
+        </div>
       </div>
     </div>
   </div>
