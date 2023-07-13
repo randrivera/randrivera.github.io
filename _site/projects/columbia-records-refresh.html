@@ -403,7 +403,7 @@ function preloadImage(img) {
 }
 
 function playPauseVideo() {
-    let videos = document.querySelectorAll("video");
+    let videos = document.querySelectorAll(".video");
     videos.forEach((video) => {
         // Play is a promise so we need to check we have it
         let playPromise = video.play();

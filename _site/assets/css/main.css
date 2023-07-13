@@ -317,6 +317,7 @@ input:checked + .slider:before {
 .projSwitch {
   display: flex;
   justify-content: space-between;
+
   text-transform: uppercase;
 }
 .projSwitch a:hover {
