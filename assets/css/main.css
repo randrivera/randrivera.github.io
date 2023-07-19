@@ -11,6 +11,12 @@
 	--background-color: #f8f8f8;
     --text-color: #121212;
 }
+canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+}
 
 html {
     cursor: url('/assets/images/custom-cursor.svg') 10 10, auto;
@@ -389,11 +395,13 @@ input:checked + .slider:before {
 /* enter bttn*/
 button {
     font-family: 'abc_monument_grotesk_unliceRg';
+    font-size: 1.1em;
     padding: 4px;
-    background-color: var(--text-color);
-    color: var(--background-color);
+    background-color: var(--background-color);
+    color: var(--my-variable);
     border: none;
     text-transform: uppercase;
+    text-decoration: underline;
     border-radius: 8px;
 }
 .move-area {/*normally use body*/
