@@ -27,7 +27,24 @@ if (mediaQuery.matches){
     setTimeout(function()
       {nameInput.style.display = "none";
       }, 1000);
-  })
+  });
+  function search(ele) {
+    if(event.key === 'Enter') {
+        //grab value from text input
+    let txt = document.querySelector("#collectName").value
+    //store value for userName
+    sessionStorage.setItem("userName", txt);
+
+    //change hello message name to have userName
+    hello.innerHTML = "Hi " + sessionStorage.getItem("userName") + "! ♥";
+
+    //hide nameScreen then display:none it afterwards so it does not interfere with other interactions
+    nameInput.style.opacity = "0";
+    setTimeout(function()
+      {nameInput.style.display = "none";
+      }, 1000);
+    }
+};
 
   //checks if a name is already stored and prevents the name popup if so
   function checkStorage(){
