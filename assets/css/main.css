@@ -139,8 +139,9 @@ width: 100%;
   font-family: 'abc_monument_grotesk_unliceMd';
   color: var(--my-variable);
   transition: .4s;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
   width: fit-content;
+  border-bottom: 1.5px solid var(--my-variable);
 }
 /*changing color playground text*/
 @keyframes rainbow-colors {
