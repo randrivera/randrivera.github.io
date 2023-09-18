@@ -144,8 +144,15 @@ const defaults = {
   ticks: 30,
   gravity: 0,
   decay: 0.99,
-  startVelocity: 50,
-  shapes: ["star"],
+  startVelocity: 30,
+  shapes: ["square"],
+  move: {
+    "direction": "bottom",
+      "enable": true,
+      "outModes": {
+        "default": "out"
+    }
+  }
 };
 
 //on hover, make fireworks!
@@ -155,17 +162,9 @@ const defaults = {
   confetti({
     ...defaults,
     colors: sessionStorage.getItem("userColor"),
-    particleCount: 20,
+    particleCount: 50,
     scalar: 1.2,
-    shapes: ["star"],
-  });
-
-  confetti({
-    ...defaults,
-    colors: sessionStorage.getItem("userColor"),
-    particleCount: 10,
-    scalar: 0.75,
-    shapes: ["circle"],
+    // shapes: ["star"],
   });
   })
 });
@@ -179,11 +178,11 @@ arrows.addEventListener("click", function(){
 
   if (amIOn == false){
   navMobile.classList.add("show");
-  arrows.innerHTML="↑↑↑";
+  arrows.innerHTML="+";
   amIOn = true;
   } else if (amIOn == true){
   navMobile.classList.remove("show");
-  arrows.innerHTML="↓↓↓";
+  arrows.innerHTML="+";
   amIOn = false;
   }
   console.log(amIOn);
@@ -195,115 +194,115 @@ let backgroundColour = "#121212";
 let pupilColor = getComputedStyle(document.documentElement).getPropertyValue('--my-variable');
 console.log(pupilColor);
 
-function setup() {
-  createCanvas(windowWidth, windowHeight);
+// function setup() {
+//   createCanvas(windowWidth, windowHeight);
   
-  for(var i = 0; i < windowWidth/100 ; i++){
-    for(var y = 0; y < windowHeight/100 ; y++){
-      faces.push(new Face(i*150 + 90, y*150 + 90))
-    }
-  }
+//   for(var i = 0; i < windowWidth/100 ; i++){
+//     for(var y = 0; y < windowHeight/100 ; y++){
+//       faces.push(new Face(i*150 + 90, y*150 + 90))
+//     }
+//   }
   
-}
+// }
 
-function draw() {
-  background(backgroundColour);
-  faces.forEach(face => {
-    face.draw()
-  })
+// function draw() {
+//   background(backgroundColour);
+//   faces.forEach(face => {
+//     face.draw()
+//   })
   
-}
+// }
 
-function Face(x,y){
-  this.x = x;
-  this.y = y;
-  this.blinkPause = random(500,4000)
-  this.rightEye = new Eye(this.x + 20, y, this.blinkPause)
-  this.leftEye = new Eye(this.x- 20, y, this.blinkPause)
-  this.draw = function(){
-    this.rightEye.draw()
-    this.rightEye.blink()
-    this.leftEye.draw()
-    this.leftEye.blink()
+// function Face(x,y){
+//   this.x = x;
+//   this.y = y;
+//   this.blinkPause = random(500,4000)
+//   this.rightEye = new Eye(this.x + 20, y, this.blinkPause)
+//   this.leftEye = new Eye(this.x- 20, y, this.blinkPause)
+//   this.draw = function(){
+//     this.rightEye.draw()
+//     this.rightEye.blink()
+//     this.leftEye.draw()
+//     this.leftEye.blink()
     
-  }
-}
+//   }
+// }
 
 
-function Eye(x,y, binkPause){
-  this.x = x;
-  this.y = y;
-  this.d = 35; // diameter of circle
-  this.topLidY = this.y
-  this.dy = 1;
-  this.distance = 0;
-  this.angle = 0;
-  this.blinkPause = 0 // duration till next bink
-  this.topLidYOrigin = this.y // original position before animation
-  this.bottomLidY = this.y - this.d
-  this.blink = function() {
+// function Eye(x,y, binkPause){
+//   this.x = x;
+//   this.y = y;
+//   this.d = 35; // diameter of circle
+//   this.topLidY = this.y
+//   this.dy = 1;
+//   this.distance = 0;
+//   this.angle = 0;
+//   this.blinkPause = 0 // duration till next bink
+//   this.topLidYOrigin = this.y // original position before animation
+//   this.bottomLidY = this.y - this.d
+//   this.blink = function() {
     
-    // decrement blink pause duration
-    if(this.blinkPause > 0){
-      this.blinkPause -= 1
-      // return function to exit function early
-      return
-    }
+//     // decrement blink pause duration
+//     if(this.blinkPause > 0){
+//       this.blinkPause -= 1
+//       // return function to exit function early
+//       return
+//     }
     
       
-    if(this.topLidY >= this.topLidYOrigin + this.d /2 ){
-      this.blinkPause = binkPause
-      this.dy = -this.dy
-    }else if(this.topLidY < this.topLidYOrigin){
-      this.dy = -this.dy
-    }
+//     if(this.topLidY >= this.topLidYOrigin + this.d /2 ){
+//       this.blinkPause = binkPause
+//       this.dy = -this.dy
+//     }else if(this.topLidY < this.topLidYOrigin){
+//       this.dy = -this.dy
+//     }
     
-    // animate eyelids
-    this.topLidY += this.dy
-    this.bottomLidY -= this.dy;
-  },
+//     // animate eyelids
+//     this.topLidY += this.dy
+//     this.bottomLidY -= this.dy;
+//   },
     
-  this.draw = function(){
-    // eye ball
-    noStroke()
-    fill("white")
-    circle(this.x,this.y, this.d)
+//   this.draw = function(){
+//     // eye ball
+//     noStroke()
+//     fill("white")
+//     circle(this.x,this.y, this.d)
     
-    // pupil
-    push();
-    fill(pupilColor)
-    // distance from mouse to eyeball center
-    this.distance =   constrain(int(dist(this.x,this.y,mouseX,mouseY)), 0, 500)
-    // map distance value from mouse position over eyeball radius
-    this.eyePos = map(this.d /3 , 0,500,0,this.distance)
-    this.angle = atan2(mouseY - this.y, mouseX - this.x);
-    translate(this.x, this.y);
-    rotate(this.angle);
-    // circle( distance from eye center, offset from angle, circe diameter)
-    circle(this.eyePos, 0, this.d / 2.5);
-    pop();
+//     // pupil
+//     push();
+//     fill(pupilColor)
+//     // distance from mouse to eyeball center
+//     this.distance =   constrain(int(dist(this.x,this.y,mouseX,mouseY)), 0, 500)
+//     // map distance value from mouse position over eyeball radius
+//     this.eyePos = map(this.d /3 , 0,500,0,this.distance)
+//     this.angle = atan2(mouseY - this.y, mouseX - this.x);
+//     translate(this.x, this.y);
+//     rotate(this.angle);
+//     // circle( distance from eye center, offset from angle, circe diameter)
+//     circle(this.eyePos, 0, this.d / 2.5);
+//     pop();
   
-    // eye lids
-    fill(backgroundColour)
-    // stroke("red") // for debugging
-    rect(this.x - this.d/2, this.topLidY,  this.d, this.d)
-    rect(this.x - this.d/2, this.bottomLidY,  this.d, this.d)
+//     // eye lids
+//     fill(backgroundColour)
+//     // stroke("red") // for debugging
+//     rect(this.x - this.d/2, this.topLidY,  this.d, this.d)
+//     rect(this.x - this.d/2, this.bottomLidY,  this.d, this.d)
    
-    // eyeliner
-    noFill()
-    strokeWeight(3)
-    stroke("black")
-    circle(this.x,this.y, this.d)
-  }
-}
+//     // eyeliner
+//     noFill()
+//     strokeWeight(3)
+//     stroke("black")
+//     circle(this.x,this.y, this.d)
+//   }
+// }
   
-  function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
+//   function windowResized() {
+//   resizeCanvas(windowWidth, windowHeight);
+// }
   
-  function updatePupil() {
-    pupilColor = sessionStorage.getItem("userColor");
-  }
+//   function updatePupil() {
+//     pupilColor = sessionStorage.getItem("userColor");
+//   }
 
 
 
