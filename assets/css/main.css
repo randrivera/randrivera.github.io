@@ -22,10 +22,16 @@ html {
     cursor: url('/assets/images/custom-cursor.svg') 10 10, auto;
     font-size: 16px;
 }
+/* 
+hr {
+  border: 0.05px solid red !important;
+} */
 
 body{
   padding: 10px;
-  font-family: 'abc_monument_grotesk_unliceRg';
+  font-family: 'GT Planar';
+  font-weight: 300;
+  font-style: normal;
   background-color: var(--background-color);
   color: var(--text-color);
 
@@ -46,14 +52,20 @@ hr {
     border: none;
     -webkit-transition: .4s;
     transition: .4s;
+    margin-top: 0px;
+
 }
 
 .italic {
   font-size: 85%;
-  font-family: 'abc_monument_grotesk_unliRgIt';
+  font-family: 'GT Planar';
+  font-weight: normal;
+  font-style: italic;
 }
 .bold{
-  font-family: 'abc_monument_grotesk_unliceMd';
+  font-family: 'GT Planar';
+  font-weight: 500;
+  font-style: normal;
 }
 
 /* making img + videos full width */
@@ -66,7 +78,7 @@ width: 100%;
 
 /* Right Side Content CSS */
 .Content{
-  width:75%;
+  width:65%;
   max-height: 90vh;
   /* background-color: aqua; */
   overflow-y: scroll;
@@ -81,17 +93,18 @@ width: 100%;
   flex-direction: row;
   justify-content: space-between;
   z-index: 10;
+  margin-bottom: 10px;
   padding-top: 5px;
   background-color: var(--background-color);
 
   font-size: 1.15em;
 }
 .header > div:nth-child(1){
-    width: 25%;
+    width: 35%;
     align-self: center;
 }
 .header > div:nth-child(2){
-  width: 75%;
+  width: 65%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -121,7 +134,7 @@ width: 100%;
 
 /*Navigation CSS*/
 .Nav {
-  width:25%;
+  width:35%;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -136,12 +149,15 @@ width: 100%;
   column-gap: 20px;
 }
 .navHeader{
-  font-family: 'abc_monument_grotesk_unliceMd';
+  font-family: 'GT Planar';
+  font-weight: normal !important;
+  font-style: normal;
   color: var(--my-variable);
   transition: .4s;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  padding-bottom: 3px;
   width: fit-content;
-  border-bottom: 1.5px solid var(--my-variable);
+  border-bottom: 1.75px solid var(--my-variable);
 }
 /*changing color playground text*/
 @keyframes rainbow-colors {
@@ -160,6 +176,20 @@ width: 100%;
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
 }
+
+.project {
+  margin-top: 10px;
+  margin-bottom: 10px !important;
+  font-weight: normal;
+}
+
+
+.project:nth-child(1) {
+  margin-top: 0px;
+
+
+}
+
 .project, .awards {
     display: flex;
     flex-direction: row;
@@ -170,7 +200,7 @@ width: 100%;
     word-break: break-all; 
 
     margin-bottom: 5px;
-    margin-left: 8px;  
+    /* margin-left: 8px;   */
 }
 .project div:nth-child(2) {
   text-align:right;
@@ -188,8 +218,8 @@ width: 100%;
 
 }
 .Projects a:hover {
-   text-decoration: underline;
-   text-decoration-color: var(--my-variable);
+   /* text-decoration: underline;
+   text-decoration-color: var(--my-variable); */
   color: var(--my-variable);
 }
 .contacts {
@@ -201,8 +231,8 @@ width: 100%;
 }
 .contacts a:hover {
   color:var(--my-variable);
-  text-decoration: underline;
-  text-decoration-color: var(--my-variable);
+  /* text-decoration: underline;
+  text-decoration-color: var(--my-variable); */
 
 }
 #headshot {
@@ -217,12 +247,14 @@ width: 100%;
 #WHOAMI:hover::after {
 	display: inline;
 	content: attr(data-hidden);
-	font-family: 'abc_monument_grotesk_unliLtIt';
+  font-family: 'GT Planar';
+  font-weight: normal;
+  font-style: italic;
 }
 a:hover > .awards div {
   color:var(--my-variable);
-  text-decoration: underline;
-  text-decoration-color: var(--my-variable);
+  /* text-decoration: underline;
+  text-decoration-color: var(--my-variable); */
 }
 .bio p {
   display: inline-block;
@@ -329,8 +361,8 @@ input:checked + .slider:before {
 }
 .projSwitch a:hover {
   color: var(--my-variable);
-  text-decoration: underline;
-  text-decoration-color: var(--my-variable);
+  /* text-decoration: underline;
+  text-decoration-color: var(--my-variable); */
 }
 .nextBefore {
   background-color: var(--background-color);
@@ -378,7 +410,9 @@ input:checked + .slider:before {
 
 }
 .nameInput span:nth-child(3){
-    font-family: 'abc_monument_grotesk_unliceMd';
+    font-family: 'GT Planar';
+    font-weight: 500;
+    font-style: normal;
     font-size: 1.1em;
     color: var(--my-variable);
     text-transform: uppercase;
@@ -395,8 +429,10 @@ input:checked + .slider:before {
 }
 /* enter bttn*/
 button {
-    font-family: 'abc_monument_grotesk_unliceRg';
-    font-size: 1.1em;
+  font-family: 'GT Planar';
+  font-weight: normal;
+  font-style: normal;    
+  font-size: 1.1em;
     padding: 4px;
     background-color: var(--background-color);
     color: var(--my-variable);

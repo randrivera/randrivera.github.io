@@ -1,3 +1,5 @@
+
+
 .projInfo {
     display: flex;
     flex-direction: row;
@@ -12,7 +14,9 @@
 }
 
 .projBio, .projOther > span:nth-child(3) {
-    font-family: 'abc_monument_grotesk_unliceLt';
+    font-family: 'GT Planar';
+    font-weight: 300;
+    font-style: normal;
     letter-spacing: 0.01em;
     line-height: 1.6em;
 }

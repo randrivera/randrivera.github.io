@@ -66,8 +66,15 @@ const defaults = {
   ticks: 30,
   gravity: 0,
   decay: 0.99,
-  startVelocity: 50,
-  shapes: ["star"],
+  startVelocity: 30,
+  shapes: ["square"],
+  move: {
+    "direction": "bottom",
+      "enable": true,
+      "outModes": {
+        "default": "out"
+    }
+  }
 };
 
 //on hover, make fireworks!
@@ -77,17 +84,9 @@ const defaults = {
   confetti({
     ...defaults,
     colors: sessionStorage.getItem("userColor"),
-    particleCount: 20,
+    particleCount: 50,
     scalar: 1.2,
-    shapes: ["star"],
-  });
-
-  confetti({
-    ...defaults,
-    colors: sessionStorage.getItem("userColor"),
-    particleCount: 10,
-    scalar: 0.75,
-    shapes: ["circle"],
+    // shapes: ["star"],
   });
   })
 });
