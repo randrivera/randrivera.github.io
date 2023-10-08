@@ -100,14 +100,52 @@ arrows.addEventListener("click", function(){
 
   if (amIOn == false){
   navMobile.classList.add("show");
-  arrows.innerHTML="↑↑↑";
+  arrows.innerHTML="–";
   amIOn = true;
   } else if (amIOn == true){
   navMobile.classList.remove("show");
-  arrows.innerHTML="↓↓↓";
+  arrows.innerHTML="+";
   amIOn = false;
   }
   console.log(amIOn);
+})
+
+let amIOnDesktop = false;
+let morePlus = document.querySelector(".moreContent");
+
+
+morePlus.addEventListener("click", function(){
+  let extraContent = document.querySelector(".hiddenDIV");
+
+  if (amIOnDesktop == false){
+  extraContent.classList.add("show");
+  morePlus.innerHTML="–";
+  amIOnDesktop = true;
+  } else if (amIOnDesktop == true){
+  extraContent.classList.remove("show");
+  morePlus.innerHTML="+";
+  amIOnDesktop = false;
+  }
+  console.log(amIOnDesktop); 
+});
+
+let amIOnProject = false;
+let projMore = document.querySelector(".projMore");
+
+
+projMore.addEventListener("click", function(){
+  let projCredits = document.querySelector(".projCredits");
+
+  if (amIOnProject == false){
+  projCredits.classList.add("show");
+  projMore.innerHTML="–";
+  amIOnProject = true;
+  } else if (amIOnProject == true){
+  projCredits.classList.remove("show");
+  projMore.innerHTML="+";
+  amIOnProject = false;
+  }
+  console.log(amIOnProject); 
 })
 
 

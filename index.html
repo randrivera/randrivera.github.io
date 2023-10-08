@@ -13,7 +13,7 @@
   <link rel="icon" type="image/x-icon" href="assets/images/rand_favicon.png">
 </head>
 
-<body data-barba="wrapper">
+<body class="noScrollBar">
   <div class="nameInput desktopOnly">
     <span>HI FRIEND!</span>
     <span> what's your name?</span>
@@ -37,10 +37,10 @@
     <div class="Nav desktopOnly">
       {% include navigation.html %}
     </div> 
-    <main class="Content" data-barba="container" data-barba-namespace="home">
+    <main class="Content noScrollBar">
       <div class="previews" id="target">
         <a href="/projects/typeoftoday.html">
-            <img src="/assets/images/previews/homepage_previews-01.png">
+            <img src="/assets/images/previews/tot.png">
         </a>
         <div class="previewDesc mobile">
           <span>Type of Today</span>
@@ -56,22 +56,27 @@
           <span>Columbia Records Rebrand</span>
           <span>Brand Identity</span>
         </div>
-        <a href="/projects/emoticon.html"><img src="/assets/images/previews/homepage_previews-04.png"></a>
+        <a href="/projects/burnt.html"><img src="/assets/images/previews/burnt.jpeg"></a>
+        <div class="previewDesc mobile">
+          <span>BURNT</span>
+          <span>Brand Identity</span>
+        </div>
+        <!-- <a href="/projects/emoticon.html"><img src="/assets/images/previews/homepage_previews-04.png"></a>
         <div class="previewDesc mobile">
           <span>Emoticon</span>
           <span>Brand Identity</span>
-        </div>
-        <a href="/projects/soundboard.html"><img src="/assets/images/previews/homepage_previews-05.png"></a>
+        </div> -->
+        <a href="/projects/soundboard.html"><img src="/assets/images/previews/canal-issue-2.gif"></a>
         <div class="previewDesc mobile">
-          <span>Soundboard</span>
-          <span>Coding</span>
+          <span>CANAL Issue 2</span>
+          <span>Magazine</span>
         </div>
-        <a href="/projects/talking-2-kewl-ppl.html"><img src="/assets/images/previews/homepage_previews-04.png"></a>
+        <a href="/projects/talking-2-kewl-ppl.html"><img src="/assets/images/previews/kewl-ppl.png"></a>
         <div class="previewDesc mobile">
           <span>Talking 2 Kewl PPL</span>
           <span>Editorial Design</span>
         </div>
-        <a href="/projects/mitosis.html"><img src="/assets/images/previews/homepage_previews-05.png"></a>
+        <!-- <a href="/projects/mitosis.html"><img src="/assets/images/previews/homepage_previews-05.png"></a>
         <div class="previewDesc mobile">
           <span>MITOSIS</span>
           <span>Typeface Design</span>
@@ -80,12 +85,12 @@
         <div class="previewDesc mobile">
           <span>Roadsign Americana</span>
           <span>Typography/Coding</span>
-        </div>
-        <a href="/projects/legacy.html"><img src="/assets/images/previews/homepage_previews-02.gif"></a>
+        </div> -->
+        <!-- <a href="/projects/legacy.html"><img src="/assets/images/previews/homepage_previews-02.gif"></a>
         <div class="previewDesc mobile">
           <span>Legacy</span>
           <span>Editorial/Brand Identity</span>
-        </div>
+        </div> -->
       </div>
     </main>
   </div>
@@ -98,8 +103,6 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
   <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script> -->
-  <script type= "module" src="assets/js/app.js"></script>
   <script src="assets/js/index.js"></script>
 </body>
 </html>

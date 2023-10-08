@@ -34,14 +34,22 @@
             <hr class="desktopOnly">
             {{page.projTitle}}
           </div>
-          <div class="projAwards">
+          <div class="projAwards desktopOnly">
             <img style="width:100%" src={{page.projAwards}}>
           </div>
         </div>
 
-        <div class="projBio">
-          <hr class="desktopOnly">
-          {{page.projBio}}
+        <div class="projRightColumn">
+          <div class="projBio">
+            <hr class="desktopOnly">
+            {{page.projBio}}
+          </div>
+          <div class="projCredits">
+            {{page.projCredits}}
+          </div>
+          <div class="projMore" style="font-size: 1.5em;">
+            +
+          </div>
         </div>
       </div>
       <br>
@@ -68,7 +76,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
   <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
-  <script src="/assets/js/app.js"></script>
   <script src="/assets/js/project.js"></script>
 </body>
 </html>
