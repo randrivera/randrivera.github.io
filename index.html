@@ -13,7 +13,7 @@
   <link rel="icon" type="image/x-icon" href="assets/images/rand_favicon.png">
 </head>
 
-<body>
+<body data-barba="wrapper">
   <div class="nameInput desktopOnly">
     <span>HI FRIEND!</span>
     <span> what's your name?</span>
@@ -37,9 +37,11 @@
     <div class="Nav desktopOnly">
       {% include navigation.html %}
     </div> 
-    <div class="Content">
+    <main class="Content" data-barba="container" data-barba-namespace="home">
       <div class="previews" id="target">
-        <a href="/projects/typeoftoday.html"><img src="/assets/images/previews/homepage_previews-01.png"></a>
+        <a href="/projects/typeoftoday.html">
+            <img src="/assets/images/previews/homepage_previews-01.png">
+        </a>
         <div class="previewDesc mobile">
           <span>Type of Today</span>
           <span>Editorial Design</span>
@@ -85,7 +87,7 @@
           <span>Editorial/Brand Identity</span>
         </div>
       </div>
-    </div>
+    </main>
   </div>
 
   
@@ -96,6 +98,8 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
   <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
-  <script src="/assets/js/index.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script> -->
+  <script type= "module" src="assets/js/app.js"></script>
+  <script src="assets/js/index.js"></script>
 </body>
 </html>

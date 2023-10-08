@@ -120,7 +120,7 @@
 
 @font-face {
     font-family: 'abc_monument_grotesk_unliceRg';
-    src: url('/assets/fonts/abcmonumentgrotesk-regular-trial-webfont.woff2') format('woff2'),
+    src: url('≈abcmonumentgrotesk-regular-trial-webfont.woff2') format('woff2'),
          url('/assets/fonts/abcmonumentgrotesk-regular-trial-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -140,8 +140,8 @@
 
 @font-face {
     font-family: 'GT Planar';
-    src: url('GTPlanar-Italic15Black.woff2') format('woff2'),
-        url('GTPlanar-Italic15Black.woff') format('woff');
+    src: url('/assets/fonts/GTPlanar-Italic15Black.woff2') format('woff2'),
+        url('/assets/fonts/GTPlanar-Italic15Black.woff') format('woff');
     font-weight: 900;
     font-style: italic;
     font-display: swap;
@@ -149,8 +149,8 @@
 
 @font-face {
     font-family: 'GT Planar';
-    src: url('GTPlanar-Black.woff2') format('woff2'),
-        url('GTPlanar-Black.woff') format('woff');
+    src: url('/assets/fonts/GTPlanar-Black.woff2') format('woff2'),
+        url('/assets/fonts/GTPlanar-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -158,8 +158,8 @@
 
 @font-face {
     font-family: 'GT Planar';
-    src: url('GTPlanar-Italic15Bold.woff2') format('woff2'),
-        url('GTPlanar-Italic15Bold.woff') format('woff');
+    src: url('/assets/fonts/GTPlanar-Italic15Bold.woff2') format('woff2'),
+        url('/assets/fonts/GTPlanar-Italic15Bold.woff') format('woff');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -167,8 +167,8 @@
 
 @font-face {
     font-family: 'GT Planar';
-    src: url('GTPlanar-Italic15Medium.woff2') format('woff2'),
-        url('GTPlanar-Italic15Medium.woff') format('woff');
+    src: url('/assets/fonts/GTPlanar-Italic15Medium.woff2') format('woff2'),
+        url('/assets/fonts/GTPlanar-Italic15Medium.woff') format('woff');
     font-weight: 500;
     font-style: italic;
     font-display: swap;
@@ -176,8 +176,8 @@
 
 @font-face {
     font-family: 'GT Planar';
-    src: url('GTPlanar-Italic15Regular.woff2') format('woff2'),
-        url('GTPlanar-Italic15Regular.woff') format('woff');
+    src: url('/assets/fonts/GTPlanar-Italic15Regular.woff2') format('woff2'),
+        url('/assets/fonts/GTPlanar-Italic15Regular.woff') format('woff');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -185,8 +185,8 @@
 
 @font-face {
     font-family: 'GT Planar';
-    src: url('GTPlanar-Italic15Thin.woff2') format('woff2'),
-        url('GTPlanar-Italic15Thin.woff') format('woff');
+    src: url('/assets/fonts/GTPlanar-Italic15Thin.woff2') format('woff2'),
+        url('/assets/fonts/GTPlanar-Italic15Thin.woff') format('woff');
     font-weight: 100;
     font-style: italic;
     font-display: swap;
@@ -194,8 +194,8 @@
 
 @font-face {
     font-family: 'GT Planar';
-    src: url('GTPlanar-Italic15Light.woff2') format('woff2'),
-        url('GTPlanar-Italic15Light.woff') format('woff');
+    src: url('/assets/fonts/GTPlanar-Italic15Light.woff2') format('woff2'),
+        url('/assets/fonts/GTPlanar-Italic15Light.woff') format('woff');
     font-weight: 300;
     font-style: italic;
     font-display: swap;
@@ -203,8 +203,8 @@
 
 @font-face {
     font-family: 'GT Planar';
-    src: url('GTPlanar-Light.woff2') format('woff2'),
-        url('GTPlanar-Light.woff') format('woff');
+    src: url('/assets/fonts/GTPlanar-Light.woff2') format('woff2'),
+        url('/assets/fonts/GTPlanar-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -212,8 +212,8 @@
 
 @font-face {
     font-family: 'GT Planar Retalic 15';
-    src: url('GTPlanar-Retalic15Black.woff2') format('woff2'),
-        url('GTPlanar-Retalic15Black.woff') format('woff');
+    src: url('/assets/fonts/GTPlanar-Retalic15Black.woff2') format('woff2'),
+        url('/assets/fonts/GTPlanar-Retalic15Black.woff') format('woff');
     font-weight: 900;
     font-style: italic;
     font-display: swap;
@@ -221,8 +221,8 @@
 
 @font-face {
     font-family: 'GT Planar';
-    src: url('GTPlanar-Medium.woff2') format('woff2'),
-        url('GTPlanar-Medium.woff') format('woff');
+    src: url('/assets/fonts/GTPlanar-Medium.woff2') format('woff2'),
+        url('/assets/fonts/GTPlanar-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -230,8 +230,8 @@
 
 @font-face {
     font-family: 'GT Planar';
-    src: url('GTPlanar-Regular.woff2') format('woff2'),
-        url('GTPlanar-Regular.woff') format('woff');
+    src: url('/assets/fonts/GTPlanar-Regular.woff2') format('woff2'),
+        url('/assets/fonts/GTPlanar-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -239,8 +239,8 @@
 
 @font-face {
     font-family: 'GT Planar Retalic 15';
-    src: url('GTPlanar-Retalic15Bold.woff2') format('woff2'),
-        url('GTPlanar-Retalic15Bold.woff') format('woff');
+    src: url('/assets/fonts/GTPlanar-Retalic15Bold.woff2') format('woff2'),
+        url('/assets/fonts/GTPlanar-Retalic15Bold.woff') format('woff');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -248,8 +248,8 @@
 
 @font-face {
     font-family: 'GT Planar Retalic 15';
-    src: url('GTPlanar-Retalic15Light.woff2') format('woff2'),
-        url('GTPlanar-Retalic15Light.woff') format('woff');
+    src: url('/assets/fonts/GTPlanar-Retalic15Light.woff2') format('woff2'),
+        url('/assets/fonts/GTPlanar-Retalic15Light.woff') format('woff');
     font-weight: 300;
     font-style: italic;
     font-display: swap;
@@ -257,8 +257,8 @@
 
 @font-face {
     font-family: 'GT Planar Retalic 15';
-    src: url('GTPlanar-Retalic15Regular.woff2') format('woff2'),
-        url('GTPlanar-Retalic15Regular.woff') format('woff');
+    src: url('/assets/fonts/GTPlanar-Retalic15Regular.woff2') format('woff2'),
+        url('/assets/fonts/GTPlanar-Retalic15Regular.woff') format('woff');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -266,8 +266,8 @@
 
 @font-face {
     font-family: 'GT Planar Retalic 15';
-    src: url('GTPlanar-Retalic15Medium.woff2') format('woff2'),
-        url('GTPlanar-Retalic15Medium.woff') format('woff');
+    src: url('/assets/fonts/GTPlanar-Retalic15Medium.woff2') format('woff2'),
+        url('/assets/fonts/GTPlanar-Retalic15Medium.woff') format('woff');
     font-weight: 500;
     font-style: italic;
     font-display: swap;
@@ -275,8 +275,8 @@
 
 @font-face {
     font-family: 'GT Planar Retalic 15';
-    src: url('GTPlanar-Retalic15Thin.woff2') format('woff2'),
-        url('GTPlanar-Retalic15Thin.woff') format('woff');
+    src: url('/assets/fonts/GTPlanar-Retalic15Thin.woff2') format('woff2'),
+        url('/assets/fonts/GTPlanar-Retalic15Thin.woff') format('woff');
     font-weight: 100;
     font-style: italic;
     font-display: swap;
@@ -284,8 +284,8 @@
 
 @font-face {
     font-family: 'GT Planar';
-    src: url('GTPlanar-Thin.woff2') format('woff2'),
-        url('GTPlanar-Thin.woff') format('woff');
+    src: url('/assets/fonts/GTPlanar-Thin.woff2') format('woff2'),
+        url('/assets/fonts/GTPlanar-Thin.woff') format('woff');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
@@ -293,8 +293,8 @@
 
 @font-face {
     font-family: 'GT Planar';
-    src: url('GTPlanar-Bold.woff2') format('woff2'),
-        url('GTPlanar-Bold.woff') format('woff');
+    src: url('/assets/fonts/GTPlanar-Bold.woff2') format('woff2'),
+        url('/assets/fonts/GTPlanar-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;

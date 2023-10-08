@@ -1,3 +1,14 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+.noScrollBar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.noScrollBar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 .mobile {
   display: none;
 }
@@ -480,3 +491,15 @@ button {
     position: relative;
 }
 
+.hiddenDIV {
+  display: none
+}
+
+.show {
+  display: block !important;
+}
+
+.moreContent:hover {
+  color: var(--my-variable);
+  cursor: url('/assets/images/custom-cursor_hover.svg') 10 10, auto;
+}

@@ -1,4 +1,3 @@
-
 //nameScreen
 let nameInput = document.querySelector(".nameInput");
 //enter button
@@ -76,7 +75,7 @@ document.addEventListener("click", function(){
     sessionStorage.setItem("userColor", "#"+randomColor);
     //make the variable color the stored color
     r.style.setProperty('--my-variable', sessionStorage.getItem("userColor"));
-    updatePupil();
+    // updatePupil();
   });
 
 //dark + light mode code
@@ -188,11 +187,24 @@ arrows.addEventListener("click", function(){
   console.log(amIOn);
 })
 
-let faces =[]
-// colour of background and canvas
-let backgroundColour = "#121212";
-let pupilColor = getComputedStyle(document.documentElement).getPropertyValue('--my-variable');
-console.log(pupilColor);
+let amIOnDesktop = false;
+let morePlus = document.querySelector(".moreContent");
+
+
+morePlus.addEventListener("click", function(){
+  let extraContent = document.querySelector(".hiddenDIV");
+
+  if (amIOnDesktop == false){
+  extraContent.classList.add("show");
+  morePlus.innerHTML="–";
+  amIOnDesktop = true;
+  } else if (amIOnDesktop == true){
+  extraContent.classList.remove("show");
+  morePlus.innerHTML="+";
+  amIOnDesktop = false;
+  }
+  console.log(amIOnDesktop); 
+})
 
 // function setup() {
 //   createCanvas(windowWidth, windowHeight);

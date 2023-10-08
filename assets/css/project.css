@@ -1,5 +1,3 @@
-
-
 .projInfo {
     display: flex;
     flex-direction: row;
@@ -23,6 +21,12 @@
 
 .Content {
     overflow-y: scroll !important;
+}
+
+.projLeftColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 @media only screen and (max-width: 768px) {

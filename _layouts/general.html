@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body data-barba="wrapper">
   <div class="header sticky">
     {% include header.html %}
   </div>
@@ -26,7 +26,7 @@
     <div class="Nav desktopOnly">
       {% include navigation.html %}
     </div>
-    <div class="Content">
+    <div class="Content" data-barba="container">
       {{content}}
     </div>
   </div>
@@ -35,7 +35,7 @@
   {% include imageGallery.html %}
   {% include nextprev.html %}
 
-
+  <script src="/assets/js/app.js"></script>
   <script src="/assets/js/project.js"></script>
 </body>
 </html>
