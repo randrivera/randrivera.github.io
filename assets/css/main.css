@@ -35,7 +35,8 @@ canvas{
 
 html {
     cursor: url('/assets/images/custom-cursor.svg') 10 10, auto;
-    font-size: 16px;
+    font-size: 14px;
+    overflow: hidden;
 }
 /* 
 hr {
@@ -93,7 +94,7 @@ width: 100%;
 
 /* Right Side Content CSS */
 .Content{
-  width:65%;
+  width:85%;
   max-height: 90vh;
   /* background-color: aqua; */
   overflow-y: scroll;
@@ -115,11 +116,11 @@ width: 100%;
   font-size: 1.15em;
 }
 .header > div:nth-child(1){
-    width: 35%;
+    width: 15%;
     align-self: center;
 }
 .header > div:nth-child(2){
-  width: 65%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -149,10 +150,12 @@ width: 100%;
 
 /*Navigation CSS*/
 .Nav {
-  width:35%;
+  width:20%;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  overflow-y: scroll;
+  height: 90vh;
   /* background-color:yellow; */
 }
 .container{
@@ -196,6 +199,8 @@ width: 100%;
   margin-top: 10px;
   margin-bottom: 10px !important;
   font-weight: normal;
+  flex-direction: column !important;
+
 }
 
 
@@ -218,7 +223,7 @@ width: 100%;
     /* margin-left: 8px;   */
 }
 .project div:nth-child(2) {
-  text-align:right;
+  /* text-align:right; */
   opacity: 60%;
   text-transform: capitalize;
   
