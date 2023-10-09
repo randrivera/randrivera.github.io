@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Designs - </title>	
+  <title>Designs - Trashbin</title>	
 	<!-- Link to the relevant stylesheet -->
   <link href="/assets/css/fonts.css" rel="stylesheet">
 	<link href="/assets/css/main.css" rel="stylesheet">
@@ -415,7 +415,7 @@
         <div class="projLeftColumn">
           <div class="projTitle bold">
             <hr class="desktopOnly">
-            
+            Trashbin
           </div>
           <div class="projAwards desktopOnly">
             <img style="width:100%" src=>
@@ -425,10 +425,10 @@
         <div class="projRightColumn">
           <div class="projBio">
             <hr class="desktopOnly">
-             
+            Trashbin is a mixed-case typeface inspired by a graffiti sign that was sighted upon during a walk on Canal St. The initial grafitti only consisted of the letters: C, A, N, + L, in which the rest of the letterforms were inspired from. <br><br> The typespecimen brings the typeface back to it's original sighting, graffitied on a wall, surrounded by custom SA and design inspired stickers. You can purchase the typeface here and all proceeds will go back to the Chinatown Partnership <br><br> This short type exploration was made during my time at Sunday Afternoon and is part of the project <a href='/projects/canal-issue-2.html' style='color:var(--my-variable)'>CANAL Issue 2</a>.
           </div>
           <div class="projCredits">
-             <div class='Credits'> <span> Client </span> <span> Burnt </span> </div> <div class='Credits'> <span> Year </span> <span> 2023 </span> </div> <div class='Credits'> <span> Team </span> <span> Juan Carlos Pagan, CD<br> Ahmed Klink, CD<br> Rich Tu, ECD<br> Rand Rivera, Designer <br> Simon Fruer, Designer <br> Xiaoyu Xue, Motion Designer <br> </span> </div>
+             <div class='Credits'> <span> Client </span> <span> Sunday Afternoon </span> </div> <div class='Credits'> <span> Year </span> <span> 2023 </span> </div> <div class='Credits'> <span> Team </span> <span> Juan Carlos Pagan, CD<br> Rand Rivera, Designer <br> </span> </div>
           </div>
           <div class="projMore" style="font-size: 1.5em;">
             +
@@ -453,13 +453,13 @@
 
 
   <script type="text/javascript">
-	let allFiles = [];
+	let allFiles = ['trashbin.jpg'];
 	let gallery = document.querySelector("#gallery")
 
 	for(let i=0; i<allFiles.length; i++){
 		if(allFiles[i].includes(".mov")||allFiles[i].includes(".mp4") && !allFiles[i].includes("_HERO")){
 			let vid = document.createElement("video");
-			vid.src="/assets/images//" + allFiles[i];
+			vid.src="/assets/images/trashbin/" + allFiles[i];
 			vid.classList.add("media");
 			vid.classList.add("video");
 			vid.controls=false;
@@ -468,7 +468,7 @@
 			gallery.append(vid);
 		} else if(allFiles[i].includes("_HERO")){
 			let hero = document.createElement("video");
-			hero.src="/assets/images//" + allFiles[i];
+			hero.src="/assets/images/trashbin/" + allFiles[i];
 			hero.classList.add("media");
 			// hero.classList.add("video");
 			hero.controls=true;
@@ -476,7 +476,7 @@
 			gallery.append(hero);
 		} else{
 			let img = document.createElement("img");
-			img.dataset.src = "../assets/images//"+ allFiles[i];
+			img.dataset.src = "../assets/images/trashbin/"+ allFiles[i];
 			img.classList.add("media");
 			gallery.append(img)
 		}
