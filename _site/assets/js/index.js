@@ -150,24 +150,24 @@ arrows.addEventListener("click", function(){
   console.log(amIOn);
 })
 
-let amIOnDesktop = false;
-let morePlus = document.querySelector(".moreContent");
+// let amIOnDesktop = false;
+// let morePlus = document.querySelector(".moreContent");
 
 
-morePlus.addEventListener("click", function(){
-  let extraContent = document.querySelector(".hiddenDIV");
+// morePlus.addEventListener("click", function(){
+//   let extraContent = document.querySelector(".hiddenDIV");
 
-  if (amIOnDesktop == false){
-  extraContent.classList.add("show");
-  morePlus.innerHTML="–";
-  amIOnDesktop = true;
-  } else if (amIOnDesktop == true){
-  extraContent.classList.remove("show");
-  morePlus.innerHTML="+";
-  amIOnDesktop = false;
-  }
-  console.log(amIOnDesktop); 
-})
+//   if (amIOnDesktop == false){
+//   extraContent.classList.add("show");
+//   morePlus.innerHTML="–";
+//   amIOnDesktop = true;
+//   } else if (amIOnDesktop == true){
+//   extraContent.classList.remove("show");
+//   morePlus.innerHTML="+";
+//   amIOnDesktop = false;
+//   }
+//   console.log(amIOnDesktop); 
+// })
 
 // // Christ (Chris Panicker - panicker.design) helped me with this one <3
 //   // On the homepage, hovering over the title moves the corresponding preview image to the top
