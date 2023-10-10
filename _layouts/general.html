@@ -16,14 +16,18 @@
 
 </head>
 
-<body data-barba="wrapper">
+<body class="noScrollBar">
   <div class="header sticky">
     {% include header.html %}
   </div>
   <hr style="margin-bottom: 15px">
 
-  <div class="container">
-    <div class="Nav desktopOnly">
+  <div class="navMobile mobile">
+    {% include navigationMobile.html %}
+  </div>
+  
+  <div class="container" >
+    <div class="Nav desktopOnly noScrollBar">
       {% include navigation.html %}
     </div>
     <div class="Content" data-barba="container">
