@@ -169,42 +169,42 @@ arrows.addEventListener("click", function(){
 //   console.log(amIOnDesktop); 
 // })
 
-// // Christ (Chris Panicker - panicker.design) helped me with this one <3
-//   // On the homepage, hovering over the title moves the corresponding preview image to the top
+// Christ (Chris Panicker - panicker.design) helped me with this one <3
+  // On the homepage, hovering over the title moves the corresponding preview image to the top
     
-//   // all the project previews
-//   let projects = [];
-//   projects[0] = document.querySelector("#projone");
-//   projects[1] = document.querySelector("#projtwo");
-//   projects[2] = document.querySelector("#projthree");
-//   projects[3] = document.querySelector("#projfour");
-//   projects[4] = document.querySelector("#projfive");
-//   projects[5] = document.querySelector("#projsix");
-//   projects[6] = document.querySelector("#projseven");
-//   projects[7] = document.querySelector("#projeight");
-//   projects[8] = document.querySelector("#projnine");
+  // all the project previews
+  let projects = [];
+  projects[0] = document.querySelector("#projone");
+  projects[1] = document.querySelector("#projtwo");
+  projects[2] = document.querySelector("#projthree");
+  projects[3] = document.querySelector("#projfour");
+  projects[4] = document.querySelector("#projfive");
+  projects[5] = document.querySelector("#projsix");
+  projects[6] = document.querySelector("#projseven");
+  projects[7] = document.querySelector("#projeight");
+  projects[8] = document.querySelector("#projnine");
 
 
-//   //div in which all the preview images live in
-//   let target = document.getElementById("target");
-//   let targetImg = document.querySelector("#target img");
-//   const scroller = document.querySelector(".Content");
+  //div in which all the preview images live in
+  let target = document.getElementById("target");
+  let targetImg = document.querySelector("#target img");
+  const scroller = document.querySelector(".Content");
 
-//   for (let i=0; i<projects.length; i++){
-//     projects[i].addEventListener("mouseenter", function(){
-//       console.log(`${scroller.scrollTop}`);
+  for (let i=0; i<projects.length; i++){
+    projects[i].addEventListener("mouseenter", function(){
+      console.log(`${scroller.scrollTop}`);
     
-//       console.log(`-${targetImg.clientHeight}`);
-//       // subtract how much user has already scrolled on their own to the scroll distance
-//       target.style.top = `-${targetImg.clientHeight*i}` - `-${scroller.scrollTop}` + "px";
-//     });
+      console.log(`-${targetImg.clientHeight}`);
+      // subtract how much user has already scrolled on their own to the scroll distance
+      target.style.top = `-${targetImg.clientHeight*i}` - `-${scroller.scrollTop}` + "px";
+    });
 
-//     projects[i].addEventListener("mouseleave", function(){
+    projects[i].addEventListener("mouseleave", function(){
     
-//       console.log(`-${targetImg.clientHeight}`);
-//       target.style.top = "0px";
-//     });
-//   }
+      console.log(`-${targetImg.clientHeight}`);
+      target.style.top = "0px";
+    });
+  }
 
 
 
