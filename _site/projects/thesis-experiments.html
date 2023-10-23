@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Designs - BURNT</title>	
+  <title>Designs - Thesis Experiments</title>	
 	<!-- Link to the relevant stylesheet -->
   <link href="/assets/css/fonts.css" rel="stylesheet">
 	<link href="/assets/css/main.css" rel="stylesheet">
@@ -436,7 +436,7 @@
         <div class="projLeftColumn">
           <div class="projTitle bold">
             <hr class="desktopOnly">
-            BURNT
+            Thesis Experiments
           </div>
           <div class="projAwards desktopOnly">
             <img style="width:100%" src=>
@@ -446,10 +446,10 @@
         <div class="projRightColumn">
           <div class="projBio">
             <hr class="desktopOnly">
-            BURNT is on a mission to advance society’s financial and creative freedom by redefining the means of Art ownership. BURNT was born out of the vision of its founder when he purchased a BANKSY piece of art for $90,000 that he then set on fire and burnt live on camera. He recorded the stunt and made the video an NFT collectible that went on to sell for $380,000. <br><br> BURNT needed a solid and trusting strategic foundation for a technology that is not yet entirely understood by the mainstream. <br><br> We built a Brand Identity rooted in old black letter as a symbol of trust that pays homage to the visionary pioneer spirit of the Brand. The word mark is based on the typeface Respira Black by Sharp Type. We then created a custom flame icon called 'BLAZE' that seamlessly integrates within the letterforms and will allow the brand to scale their line of products while maintaining brand integrity. <br><br> As fire naturally burns and inevitably makes way for the new, the BURNT brand identity honors the past while clearing the way for a fairer and more distributed future where creators can truly own a share of their artwork. 
+            A collection of all the short experimentation I did during my Thesis exploration. Meant to serve as simple documentation of my process and to showcase various quick outputs that I felt needed a spotlight.
           </div>
           <div class="projCredits">
-             <div class='Credits'> <span> Client </span> <span> Burnt </span> </div> <div class='Credits'> <span> Year </span> <span> 2023 </span> </div> <div class='Credits'> <span> Team </span> <span> Juan Carlos Pagan, CD<br> Ahmed Klink, CD<br> Rich Tu, ECD<br> Rand Rivera, Designer <br> Simon Fruer, Designer <br> Xiaoyu Xue, Motion Designer <br> </span> </div>
+             <!-- <div class='Credits'> <span> Client </span> <span> Burnt </span> </div> --> <div class='Credits'> <span> Year </span> <span> 2023 </span> </div> <div class='Credits'> <!-- <span> Team </span> <span> Juan Carlos Pagan, CD<br> Ahmed Klink, CD<br> Rich Tu, ECD<br> Rand Rivera, Designer <br> Simon Fruer, Designer <br> Xiaoyu Xue, Motion Designer <br> --> </span> </div>
           </div>
           <!-- <div class="projMore" style="font-size: 1.5em;">
             +
@@ -474,13 +474,13 @@
 
 
   <script type="text/javascript">
-	let allFiles = ['01_BURNT_Burn-Logo-Reveal.mp4','02_Burnt_Logo.png','03_BURNT_Logo_Four-Up-FINAL.mp4','04_B-Blaise.png','05_BURNT_type-showcase.gif','06_BURNT_flame_blk_animation.gif','07_BURNT_Billboard-Mock.png','08_BURNT_Insta-Stories.png','09_BURNT_painting-video.mp4','10_BURNT_Notification+App-FINAL.mp4','11_BURNT_HD_triple-screen-animation.mp4','12_BURNT_Poster+Twitter.mp4','12_BURNT_Burning-Paper.mp4'];
+	let allFiles = [];
 	let gallery = document.querySelector("#gallery")
 
 	for(let i=0; i<allFiles.length; i++){
 		if(allFiles[i].includes(".mov")||allFiles[i].includes(".mp4") && !allFiles[i].includes("_HERO")){
 			let vid = document.createElement("video");
-			vid.src="/assets/images/burnt/" + allFiles[i];
+			vid.src="/assets/images/thesis-experiments/" + allFiles[i];
 			vid.classList.add("media");
 			vid.classList.add("video");
 			vid.controls=false;
@@ -489,7 +489,7 @@
 			gallery.append(vid);
 		} else if(allFiles[i].includes("_HERO")){
 			let hero = document.createElement("video");
-			hero.src="/assets/images/burnt/" + allFiles[i];
+			hero.src="/assets/images/thesis-experiments/" + allFiles[i];
 			hero.classList.add("media");
 			// hero.classList.add("video");
 			hero.controls=true;
@@ -498,7 +498,7 @@
 			gallery.append(hero);
 		} else{
 			let img = document.createElement("img");
-			img.dataset.src = "../assets/images/burnt/"+ allFiles[i];
+			img.dataset.src = "../assets/images/thesis-experiments/"+ allFiles[i];
 			img.classList.add("media");
 			gallery.append(img)
 		}
