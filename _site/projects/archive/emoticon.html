@@ -35,6 +35,17 @@
     <div class="Projects">
   <div class="project">
     <div>
+      <a href="/projects/thesis-experiments.html" rel="history" id="">Thesis Experiments</a>
+    </div>
+    <div>
+      <span>Exploration</span>
+    </div>
+  </div>
+
+  <hr>
+  
+  <div class="project">
+    <div>
       <a href="/projects/typeoftoday.html" rel="history" id="">ToT: Designers on Design</a>
     </div>
     <div>
@@ -61,17 +72,6 @@
     </div>
     <div>
       <span>Brand Identity</span>
-    </div>
-  </div>
-
-  <hr>
-
-  <div class="project">
-    <div>
-      <a href="/projects/thesis-experiments.html" rel="history" id="">Thesis Experiments</a>
-    </div>
-    <div>
-      <span>Exploration</span>
     </div>
   </div>
 
@@ -473,6 +473,13 @@
   </div>
 
 
+
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.10.1/tsparticles.confetti.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+  <script src="/assets/js/project.js"></script>
   <script type="text/javascript">
 	let allFiles = ['emoticon_01.mp4', 'emoticon_02.jpg', 'emoticon_03.jpg', 'emoticon_04.jpg', 'emoticon_05_HERO.mp4', 'emoticon_06.jpg', 'emoticon_07.jpg', 'emoticon_08.jpg', 'emoticon_09.jpg', 'emoticon_10.mp4', 'emoticon_11.jpg', 'emoticon_12.jpg', 'emoticon_13.jpg', 'emoticon_14.mp4', 'emoticon_15.jpg', 'emoticon_16.mp4', 'emoticon_17.jpg', 'emoticon_18.jpg', 'emoticon_19.jpg', 'emoticon_20.mp4', 'emoticon_21.mp4', 'emoticon_22.jpg', 'emoticon_23.jpg', 'emoticon_24.jpg', 'emoticon_25.jpg', 'emoticon_26.jpg', 'emoticon_27.jpg'];
 	let gallery = document.querySelector("#gallery")
@@ -487,7 +494,12 @@
 			vid.muted=true;
 			vid.loop=true;
 			gallery.append(vid);
-		} else if(allFiles[i].includes("_HERO")){
+		} else if(allFiles[i].includes(".html")){
+			let text = document.createElement("div");
+			$(text).load("/assets/images/emoticon/" + allFiles[i]);
+			gallery.append(text);
+		}
+		else if(allFiles[i].includes("_HERO")){
 			let hero = document.createElement("video");
 			hero.src="/assets/images/emoticon/" + allFiles[i];
 			hero.classList.add("media");
@@ -600,11 +612,5 @@ playPauseVideo();
 		}
 	}
 </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.10.1/tsparticles.confetti.bundle.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
-  <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
-  <script src="/assets/js/project.js"></script>
 </body>
 </html>
