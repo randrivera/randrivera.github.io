@@ -65,6 +65,23 @@
 }
 
 
+.projText {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 1.2em;
+    justify-content: space-between;
+}
+
+.projText > div:nth-child(1){
+    font-size: 1.5em;
+    width: 100%; 
+    color: var(--my-variable);
+}
+
+
 @media only screen and (max-width: 768px) {
 .projInfo {
     display: flex;

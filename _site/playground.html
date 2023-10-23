@@ -260,7 +260,12 @@
 			vid.muted=true;
 			vid.loop=true;
 			gallery.append(vid);
-		} else if(allFiles[i].includes("_HERO")){
+		} else if(allFiles[i].includes(".html")){
+			let text = document.createElement("div");
+			$(text).load("/assets/images//" + allFiles[i]);
+			gallery.append(text);
+		}
+		else if(allFiles[i].includes("_HERO")){
 			let hero = document.createElement("video");
 			hero.src="/assets/images//" + allFiles[i];
 			hero.classList.add("media");
