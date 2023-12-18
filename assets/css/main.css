@@ -153,7 +153,6 @@ width: 100%;
 ::-webkit-scrollbar {
   direction: rtl;
   width:1.75px;
-  height: 10px !important;
 }
 
 ::-webkit-scrollbar-track {
@@ -163,11 +162,15 @@ width: 100%;
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--my-variable); 
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--my-variable); 
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 .Nav {
