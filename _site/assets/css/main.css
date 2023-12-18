@@ -149,6 +149,30 @@ width: 100%;
 
 
 /*Navigation CSS*/
+/* width */
+::-webkit-scrollbar {
+  direction: rtl;
+  width:1.75px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--text-color) 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--my-variable); 
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--my-variable); 
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
 .Nav {
   width:20%;
   display: flex;
@@ -156,6 +180,7 @@ width: 100%;
   gap: 20px;
   overflow-y: scroll;
   height: 90vh;
+  padding-right: 10px;
   /* background-color:yellow; */
 }
 .container{
