@@ -514,7 +514,7 @@
 	for(let i=0; i<allFiles.length; i++){
 		if(allFiles[i].includes(".mov")||allFiles[i].includes(".mp4") && !allFiles[i].includes("_HERO")){
 			let vid = document.createElement("video");
-			vid.src="/assets/images/slash-type/" + allFiles[i];
+			vid.src= allFiles[i];
 			vid.classList.add("media");
 			vid.classList.add("video");
 			vid.controls=false;
@@ -537,7 +537,7 @@
 			gallery.append(hero);
 		} else{
 			let img = document.createElement("img");
-			img.dataset.src = "../assets/images/slash-type/"+ allFiles[i];
+			img.dataset.src = allFiles[i];
 			img.classList.add("media");
 			gallery.append(img)
 		}

@@ -508,13 +508,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
   <script src="/assets/js/project.js"></script>
   <script type="text/javascript">
-	let allFiles = ['teeth-01.mp4', 'teeth-02.png','teeth-03.jpg'];
+	let allFiles = ['https://www.dropbox.com/scl/fi/0uhbq73yyk6d65tispesc/teeth-01.mp4?rlkey=h0tvtosj5zfu5681amzrjex7f&raw=1','https://www.dropbox.com/scl/fi/98xe9r5szfufouincxb2v/teeth-02.png?rlkey=96quouv3m9450s35lycy6g8ut&raw=1', 'https://www.dropbox.com/scl/fi/gcwscumybizgpk7tp60cd/teeth-03.jpg?rlkey=75ix82oc7ozks125fi8d9743g&raw=1'];
 	let gallery = document.querySelector("#gallery")
 
 	for(let i=0; i<allFiles.length; i++){
 		if(allFiles[i].includes(".mov")||allFiles[i].includes(".mp4") && !allFiles[i].includes("_HERO")){
 			let vid = document.createElement("video");
-			vid.src="/assets/images/teeth/" + allFiles[i];
+			vid.src= allFiles[i];
 			vid.classList.add("media");
 			vid.classList.add("video");
 			vid.controls=false;
@@ -537,7 +537,7 @@
 			gallery.append(hero);
 		} else{
 			let img = document.createElement("img");
-			img.dataset.src = "../assets/images/teeth/"+ allFiles[i];
+			img.dataset.src = allFiles[i];
 			img.classList.add("media");
 			gallery.append(img)
 		}
