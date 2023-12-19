@@ -589,33 +589,33 @@
 
 // }
 
-// function playPauseVideo() {
-//     let videos = document.querySelectorAll(".video");
-//     videos.forEach((video) => {
-//         // Play is a promise so we need to check we have it
-//         let playPromise = video.play();
-//         if (playPromise !== undefined) {
-//             playPromise.then((_) => {
-//                 let observer = new IntersectionObserver(
-//                     (entries) => {
-//                         entries.forEach((entry) => {
-//                             if (!entry.isIntersecting && !video.paused) {
-//                                 video.pause();
-//                             } else if (video.paused) {
-//                                 video.play();
-//                             }
-//                         });
-//                     },
-//                     { threshold: 0.2}
-//                 );
-//                 observer.observe(video);
-//             });
-//         }
-//     });
-// }
+function playPauseVideo() {
+    let videos = document.querySelectorAll(".video");
+    videos.forEach((video) => {
+        // Play is a promise so we need to check we have it
+        let playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.then((_) => {
+                let observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (!entry.isIntersecting && !video.paused) {
+                                video.pause();
+                            } else if (video.paused) {
+                                video.play();
+                            }
+                        });
+                    },
+                    { threshold: 0.2}
+                );
+                observer.observe(video);
+            });
+        }
+    });
+}
 
-// // And you would kick this off where appropriate with:
-// playPauseVideo();
+// And you would kick this off where appropriate with:
+playPauseVideo();
 
 </script>
 
