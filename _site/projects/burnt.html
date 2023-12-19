@@ -10,7 +10,16 @@
   <link href="/assets/css/mainMobile.css" rel="stylesheet">
   <link href="/assets/css/project.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="/assets/images/rand_favicon.png">
-
+  <script type="text/javascript">
+    window.GUMLET_CONFIG = {
+        hosts: [{
+            current: "",
+            gumlet: "designsbyrand.gumlet.io"
+        }],
+        lazy_load: true
+    };
+    (function(){d=document;s=d.createElement("script");s.src="https://cdn.gumlet.com/gumlet.js/2.1/gumlet.min.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+</script>
 </head>
 
 <body class="noScrollBar">
@@ -512,97 +521,101 @@
 	let gallery = document.querySelector("#gallery")
 
 	for(let i=0; i<allFiles.length; i++){
-		if(allFiles[i].includes(".mov")||allFiles[i].includes(".mp4") && !allFiles[i].includes("_HERO")){
+		if(allFiles[i].includes(".mp4")){
 			let vid = document.createElement("video");
-			vid.src= allFiles[i];
+			vid.src = "https://designsbyrand.gumlet.io/projects/burnt/" + allFiles[i];
+			// vid.setAttribute('data-src',allFiles[i]);
 			vid.classList.add("media");
 			vid.classList.add("video");
 			vid.controls=false;
 			vid.muted=true;
 			vid.loop=true;
+			// vid.play();
 			gallery.append(vid);
-		} else if(allFiles[i].includes(".html")){
+		} 
+		else if(allFiles[i].includes(".html")){
 			let text = document.createElement("div");
 			$(text).load("/assets/images/burnt/" + allFiles[i]);
 			gallery.append(text);
 		}
-		else if(allFiles[i].includes("_HERO")){
-			let hero = document.createElement("video");
-			hero.src="/assets/images/burnt/" + allFiles[i];
-			hero.classList.add("media");
-			// hero.classList.add("video");
-			hero.controls=true;
-			// vid.muted=false;
-			// hero.muted=true;
-			gallery.append(hero);
-		} else{
+		// else if(allFiles[i].includes("_HERO")){
+		// 	let hero = document.createElement("video");
+		// 	hero.src = "designsbyrand.gumlet.io/projects/burnt/" + allFiles[i];
+		// 	hero.classList.add("media");
+		// 	// hero.classList.add("video");
+		// 	hero.controls=true;
+		// 	// vid.muted=false;
+		// 	// hero.muted=true;
+		// 	gallery.append(hero);
+		// } 
+		else{
 			let img = document.createElement("img");
-			img.dataset.src = allFiles[i];
+			img.dataset.src = "/projects/burnt/" + allFiles[i];
 			img.classList.add("media");
 			gallery.append(img)
 		}
 
 	}
 
-const images = document.querySelectorAll("[data-src]");
+// const images = document.querySelectorAll("[data-src]");
 
 	
-	const imgOptions = {
-		threshold: 0,
-		rootMargin: "100px"
-	};
+// 	const imgOptions = {
+// 		threshold: 0,
+// 		rootMargin: "100px"
+// 	};
 
-const imgObserver = new IntersectionObserver((entries, 
-	imgObserver) => {
-		entries.forEach(entry => {
-			if (entry.isIntersecting) {
-				preloadImage(entry.target);
-				imgObserver.unobserve(entry.target);
-			}
-		})
-}, imgOptions);
+// const imgObserver = new IntersectionObserver((entries, 
+// 	imgObserver) => {
+// 		entries.forEach(entry => {
+// 			if (entry.isIntersecting) {
+// 				preloadImage(entry.target);
+// 				imgObserver.unobserve(entry.target);
+// 			}
+// 		})
+// }, imgOptions);
 
-images.forEach(image => {
-	imgObserver.observe(image);
-});
+// images.forEach(image => {
+// 	imgObserver.observe(image);
+// });
 
 
-function preloadImage(img) {
-	const src = img.getAttribute("data-src");
-	if(!src){
-		return;
-	}
-	img.src = src;
+// function preloadImage(img) {
+// 	const src = img.getAttribute("data-src");
+// 	if(!src){
+// 		return;
+// 	}
+// 	img.src = src;
 
-}
+// }
 
-function playPauseVideo() {
-    let videos = document.querySelectorAll(".video");
-    videos.forEach((video) => {
-        // Play is a promise so we need to check we have it
-        let playPromise = video.play();
-        if (playPromise !== undefined) {
-            playPromise.then((_) => {
-                let observer = new IntersectionObserver(
-                    (entries) => {
-                        entries.forEach((entry) => {
-                            if (!entry.isIntersecting && !video.paused) {
-                                video.pause();
-                            } else if (video.paused) {
-                                video.play();
-                            }
-                        });
-                    },
-                    { threshold: 0.2}
-                );
-                observer.observe(video);
-            });
-        }
-    });
-}
+// function playPauseVideo() {
+//     let videos = document.querySelectorAll(".video");
+//     videos.forEach((video) => {
+//         // Play is a promise so we need to check we have it
+//         let playPromise = video.play();
+//         if (playPromise !== undefined) {
+//             playPromise.then((_) => {
+//                 let observer = new IntersectionObserver(
+//                     (entries) => {
+//                         entries.forEach((entry) => {
+//                             if (!entry.isIntersecting && !video.paused) {
+//                                 video.pause();
+//                             } else if (video.paused) {
+//                                 video.play();
+//                             }
+//                         });
+//                     },
+//                     { threshold: 0.2}
+//                 );
+//                 observer.observe(video);
+//             });
+//         }
+//     });
+// }
 
-// And you would kick this off where appropriate with:
-playPauseVideo();
+// // And you would kick this off where appropriate with:
+// playPauseVideo();
 
 </script>
 
