@@ -136,14 +136,17 @@ let amIOn = false;
 
 arrows.addEventListener("click", function(){
   let navMobile = document.querySelector(".navMobile");
+  let containerDiv = document.querySelector(".container");
 
 
   if (amIOn == false){
   navMobile.classList.add("show");
+  containerDiv.classList.add("hide");
   arrows.innerHTML="–";
   amIOn = true;
   } else if (amIOn == true){
   navMobile.classList.remove("show");
+  containerDiv.classList.remove("hide");
   arrows.innerHTML="+";
   amIOn = false;
   }
