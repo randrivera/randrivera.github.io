@@ -114,6 +114,7 @@ width: 100%;
   background-color: var(--background-color);
 
   font-size: 1.15em;
+  overflow-x: hidden;
 }
 .header > div:nth-child(1){
     width: 75%;
