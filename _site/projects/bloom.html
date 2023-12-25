@@ -525,7 +525,9 @@ Discover this digital collection of resources, firsthand experiences, and action
 	for(let i=0; i<allFiles.length; i++){
 		if(allFiles[i].includes(".mp4")){
 			let vid = document.createElement("video");
-			vid.src = "https://designsbyrand.gumlet.io/projects/bloom/" + allFiles[i];
+			let source = document.createElement("source");
+			source.src = "https://designsbyrand.gumlet.io/projects/bloom/" + allFiles[i];
+			vid.append(source);
 			// vid.setAttribute('data-src',allFiles[i]);
 			vid.classList.add("media");
 			vid.classList.add("video");
