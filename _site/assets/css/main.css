@@ -265,7 +265,7 @@ width: 100%;
 .Projects a:hover {
    /* text-decoration: underline;
    text-decoration-color: var(--my-variable); */
-  color: var(--my-variable);
+  color: var(--my-variable) !important;
 }
 .contacts {
   display: flex;

@@ -153,6 +153,43 @@ arrows.addEventListener("click", function(){
   console.log(amIOn);
 })
 
+//hover projects
+
+let thumbnails = [];
+thumbnails[0] = document.querySelector("#thumbone");
+thumbnails[1] = document.querySelector("#thumbtwo");
+thumbnails[2] = document.querySelector("#thumbthree");
+thumbnails[3] = document.querySelector("#thumbfour");
+thumbnails[4] = document.querySelector("#thumbfive");
+thumbnails[5] = document.querySelector("#thumbsix");
+thumbnails[6] = document.querySelector("#thumbseven");
+thumbnails[7] = document.querySelector("#thumbeight");
+thumbnails[8] = document.querySelector("#thumbnine");
+// thumbnails[9] = document.querySelector("#thumbone");
+
+
+
+// console.log("test");
+for (let i=0; i<thumbnails.length; i++){
+  thumbnails[i].addEventListener("mouseenter", function(){
+    // console.log("start func()");
+
+    // for (let i=0; i<thumbnails.length; i++){
+    //   projects[i].style.opacity = "75%";
+    // }
+    // projects[i].style.opacity = "100%";
+    projects[i].style.color = sessionStorage.getItem("userColor");
+    console.log("done");
+  });
+
+  thumbnails[i].addEventListener("mouseleave", function(){
+    // for (let i=0; i<thumbnails.length; i++){
+    //   projects[i].style.opacity = "100%";
+    // }
+    projects[i].style.color = 'var(--text-color)';
+  });
+}
+
 // let amIOnDesktop = false;
 // let morePlus = document.querySelector(".moreContent");
 
@@ -208,8 +245,3 @@ arrows.addEventListener("click", function(){
       target.style.top = "0px";
     });
   }
-
-
-
-
-  
