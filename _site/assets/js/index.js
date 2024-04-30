@@ -153,6 +153,17 @@ arrows.addEventListener("click", function(){
   console.log(amIOn);
 })
 
+// all the project previews
+let projects = [];
+projects[0] = document.querySelector("#projone");
+projects[1] = document.querySelector("#projtwo");
+projects[2] = document.querySelector("#projthree");
+projects[3] = document.querySelector("#projfour");
+projects[4] = document.querySelector("#projfive");
+projects[5] = document.querySelector("#projsix");
+projects[6] = document.querySelector("#projseven");
+projects[7] = document.querySelector("#projeight");
+projects[8] = document.querySelector("#projnine");
 //hover projects
 
 let thumbnails = [];
@@ -211,18 +222,7 @@ for (let i=0; i<thumbnails.length; i++){
 
 // Christ (Chris Panicker - panicker.design) helped me with this one <3
   // On the homepage, hovering over the title moves the corresponding preview image to the top
-    
-  // all the project previews
-  let projects = [];
-  projects[0] = document.querySelector("#projone");
-  projects[1] = document.querySelector("#projtwo");
-  projects[2] = document.querySelector("#projthree");
-  projects[3] = document.querySelector("#projfour");
-  projects[4] = document.querySelector("#projfive");
-  projects[5] = document.querySelector("#projsix");
-  projects[6] = document.querySelector("#projseven");
-  projects[7] = document.querySelector("#projeight");
-  projects[8] = document.querySelector("#projnine");
+  
 
 
   //div in which all the preview images live in
