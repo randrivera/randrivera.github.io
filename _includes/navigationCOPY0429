@@ -1,10 +1,10 @@
   <div class="Projects">
     <div class="project">
       <div>
-        <a href="/projects/robot-rand.html" rel="history" id="projone">Can I Make Robot Rand?</a>
+        <a href="/projects/teeth.html" rel="history" id="projone">Is There Something in My Teeth?</a>
       </div>
       <div>
-        <span>Print/Web AI Exploration</span>
+        <span>Printmaking/Zine</span>
       </div>
     </div>
 
@@ -12,19 +12,7 @@
 
     <div class="project">
       <div>
-        <a href="/projects/burnt.html" rel="history" id="projtwo">Burnt</a>
-      </div>
-      <div>
-        <span>Brand Identity</span>
-      </div>
-    </div>
-
-    <hr>
-  
-
-    <div class="project">
-      <div>
-        <a href="/projects/typeoftoday.html" rel="history" id="projthree">ToT: Designers on Design</a>
+        <a href="/projects/typeoftoday.html" rel="history" id="projtwo">ToT: Designers on Design</a>
       </div>
       <div>
         <span>Editorial/Newspaper Design</span>
@@ -35,7 +23,7 @@
 
     <div class="project">
       <div>
-        <a href="/projects/tide.html" rel="history" id="projfour">Tide</a>
+        <a href="/projects/tide.html" rel="history" id="projthree">Tide</a>
       </div>
       <div>
         <span>Brand Identity</span>
@@ -46,16 +34,16 @@
 
     <div class="project">
       <div>
-        <a href="/projects/teeth.html" rel="history" id="projfive">Is There Something in My Teeth?</a>
+        <a href="/projects/burnt.html" rel="history" id="projfour">Burnt</a>
       </div>
       <div>
-        <span>Printmaking/Zine</span>
+        <span>Brand Identity</span>
       </div>
     </div>
 
     <hr>
 
-    <!-- <div class="project">
+    <div class="project">
       <div>
         <a href="/projects/thesis-experiments.html" rel="history" id="projfive">Thesis Experiments</a>
       </div>
@@ -64,7 +52,7 @@
       </div>
     </div>
 
-    <hr> -->
+    <hr>
     
     <div class="project">
       <div>
@@ -177,7 +165,7 @@
       <div id="headshot">
         <img src="/assets/images/headshot_edited-39.jpg">
       </div>
-      <div class="bio">Rand is a <p>𓅰</p> NYC-based <p>⁺˚⋆｡</p>multi-disciplinary<p>｡°✩₊</p> designer currently finishing his final year at Parsons School of Design pursuing a <p>✎</p> BAFA dual-degree in Communication Design + Screen Studies. 
+      <div class="bio">Rand is a <p>𓅰</p> NYC-based <p>⁺˚⋆｡</p>multi-disciplinary<p>｡°✩₊</p> designer currently finishing his final year at The New School pursuing a <p>✎</p> BAFA dual-degree in Communication Design + Screen Studies. 
         <br><br>
         He formerly interned and then freelanced at <a href="https://www.sundayafternoon.us" style="text-decoration: none; color:var(--my-variable); transition: .4s;" target="_blank">Sunday Afternoon</a> as a junior designer.
         He believes highly in experimentation <p>ᵕ̈</p>, aka doing shit <p>৻(  •̀ ᗜ •́  ৻)</p>, as a young designer he is constantly looking for new things to explore in the field of graphic design <p>✮</p>

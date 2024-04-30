@@ -1,27 +1,15 @@
 <div class="Projects">
   <div class="project">
     <div>
-      <a href="/projects/robot-rand.html" rel="history" id="">Can I Make Robot Rand?</a>
+      <a href="/projects/teeth.html" rel="history" id="">Is There Something In My Teeth?</a>
     </div>
     <div>
-      <span>Print/Web AI Exploration</span>
+      <span>Printmaking/Zine</span>
     </div>
   </div>
 
   <hr>
-
-  <div class="project">
-    <div>
-      <a href="/projects/burnt.html" rel="history" id="">Burnt</a>
-    </div>
-    <div>
-      <span>Brand Identity</span>
-    </div>
-  </div>
-
-  <hr>
-
-
+  
   <div class="project">
     <div>
       <a href="/projects/typeoftoday.html" rel="history" id="">ToT: Designers on Design</a>
@@ -46,10 +34,21 @@
 
   <div class="project">
     <div>
-      <a href="/projects/teeth.html" rel="history" id="">Is There Something in My Teeth?</a>
+      <a href="/projects/burnt.html" rel="history" id="">Burnt</a>
     </div>
     <div>
-      <span>Printmaking/Zine</span>
+      <span>Brand Identity</span>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="project">
+    <div>
+      <a href="/projects/thesis-experiments.html" rel="history" id="">Thesis Experiments</a>
+    </div>
+    <div>
+      <span>Exploration</span>
     </div>
   </div>
 
