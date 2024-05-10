@@ -33,7 +33,7 @@
   </div>
   
   <div class="container" >
-    <div class="Nav desktopOnly">
+    <div class="Nav desktopOnly" style="opacity: 0.3" id="projectNav">
       {% include navigation.html %}
       <div style="text-align: left; position: sticky; bottom: 0px; background-color: var(--background-color); padding-top: 5px;">entire site coded by <span style="color:var(--my-variable); transition:.4s;">me!</span> @rkrivera2024</div>
     </div>
@@ -41,7 +41,7 @@
       <div class="projInfo">
         <div class="projLeftColumn">
           <div class="projTitle bold">
-            <hr class="desktopOnly">
+            <!-- <hr class="desktopOnly"> -->
             {{page.projTitle}}
           </div>
           <div class="projAwards desktopOnly">
@@ -51,7 +51,7 @@
 
         <div class="projRightColumn">
           <div class="projBio">
-            <hr class="desktopOnly">
+            <!-- <hr class="desktopOnly"> -->
             {{page.projBio}}
           </div>
           <div class="projCredits">

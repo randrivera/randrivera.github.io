@@ -1,3 +1,7 @@
+#projectNav:hover {
+    opacity: 1 !important;
+    transition: opacity 0.3s ease;
+}
 .projInfo {
     display: flex;
     flex-direction: row;
@@ -80,6 +84,10 @@
     width: 100%; 
     color: var(--my-variable);
 }
+
+
+
+
 
 
 @media only screen and (max-width: 768px) {
