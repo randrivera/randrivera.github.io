@@ -9,54 +9,54 @@ let r = document.querySelector(':root');
 
 r.style.setProperty('--my-variable', sessionStorage.getItem("userColor"));
 
-const mediaQuery = window.matchMedia('(min-width: 768px)')
-if (mediaQuery.matches){
-  //enter name interaction
-  button.addEventListener("click", function(){
-    //grab value from text input
-    let txt = document.querySelector("#collectName").value
-    //store value for userName
-    sessionStorage.setItem("userName", txt);
+// const mediaQuery = window.matchMedia('(min-width: 768px)')
+// if (mediaQuery.matches){
+//   //enter name interaction
+//   button.addEventListener("click", function(){
+//     //grab value from text input
+//     let txt = document.querySelector("#collectName").value
+//     //store value for userName
+//     sessionStorage.setItem("userName", txt);
 
-    //change hello message name to have userName
-    hello.innerHTML = "Hi " + sessionStorage.getItem("userName") + "! ♥";
+//     //change hello message name to have userName
+//     hello.innerHTML = "Hi " + sessionStorage.getItem("userName") + "! ♥";
 
-    //hide nameScreen then display:none it afterwards so it does not interfere with other interactions
-    nameInput.style.opacity = "0";
-    setTimeout(function()
-      {nameInput.style.display = "none";
-      }, 1000);
-  });
-  function search(ele) {
-    if(event.key === 'Enter') {
-        //grab value from text input
-    let txt = document.querySelector("#collectName").value
-    //store value for userName
-    sessionStorage.setItem("userName", txt);
+//     //hide nameScreen then display:none it afterwards so it does not interfere with other interactions
+//     nameInput.style.opacity = "0";
+//     setTimeout(function()
+//       {nameInput.style.display = "none";
+//       }, 1000);
+//   });
+//   function search(ele) {
+//     if(event.key === 'Enter') {
+//         //grab value from text input
+//     let txt = document.querySelector("#collectName").value
+//     //store value for userName
+//     sessionStorage.setItem("userName", txt);
 
-    //change hello message name to have userName
-    hello.innerHTML = "Hi " + sessionStorage.getItem("userName") + "! ♥";
+//     //change hello message name to have userName
+//     hello.innerHTML = "Hi " + sessionStorage.getItem("userName") + "! ♥";
 
-    //hide nameScreen then display:none it afterwards so it does not interfere with other interactions
-    nameInput.style.opacity = "0";
-    setTimeout(function()
-      {nameInput.style.display = "none";
-      }, 1000);
-    }
-  };
+//     //hide nameScreen then display:none it afterwards so it does not interfere with other interactions
+//     nameInput.style.opacity = "0";
+//     setTimeout(function()
+//       {nameInput.style.display = "none";
+//       }, 1000);
+//     }
+//   };
 
 
-  //checks if a name is already stored and prevents the name popup if so
-  function checkStorage(){
-    if (sessionStorage.getItem("userName")){
-      hello.innerHTML = "Hi " + sessionStorage.getItem("userName") + "! ♥";
-      nameInput.style.display = "none";
-    } else {
-      null
-    };
-  } 
-  window.onload = checkStorage();
-};
+//   //checks if a name is already stored and prevents the name popup if so
+//   function checkStorage(){
+//     if (sessionStorage.getItem("userName")){
+//       hello.innerHTML = "Hi " + sessionStorage.getItem("userName") + "! ♥";
+//       nameInput.style.display = "none";
+//     } else {
+//       null
+//     };
+//   } 
+//   window.onload = checkStorage();
+// };
 
 //change color on every click!
 let rbackground = [
