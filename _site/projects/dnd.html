@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Designs - TIDE</title>	
+  <title>Designs - DND | Do Not Disturb</title>	
 	<!-- Link to the relevant stylesheet -->
   <link href="/assets/css/fonts.css" rel="stylesheet">
 	<link href="/assets/css/main.css" rel="stylesheet">
@@ -503,7 +503,7 @@
         <div class="projLeftColumn">
           <div class="projTitle bold">
             <!-- <hr class="desktopOnly"> -->
-            TIDE
+            DND | Do Not Disturb
           </div>
           <div class="projAwards desktopOnly">
             <img style="width:100%" data-gumlet="false" src=>
@@ -513,10 +513,10 @@
         <div class="projRightColumn">
           <div class="projBio">
             <!-- <hr class="desktopOnly"> -->
-            Created two homepage options to align with the 2022 rebrand of TIDE Film Festival.  In both options, we strived for a unique yet user-friendly design — to make it standout from it film-festival competitors — by utilizing the new wave-y identitiy. <br><br> Below are main snippets from OPTION 1 which utilizes the entire color palette in the indentity and showcases the smaller wave/ inktrap forms.  Also, there is a condensed page footer with links to social media and a mailing list.
+            For emerging Miami-based band DND | Do Not Disturb, we shot a pair of music and standalone performance videos for 'Piña Coladas' and 'Deja Vu' to help launch the band's musical debut.
           </div>
           <div class="projCredits">
-             <div class='Credits'> <span> Client </span> <span> TIDE Film Festival </span> </div> <div class='Credits'> <span> Year </span> <span> 2022 </span> </div> <div class='Credits'> <span> Team </span> <span> Juan Carlos Pagan, CD<br> Ahmed Klink, CD<br> Kee Wei Chin, Designer<br> Rand Rivera, Designer<br> Xiaoyu Xue, Motion Designer<br> Jasmine Kan, Web Designer<br> </span> </div> 
+             <div class='Credits'> <span> Client </span> <span> Do Not Disturb </span> </div> <div class='Credits'> <span> Year </span> <span> 2024 </span> </div> <div class='Credits'> <span> Team - Grand Crew </span> <span> Ian Kaplan, Managing Director<br> Geoff Sean Levy, ECD + Director<br> Sami Sheppard, Executive Producer<br> Bella Savignano, Creative Assistant<br> Rand Rivera, Creative Assistant + Designer<br> Mariana Urrego, Production Coordinator<br> Jasmine Kan, Creative Intern<br> </span> </div>
           </div>
           <!-- <div class="projMore" style="font-size: 1.5em;">
             +
@@ -548,14 +548,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
   <script src="/assets/js/project.js"></script>
   <script type="text/javascript">
-	let allFiles = ['01_TIDE.gif', '02_TIDE.jpg', '03_TIDE.png', '04_TIDE.gif', '05_TIDE.gif', '06_TIDE.mp4', '07_TIDE.mp4', '08_TIDE.mp4', '09_TIDE.mp4', '10_TIDE.mp4', '11_TIDE.mp4', '14_TIDE.jpg', '15_TIDE.mp4', '16_TIDE.jpg', '17_TIDE.png', '18_TIDE.jpg', '19_TIDE.jpg'];
+	let allFiles = ['01.png', 'dejavu.html', '02.png', '03-03.png', '05.png', '06-03.png','pina.html', '10.png', '11.png'];
 	let gallery = document.querySelector("#gallery")
 
 	for(let i=0; i<allFiles.length; i++){
 		if(allFiles[i].includes(".mp4")){
 			let vid = document.createElement("video");
 			let source = document.createElement("source");
-			source.src = "https://designsbyrand.gumlet.io/projects/tide/" + allFiles[i];
+			source.src = "https://designsbyrand.gumlet.io/projects/dnd/" + allFiles[i];
 			vid.append(source);
 			// vid.setAttribute('data-src',allFiles[i]);
 			vid.classList.add("media");
@@ -569,12 +569,12 @@
 		} 
 		else if(allFiles[i].includes(".html")){
 			let text = document.createElement("div");
-			$(text).load("/assets/images/tide/" + allFiles[i]);
+			$(text).load("/assets/images/dnd/" + allFiles[i]);
 			gallery.append(text);
 		}
 		// else if(allFiles[i].includes("_HERO")){
 		// 	let hero = document.createElement("video");
-		// 	hero.src = "designsbyrand.gumlet.io/projects/tide/" + allFiles[i];
+		// 	hero.src = "designsbyrand.gumlet.io/projects/dnd/" + allFiles[i];
 		// 	hero.classList.add("media");
 		// 	// hero.classList.add("video");
 		// 	hero.controls=true;
@@ -584,7 +584,7 @@
 		// } 
 		else{
 			let img = document.createElement("img");
-			img.dataset.src = "/projects/tide/" + allFiles[i];
+			img.dataset.src = "/projects/dnd/" + allFiles[i];
 			img.classList.add("media");
 			gallery.append(img)
 		}

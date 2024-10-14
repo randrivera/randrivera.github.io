@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Designs - {{page.projTitle}}</title>	
+	<!-- Link to the relevant stylesheet -->
+  <link href="/assets/css/fonts.css" rel="stylesheet">
+	<link href="/assets/css/main.css" rel="stylesheet">
+  <link href="/assets/css/mainMobile.css" rel="stylesheet">
+  <link href="/assets/css/project.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/assets/images/rand_favicon.png">
+  <script type="text/javascript">
+    window.GUMLET_CONFIG = {
+        hosts: [{
+            current: "{{designsbyrand.com}}",
+            gumlet: "designsbyrand.gumlet.io"
+        }],
+        lazy_load: true
+    };
+    (function(){d=document;s=d.createElement("script");s.src="https://cdn.gumlet.com/gumlet.js/2.1/gumlet.min.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+</script>
+</head>
+
+<body class="noScrollBar">
+  <div class="header sticky">
+    {% include header.html %}
+  </div>
+  <hr style="margin-bottom: 15px">
+
+  <div class="navMobile mobile">
+    {% include navigationMobile.html %}
+  </div>
+  
+  <div class="container" >
+    <div class="Nav desktopOnly" style="opacity: 0.3" id="projectNav">
+      {% include navigation.html %}
+      <div style="text-align: left; position: sticky; bottom: 0px; background-color: var(--background-color); padding-top: 5px;">entire site coded by <span style="color:var(--my-variable); transition:.4s;">me!</span> @rkrivera2024</div>
+    </div>
+    <div class="Content noScrollBar" >
+      <div class="projInfo">
+        <div class="projLeftColumn">
+          <div class="projTitle bold">
+            <!-- <hr class="desktopOnly"> -->
+            {{page.projTitle}}
+          </div>
+          <div class="projAwards desktopOnly">
+            <img style="width:100%" data-gumlet="false" src={{page.projAwards}}>
+          </div>
+        </div>
+
+        <div class="projRightColumn">
+          <div class="projBio">
+            <!-- <hr class="desktopOnly"> -->
+            {{page.projBio}}
+          </div>
+          <div class="projCredits">
+            {{page.projCredits}}
+          </div>
+          <!-- <div class="projMore" style="font-size: 1.5em;">
+            +
+          </div> -->
+        </div>
+      </div>
+      <br>
+        {{content}}
+        <br>
+        <span id ="gallery"></span>
+        <!-- <div class="nextBefore">
+          <hr>
+          <div class="projSwitch">
+            <a id="prev">TEST
+            </a>
+            <a id="next">TEST
+            </a>
+          </div>
+        </div> -->
+    </div>
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.10.1/tsparticles.confetti.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+  <script src="/assets/js/project.js"></script>
+  {% include imageGallery.html %}
+  {% include nextprev.html %}
+  
+</body>
+</html>
