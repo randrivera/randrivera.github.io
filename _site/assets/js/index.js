@@ -162,10 +162,6 @@ projects[3] = document.querySelector("#projfour");
 projects[4] = document.querySelector("#projfive");
 projects[5] = document.querySelector("#projsix");
 projects[6] = document.querySelector("#projseven");
-projects[7] = document.querySelector("#projeight");
-projects[8] = document.querySelector("#projnine");
-projects[9] = document.querySelector("#projten");
-//hover projects
 
 let thumbnails = [];
 thumbnails[0] = document.querySelector("#thumbone");
@@ -175,10 +171,6 @@ thumbnails[3] = document.querySelector("#thumbfour");
 thumbnails[4] = document.querySelector("#thumbfive");
 thumbnails[5] = document.querySelector("#thumbsix");
 thumbnails[6] = document.querySelector("#thumbseven");
-thumbnails[7] = document.querySelector("#thumbeight");
-thumbnails[8] = document.querySelector("#thumbnine");
-thumbnails[9] = document.querySelector("#thumbten");
-// thumbnails[9] = document.querySelector("#thumbone");
 
 
 
