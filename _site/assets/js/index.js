@@ -162,6 +162,8 @@ projects[3] = document.querySelector("#projfour");
 projects[4] = document.querySelector("#projfive");
 projects[5] = document.querySelector("#projsix");
 projects[6] = document.querySelector("#projseven");
+projects[7] = document.querySelector("#projeight");
+projects[8] = document.querySelector("#projnine");
 
 let thumbnails = [];
 thumbnails[0] = document.querySelector("#thumbone");
@@ -171,26 +173,18 @@ thumbnails[3] = document.querySelector("#thumbfour");
 thumbnails[4] = document.querySelector("#thumbfive");
 thumbnails[5] = document.querySelector("#thumbsix");
 thumbnails[6] = document.querySelector("#thumbseven");
+thumbnails[7] = document.querySelector("#thumbeight");
+thumbnails[8] = document.querySelector("#thumbnine");
 
 
 
 // console.log("test");
 for (let i=0; i<thumbnails.length; i++){
+  if (!thumbnails[i] || !projects[i]) continue;
   thumbnails[i].addEventListener("mouseenter", function(){
-    // console.log("start func()");
-
-    // for (let i=0; i<thumbnails.length; i++){
-    //   projects[i].style.opacity = "75%";
-    // }
-    // projects[i].style.opacity = "100%";
     projects[i].style.color = sessionStorage.getItem("userColor");
-    console.log("done");
   });
-
   thumbnails[i].addEventListener("mouseleave", function(){
-    // for (let i=0; i<thumbnails.length; i++){
-    //   projects[i].style.opacity = "100%";
-    // }
     projects[i].style.color = 'var(--text-color)';
   });
 }
@@ -225,17 +219,11 @@ for (let i=0; i<thumbnails.length; i++){
   const scroller = document.querySelector(".Content");
 
   for (let i=0; i<projects.length; i++){
+    if (!projects[i]) continue;
     projects[i].addEventListener("mouseenter", function(){
-      console.log(`${scroller.scrollTop}`);
-    
-      console.log(`-${targetImg.clientHeight}`);
-      // subtract how much user has already scrolled on their own to the scroll distance
       target.style.top = `-${targetImg.clientHeight*i}` - `-${scroller.scrollTop}` + "px";
     });
-
     projects[i].addEventListener("mouseleave", function(){
-    
-      console.log(`-${targetImg.clientHeight}`);
       target.style.top = "0px";
     });
   }
