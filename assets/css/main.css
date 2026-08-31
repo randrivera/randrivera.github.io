@@ -202,6 +202,14 @@ width: 100%;
   width: fit-content;
   border-bottom: 1.75px solid var(--my-variable);
 }
+#WHOAMI {
+  color: var(--text-color);
+  border-bottom-color: var(--text-color);
+}
+a:hover #WHOAMI {
+  color: var(--my-variable);
+  border-bottom-color: var(--my-variable);
+}
 /*changing color playground text*/
 @keyframes rainbow-colors {
   0% { color: hsl(0turn, 90%, 65%); }
