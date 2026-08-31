@@ -176,7 +176,7 @@ thumbnails[6] = document.querySelector("#thumbseven");
 thumbnails[7] = document.querySelector("#thumbeight");
 thumbnails[8] = document.querySelector("#thumbnine");
 
-
+//
 
 // console.log("test");
 for (let i=0; i<thumbnails.length; i++){
