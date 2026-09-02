@@ -7,97 +7,65 @@ let button = document.querySelector("#enterBtn");
 let hello = document.getElementById("hello");
 let r = document.querySelector(':root');
 
-r.style.setProperty('--my-variable', sessionStorage.getItem("userColor"));
-
-// const mediaQuery = window.matchMedia('(min-width: 768px)')
-// if (mediaQuery.matches){
-//   //enter name interaction
-//   button.addEventListener("click", function(){
-//     //grab value from text input
-//     let txt = document.querySelector("#collectName").value
-//     //store value for userName
-//     sessionStorage.setItem("userName", txt);
-
-//     //change hello message name to have userName
-//     hello.innerHTML = "Hi " + sessionStorage.getItem("userName") + "! ♥";
-
-//     //hide nameScreen then display:none it afterwards so it does not interfere with other interactions
-//     nameInput.style.opacity = "0";
-//     setTimeout(function()
-//       {nameInput.style.display = "none";
-//       }, 1000);
-//   });
-//   function search(ele) {
-//     if(event.key === 'Enter') {
-//         //grab value from text input
-//     let txt = document.querySelector("#collectName").value
-//     //store value for userName
-//     sessionStorage.setItem("userName", txt);
-
-//     //change hello message name to have userName
-//     hello.innerHTML = "Hi " + sessionStorage.getItem("userName") + "! ♥";
-
-//     //hide nameScreen then display:none it afterwards so it does not interfere with other interactions
-//     nameInput.style.opacity = "0";
-//     setTimeout(function()
-//       {nameInput.style.display = "none";
-//       }, 1000);
-//     }
-//   };
-
-
-//   //checks if a name is already stored and prevents the name popup if so
-//   function checkStorage(){
-//     if (sessionStorage.getItem("userName")){
-//       hello.innerHTML = "Hi " + sessionStorage.getItem("userName") + "! ♥";
-//       nameInput.style.display = "none";
-//     } else {
-//       null
-//     };
-//   } 
-//   window.onload = checkStorage();
-// };
-
-//change color on every click!
-let rbackground = [
-  'F30909',
-  'F37E09',
-  '7EF309',
-  '0931F3',
-  'CB09F3', 
+// color duos pulled from photo reference, in order top-left → bottom-right
+const colorDuos = [
+  { bg: '#DEDAD0', text: '#121212', accent: '#E85520' },  // cream + black
+  { bg: '#E85520', text: '#3D1200', accent: '#DEDAD0' },  // orange + dark brown
+  { bg: '#6EC9A2', text: '#1B2040', accent: '#E85520' },  // teal + dark navy
+  { bg: '#AEC028', text: '#1A3008', accent: '#F0C020' },  // light green + dark green
+  { bg: '#E06878', text: '#8B1020', accent: '#F0C020' },  // pink + deep red
+  { bg: '#F0C020', text: '#2A2820', accent: '#E06878' },  // yellow + dark warm gray
 ];
 
+function applyDuo(duo) {
+  r.style.setProperty('--my-variable',      duo.accent);
+  r.style.setProperty('--background-color', duo.bg);
+  r.style.setProperty('--text-color',       duo.text);
+  sessionStorage.setItem("userBg",   duo.bg);
+  sessionStorage.setItem("userText", duo.text);
+}
 
-//every click changes the key color
-document.addEventListener("click", function(){
-    //picks a random color from rbackground[]
-    let randomColor = rbackground[Math.floor(Math.random()*rbackground.length)];
-    //sets the storage color as the random color from above
-    sessionStorage.setItem("userColor", "#"+randomColor);
-    //make the variable color the stored color
-    r.style.setProperty('--my-variable', sessionStorage.getItem("userColor"));
-    // updatePupil();
-  });
+// colorify toggle
+const defaultBg   = '#121212';
+const defaultText = '#f5f5f5';
+let colorifyOn = sessionStorage.getItem("colorifyOn") === "true";
+let duoIndex   = parseInt(sessionStorage.getItem("duoIndex") || "0");
 
-//dark + light mode code
+function setDefault() {
+  r.style.setProperty('--background-color', defaultBg);
+  r.style.setProperty('--text-color',       defaultText);
+  r.style.setProperty('--my-variable',      '#E85520');
+}
 
-//sets the mode to the stored userMode
-document.documentElement.setAttribute("data-theme", sessionStorage.getItem("userMode"));
+// restore state on load
+if (colorifyOn) {
+  applyDuo(colorDuos[duoIndex]);
+} else {
+  setDefault();
+}
 
-//checks for dark/light mode switches
-document.addEventListener("DOMContentLoaded", function(event) {
-    let checkbox = document.querySelector('input[type="checkbox"]');
-
-    checkbox.addEventListener('change', function () {
-      let currentTheme = document.documentElement.getAttribute("data-theme");
-      // Switch between `dark` and `light`
-      let switchToTheme = currentTheme === "dark" ? "light" : "dark";
-      sessionStorage.setItem("userMode", switchToTheme);
-
-      document.documentElement.setAttribute("data-theme", sessionStorage.getItem("userMode"));
+document.addEventListener("DOMContentLoaded", function() {
+  const checkbox = document.querySelector('input[type="checkbox"]');
+  if (!checkbox) return;
+  checkbox.checked = colorifyOn;
+  checkbox.addEventListener('change', function() {
+    colorifyOn = this.checked;
+    sessionStorage.setItem("colorifyOn", colorifyOn);
+    if (!colorifyOn) {
+      setDefault();
+    } else {
+      applyDuo(colorDuos[duoIndex]);
     }
+  });
+});
 
-)});
+// every click steps to the next duo in order (only when colorify is on)
+document.addEventListener("click", function() {
+  if (!colorifyOn) return;
+  duoIndex = (duoIndex + 1) % colorDuos.length;
+  sessionStorage.setItem("duoIndex", duoIndex);
+  applyDuo(colorDuos[duoIndex]);
+});
   
 
 //award fireworks code
@@ -184,7 +152,7 @@ thumbnails[9] = document.querySelector("#thumbten");
 for (let i=0; i<thumbnails.length; i++){
   if (!thumbnails[i] || !projects[i]) continue;
   thumbnails[i].addEventListener("mouseenter", function(){
-    projects[i].style.color = sessionStorage.getItem("userColor");
+    projects[i].style.color = 'var(--my-variable)';
   });
   thumbnails[i].addEventListener("mouseleave", function(){
     projects[i].style.color = 'var(--text-color)';
@@ -225,7 +193,186 @@ for (let i=0; i<thumbnails.length; i++){
     projects[i].addEventListener("mouseenter", function(){
       target.style.top = `-${targetImg.clientHeight*i}` - `-${scroller.scrollTop}` + "px";
     });
-    projects[i].addEventListener("mouseleave", function(){
-      target.style.top = "0px";
-    });
   }
+
+// staggered nav project entrance
+document.querySelectorAll(".Nav .project").forEach((el, i) => {
+  el.style.animationDelay = (i * 60) + "ms";
+});
+
+// staggered preview image entrance
+document.querySelectorAll(".previews > a").forEach((el, i) => {
+  el.style.animationDelay = (i * 60) + "ms";
+});
+
+// slide-in panel for all internal project links
+const contentArea = document.querySelector(".Content");
+const containerArea = document.querySelector(".container");
+const navArea = document.querySelector(".Nav");
+const previews = document.querySelector(".previews");
+let activePanel = null;
+
+// scroll jack: natural scroll, eased snap to nearest preview when scroll settles
+const previewLinks = [...document.querySelectorAll(".previews > a")];
+if (previewLinks.length && contentArea) {
+  let snapTimer = null;
+  let snapRaf = null;
+
+  function easeInOutExpo(t) {
+    if (t === 0) return 0;
+    if (t === 1) return 1;
+    if (t < 0.5) return Math.pow(2, 20 * t - 10) / 2;
+    return (2 - Math.pow(2, -20 * t + 10)) / 2;
+  }
+
+  function smoothScrollTo(target, duration) {
+    cancelAnimationFrame(snapRaf);
+    const start = contentArea.scrollTop;
+    const dist = target - start;
+    const startTime = performance.now();
+    function step(now) {
+      const elapsed = now - startTime;
+      const t = Math.min(elapsed / duration, 1);
+      contentArea.scrollTop = start + dist * easeInOutExpo(t);
+      if (t < 1) snapRaf = requestAnimationFrame(step);
+    }
+    snapRaf = requestAnimationFrame(step);
+  }
+
+  contentArea.addEventListener("scroll", function() {
+    if (activePanel) return;
+    if (snapRaf) return; // don't re-trigger while snapping
+    clearTimeout(snapTimer);
+    snapTimer = setTimeout(() => {
+      const scrollTop = contentArea.scrollTop;
+      const containerTop = contentArea.getBoundingClientRect().top;
+      let closest = 0;
+      let minDist = Infinity;
+      previewLinks.forEach((el, i) => {
+        const elTop = el.getBoundingClientRect().top - containerTop + scrollTop;
+        const dist = Math.abs(elTop - scrollTop);
+        if (dist < minDist) { minDist = dist; closest = i; }
+      });
+      if (minDist > 30) {
+        const targetTop = previewLinks[closest].getBoundingClientRect().top - containerTop + scrollTop;
+        smoothScrollTo(targetTop, 1100);
+        setTimeout(() => { snapRaf = null; }, 1150);
+      }
+    }, 250);
+  });
+}
+
+function closePanel() {
+  if (!activePanel) return;
+  const panelToClose = activePanel;
+  activePanel = null;
+  panelToClose.classList.add("closing");
+  if (previews) {
+    previews.classList.remove("exiting");
+    previews.style.opacity = "";
+    previews.style.transition = "";
+  }
+  if (navArea) navArea.style.opacity = "";
+  if (panelToClose._positionPanel) window.removeEventListener("resize", panelToClose._positionPanel);
+  panelToClose.addEventListener("transitionend", () => {
+    if (panelToClose.parentNode) panelToClose.parentNode.removeChild(panelToClose);
+  }, { once: true });
+  if (navArea) navArea.removeEventListener("mouseenter", closePanel);
+}
+
+function loadProjectCSS() {
+  if (!document.querySelector('link[href="/assets/css/project.css"]')) {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "/assets/css/project.css";
+    document.head.appendChild(link);
+  }
+}
+
+if (contentArea) {
+  document.querySelectorAll(".Nav .Projects a[href^='/projects/'], .previews a[href^='/projects/']").forEach(link => {
+    link.addEventListener("click", function(e) {
+      e.preventDefault();
+      if (activePanel) closePanel();
+      loadProjectCSS();
+
+      const projUrl = this.getAttribute("href");
+      fetch(projUrl)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, "text/html");
+          const projContent = doc.querySelector(".Content").innerHTML;
+          const bodyScripts = [...doc.querySelectorAll("body script")];
+
+          const panel = document.createElement("div");
+          panel.classList.add("project-panel");
+          panel.innerHTML = `<span class="back-btn">← Back</span>` + projContent;
+
+          function positionPanel() {
+            const rect = contentArea.getBoundingClientRect();
+            panel.style.top = rect.top + "px";
+            panel.style.left = rect.left + "px";
+            panel.style.width = rect.width + "px";
+            panel.style.height = rect.height + "px";
+          }
+
+          positionPanel();
+          document.body.appendChild(panel);
+          activePanel = panel;
+
+          panel._positionPanel = positionPanel;
+          window.addEventListener("resize", positionPanel);
+
+          // patch nextprev script: window.location.pathname is / in panel context, so inject the real path
+          const fetchedPath = "/projects/" + projUrl.split("/projects/")[1];
+
+          // give this panel's gallery a unique ID so scripts target the right one
+          const galleryEl = panel.querySelector("#gallery");
+          const galleryId = "gallery-" + Date.now();
+          if (galleryEl) galleryEl.id = galleryId;
+
+          bodyScripts.forEach(old => {
+            const s = document.createElement("script");
+            if (old.src) {
+              s.src = old.src;
+            } else {
+              // wrap in IIFE + scope gallery selector to this panel's unique ID
+              const scoped = old.textContent
+                .replace(/document\.querySelector\(["']#gallery["']\)/g, `document.querySelector("#${galleryId}")`)
+                .replace(/window\.location\.pathname/g, `"${fetchedPath}"`);
+              s.textContent = `(function() { ${scoped} })();`;
+            }
+            panel.appendChild(s);
+          });
+
+          // fade previews first, then slide panel in with slight overlap
+          if (previews) previews.classList.add("exiting");
+          if (navArea) {
+            navArea.style.transition = "opacity 0.6s ease";
+            navArea.style.opacity = "0.3";
+          }
+          panel.getBoundingClientRect();
+          setTimeout(() => {
+            panel.classList.add("active");
+          }, 60);
+
+          panel.querySelector(".back-btn").addEventListener("click", closePanel);
+          if (navArea) navArea.addEventListener("mouseenter", closePanel);
+
+          let bottomTriggered = false;
+          panel.addEventListener("scroll", function() {
+            const atBottom = panel.scrollTop + panel.clientHeight >= panel.scrollHeight - 40;
+            if (atBottom && !bottomTriggered) {
+              bottomTriggered = true;
+              if (previews) {
+                previews.style.opacity = "1";
+                previews.style.transition = "opacity 0.5s ease-in-out";
+              }
+              setTimeout(closePanel, 500);
+            }
+          });
+        });
+    });
+  });
+}

@@ -11,13 +11,14 @@
 
 .projTitle {
     text-transform: uppercase;
-    font-size: 1.5em;
-    
+    font-size: 2em;
+    width: 100%;
+    word-break: normal;
 }
 
 .projBio, .projOther > span:nth-child(3) {
-    font-family: 'GT Planar';
-    font-weight: 300;
+    font-family: 'Roobert';
+    font-weight: 500;
     font-style: normal;
     letter-spacing: 0.01em;
     line-height: 1.6em;
@@ -31,6 +32,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex: 1;
+    min-width: 0;
 }
 .projCredits {
     display: flex;

@@ -27,7 +27,7 @@ html {
 
 body{
   padding: 10px;
-  font-family: 'GT Planar';
+  font-family: 'Roobert';
   font-weight: 300;
   font-style: normal;
   background-color: var(--background-color);
@@ -57,12 +57,12 @@ hr {
 
 .italic {
   font-size: 85%;
-  font-family: 'GT Planar';
+  font-family: 'Roobert';
   font-weight: normal;
   font-style: italic;
 }
 .bold{
-  font-family: 'GT Planar';
+  font-family: 'Roobert';
   font-weight: 500;
   font-style: normal;
 }
@@ -92,7 +92,7 @@ width: 100%;
   flex-direction: column;
   margin-bottom: 20px;
 
-  font-family: 'GT Planar';
+  font-family: 'Roobert';
   font-weight: normal;
   font-style: normal;
 
@@ -137,7 +137,7 @@ width: 100%;
   align-items: center;
 }
 .hamburger > button {
-  font-family: 'GT Planar';
+  font-family: 'Roobert';
   font-weight: normal;
   color: var(--text-color);
   transition: .4s;
@@ -170,7 +170,7 @@ width: 100%;
 }
 
 .navHeader{
-  font-family: 'GT Planar';
+  font-family: 'Roobert';
   font-weight: normal !important;
   font-style: normal;
   color: var(--my-variable);
@@ -254,7 +254,7 @@ width: 100%;
 #WHOAMI:hover::after {
 	display: inline;
 	content: attr(data-hidden);
-  font-family: 'GT Planar';
+  font-family: 'Roobert';
   font-weight: normal;
   font-style: italic;
 }
@@ -393,7 +393,7 @@ input:checked + .slider:before {
 
 }
 .nameInput span:nth-child(3){
-  font-family: 'GT Planar';
+  font-family: 'Roobert';
   font-weight: 500;
   font-style: normal;
     font-size: 1.1em;
@@ -412,7 +412,7 @@ input:checked + .slider:before {
 }
 /* enter bttn*/
 button {
-  font-family: 'GT Planar';
+  font-family: 'Roobert';
   font-weight: normal;
   font-style: normal;    
       padding: 4px;

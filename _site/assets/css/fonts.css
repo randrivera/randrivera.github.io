@@ -1,301 +1,47 @@
 @font-face {
-    font-family: 'abc_monument_grotesk_unlicBlk';
-    src: url('/assets/fonts/abcmonumentgrotesk-black-trial-webfont.woff2') format('woff2'),
-         url('/assets/fonts/abcmonumentgrotesk-black-trial-webfont.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Roobert';
+    src: url('/assets/fonts/Roobert-Regular.otf') format('opentype');
+    font-weight: 400;
     font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'abc_monument_grotesk_unlBlkIt';
-    src: url('/assets/fonts/abcmonumentgrotesk-blackitalic-trial-webfont.woff2') format('woff2'),
-         url('/assets/fonts/abcmonumentgrotesk-blackitalic-trial-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'abc_monument_grotesk_unliceBd';
-    src: url('/assets/fonts/abcmonumentgrotesk-bold-trial-webfont.woff2') format('woff2'),
-         url('/assets/fonts/abcmonumentgrotesk-bold-trial-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'abc_monument_grotesk_unliBdIt';
-    src: url('/assets/fonts/abcmonumentgrotesk-bolditalic-trial-webfont.woff2') format('woff2'),
-         url('/assets/fonts/abcmonumentgrotesk-bolditalic-trial-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'abc_monument_grotesk_unliceHv';
-    src: url('/assets/fonts/abcmonumentgrotesk-heavy-trial-webfont.woff2') format('woff2'),
-         url('/assets/fonts/abcmonumentgrotesk-heavy-trial-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'abc_monument_grotesk_unliHvIt';
-    src: url('/assets/fonts/abcmonumentgrotesk-heavyitalic-trial-webfont.woff2') format('woff2'),
-         url('/assets/fonts/abcmonumentgrotesk-heavyitalic-trial-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'abc_monument_grotesk_unliceLt';
-    src: url('/assets/fonts/abcmonumentgrotesk-light-trial-webfont.woff2') format('woff2'),
-         url('/assets/fonts/abcmonumentgrotesk-light-trial-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'abc_monument_grotesk_unliLtIt';
-    src: url('/assets/fonts/abcmonumentgrotesk-lightitalic-trial-webfont.woff2') format('woff2'),
-         url('/assets/fonts/abcmonumentgrotesk-lightitalic-trial-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'abc_monument_grotesk_unliceMd';
-    src: url('/assets/fonts/abcmonumentgrotesk-medium-trial-webfont.woff2') format('woff2'),
-         url('/assets/fonts/abcmonumentgrotesk-medium-trial-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'abc_monument_grotesk_unliMdIt';
-    src: url('/assets/fonts/abcmonumentgrotesk-mediumitalic-trial-webfont.woff2') format('woff2'),
-         url('/assets/fonts/abcmonumentgrotesk-mediumitalic-trial-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'abc_monument_grotesk_unliceRg';
-    src: url('≈abcmonumentgrotesk-regular-trial-webfont.woff2') format('woff2'),
-         url('/assets/fonts/abcmonumentgrotesk-regular-trial-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'abc_monument_grotesk_unliRgIt';
-    src: url('/assets/fonts/abcmonumentgrotesk-regularitalic-trial-webfont.woff2') format('woff2'),
-         url('/assets/fonts/abcmonumentgrotesk-regularitalic-trial-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: 'GT Planar';
-    src: url('/assets/fonts/GTPlanar-Italic15Black.woff2') format('woff2'),
-        url('/assets/fonts/GTPlanar-Italic15Black.woff') format('woff');
-    font-weight: 900;
+    font-family: 'Roobert';
+    src: url('/assets/fonts/Roobert-RegularItalic.otf') format('opentype');
+    font-weight: 400;
     font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'GT Planar';
-    src: url('/assets/fonts/GTPlanar-Black.woff2') format('woff2'),
-        url('/assets/fonts/GTPlanar-Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'GT Planar';
-    src: url('/assets/fonts/GTPlanar-Italic15Bold.woff2') format('woff2'),
-        url('/assets/fonts/GTPlanar-Italic15Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'GT Planar';
-    src: url('/assets/fonts/GTPlanar-Italic15Medium.woff2') format('woff2'),
-        url('/assets/fonts/GTPlanar-Italic15Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'GT Planar';
-    src: url('/assets/fonts/GTPlanar-Italic15Regular.woff2') format('woff2'),
-        url('/assets/fonts/GTPlanar-Italic15Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'GT Planar';
-    src: url('/assets/fonts/GTPlanar-Italic15Thin.woff2') format('woff2'),
-        url('/assets/fonts/GTPlanar-Italic15Thin.woff') format('woff');
-    font-weight: 100;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'GT Planar';
-    src: url('/assets/fonts/GTPlanar-Italic15Light.woff2') format('woff2'),
-        url('/assets/fonts/GTPlanar-Italic15Light.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'GT Planar';
-    src: url('/assets/fonts/GTPlanar-Light.woff2') format('woff2'),
-        url('/assets/fonts/GTPlanar-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'GT Planar Retalic 15';
-    src: url('/assets/fonts/GTPlanar-Retalic15Black.woff2') format('woff2'),
-        url('/assets/fonts/GTPlanar-Retalic15Black.woff') format('woff');
-    font-weight: 900;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'GT Planar';
-    src: url('/assets/fonts/GTPlanar-Medium.woff2') format('woff2'),
-        url('/assets/fonts/GTPlanar-Medium.woff') format('woff');
+    font-family: 'Roobert';
+    src: url('/assets/fonts/Roobert-Medium.otf') format('opentype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'GT Planar';
-    src: url('/assets/fonts/GTPlanar-Regular.woff2') format('woff2'),
-        url('/assets/fonts/GTPlanar-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'GT Planar Retalic 15';
-    src: url('/assets/fonts/GTPlanar-Retalic15Bold.woff2') format('woff2'),
-        url('/assets/fonts/GTPlanar-Retalic15Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'GT Planar Retalic 15';
-    src: url('/assets/fonts/GTPlanar-Retalic15Light.woff2') format('woff2'),
-        url('/assets/fonts/GTPlanar-Retalic15Light.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'GT Planar Retalic 15';
-    src: url('/assets/fonts/GTPlanar-Retalic15Regular.woff2') format('woff2'),
-        url('/assets/fonts/GTPlanar-Retalic15Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'GT Planar Retalic 15';
-    src: url('/assets/fonts/GTPlanar-Retalic15Medium.woff2') format('woff2'),
-        url('/assets/fonts/GTPlanar-Retalic15Medium.woff') format('woff');
+    font-family: 'Roobert';
+    src: url('/assets/fonts/Roobert-MediumItalic.otf') format('opentype');
     font-weight: 500;
     font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'GT Planar Retalic 15';
-    src: url('/assets/fonts/GTPlanar-Retalic15Thin.woff2') format('woff2'),
-        url('/assets/fonts/GTPlanar-Retalic15Thin.woff') format('woff');
-    font-weight: 100;
+    font-family: 'Roobert';
+    src: url('/assets/fonts/Roobert-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roobert';
+    src: url('/assets/fonts/Roobert-BoldItalic.otf') format('opentype');
+    font-weight: 700;
     font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'GT Planar';
-    src: url('/assets/fonts/GTPlanar-Thin.woff2') format('woff2'),
-        url('/assets/fonts/GTPlanar-Thin.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'GT Planar';
-    src: url('/assets/fonts/GTPlanar-Bold.woff2') format('woff2'),
-        url('/assets/fonts/GTPlanar-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
     font-display: swap;
 }
