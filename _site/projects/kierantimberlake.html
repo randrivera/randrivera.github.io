@@ -514,13 +514,13 @@
 </div>
 
 <div class="ed-half right">
-  <div class="ed-carousel">
+  <div class="ed-carousel" id="kt-carousel">
     <img src="https://designsbyrand.gumlet.io/projects/kierantimberlake/KT_Case_Ruler.jpg" class="ed-carousel-slide active">
     <img src="https://designsbyrand.gumlet.io/projects/kierantimberlake/KT-Case_Pen.jpg" class="ed-carousel-slide">
   </div>
   <script>
   (function() {
-    var slides = document.querySelectorAll('.ed-carousel .ed-carousel-slide');
+    var slides = document.querySelectorAll('#kt-carousel .ed-carousel-slide');
     var current = 0;
     setInterval(function() {
       slides[current].classList.remove('active');

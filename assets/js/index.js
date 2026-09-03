@@ -51,6 +51,8 @@ document.addEventListener("DOMContentLoaded", function() {
   checkbox.addEventListener('change', function() {
     colorifyOn = this.checked;
     sessionStorage.setItem("colorifyOn", colorifyOn);
+    document.body.classList.add('colorify-transitioning');
+    setTimeout(() => document.body.classList.remove('colorify-transitioning'), 500);
     if (!colorifyOn) {
       setDefault();
     } else {
@@ -176,98 +178,24 @@ for (let i=0; i<thumbnails.length; i++){
   
 
 
-  //div in which all the preview images live in
-  let target = document.getElementById("target");
-  const scroller = document.querySelector(".Content");
-  const previewLinksNav = [...document.querySelectorAll(".previews > a")];
-
-  for (let i=0; i<projects.length; i++){
-    if (!projects[i]) continue;
-    projects[i].addEventListener("mouseenter", function(){
-      if (!previewLinksNav[i] || !scroller) return;
-      const containerTop = scroller.getBoundingClientRect().top;
-      const elTop = previewLinksNav[i].getBoundingClientRect().top - containerTop + scroller.scrollTop;
-      const start = scroller.scrollTop;
-      const dist = elTop - start;
-      const duration = 700;
-      const t0 = performance.now();
-      let raf;
-      function step(now) {
-        const t = Math.min((now - t0) / duration, 1);
-        const ease = t < 0.5 ? 2*t*t : -1+(4-2*t)*t;
-        scroller.scrollTop = start + dist * ease;
-        if (t < 1) raf = requestAnimationFrame(step);
-      }
-      raf = requestAnimationFrame(step);
-    });
-  }
+  const contentArea = document.querySelector(".Content");
 
 // staggered nav project entrance
 document.querySelectorAll(".Nav .project").forEach((el, i) => {
-  el.style.animationDelay = (i * 60) + "ms";
+  el.style.animationDelay = (i * 120) + "ms";
 });
 
 // staggered preview image entrance
 document.querySelectorAll(".previews > a").forEach((el, i) => {
-  el.style.animationDelay = (i * 60) + "ms";
+  el.style.animationDelay = (i * 120) + "ms";
 });
 
 // slide-in panel for all internal project links
-const contentArea = document.querySelector(".Content");
 const containerArea = document.querySelector(".container");
 const navArea = document.querySelector(".Nav");
 const previews = document.querySelector(".previews");
 let activePanel = null;
 
-// scroll jack: natural scroll, eased snap to nearest preview when scroll settles
-const previewLinks = [...document.querySelectorAll(".previews > a")];
-if (previewLinks.length && contentArea) {
-  let snapTimer = null;
-  let snapRaf = null;
-
-  function easeInOutExpo(t) {
-    if (t === 0) return 0;
-    if (t === 1) return 1;
-    if (t < 0.5) return Math.pow(2, 20 * t - 10) / 2;
-    return (2 - Math.pow(2, -20 * t + 10)) / 2;
-  }
-
-  function smoothScrollTo(target, duration) {
-    cancelAnimationFrame(snapRaf);
-    const start = contentArea.scrollTop;
-    const dist = target - start;
-    const startTime = performance.now();
-    function step(now) {
-      const elapsed = now - startTime;
-      const t = Math.min(elapsed / duration, 1);
-      contentArea.scrollTop = start + dist * easeInOutExpo(t);
-      if (t < 1) snapRaf = requestAnimationFrame(step);
-    }
-    snapRaf = requestAnimationFrame(step);
-  }
-
-  contentArea.addEventListener("scroll", function() {
-    if (activePanel) return;
-    if (snapRaf) return; // don't re-trigger while snapping
-    clearTimeout(snapTimer);
-    snapTimer = setTimeout(() => {
-      const scrollTop = contentArea.scrollTop;
-      const containerTop = contentArea.getBoundingClientRect().top;
-      let closest = 0;
-      let minDist = Infinity;
-      previewLinks.forEach((el, i) => {
-        const elTop = el.getBoundingClientRect().top - containerTop + scrollTop;
-        const dist = Math.abs(elTop - scrollTop);
-        if (dist < minDist) { minDist = dist; closest = i; }
-      });
-      if (minDist > 30) {
-        const targetTop = previewLinks[closest].getBoundingClientRect().top - containerTop + scrollTop;
-        smoothScrollTo(targetTop, 1100);
-        setTimeout(() => { snapRaf = null; }, 1150);
-      }
-    }, 250);
-  });
-}
 
 function closePanel() {
   if (!activePanel) return;
@@ -359,7 +287,13 @@ if (contentArea) {
             panel.appendChild(s);
           });
 
-          // fade previews first, then slide panel in with slight overlap
+          // stagger panel children with fadeUpIn like the nav
+          [...panel.children].filter(el => !el.classList.contains('back-btn')).forEach((el, i) => {
+            el.style.opacity = '0';
+            el.style.animation = `fadeUpIn 0.6s cubic-bezier(0.5, 0, 0.2, 1) ${i * 120}ms forwards`;
+          });
+
+          // fade previews, then fade panel in
           if (previews) previews.classList.add("exiting");
           if (navArea) {
             navArea.style.transition = "opacity 0.6s ease";
