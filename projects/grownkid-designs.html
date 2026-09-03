@@ -1,0 +1,93 @@
+---
+layout: project-editorial
+project: 'grownkid-designs'
+projTitle: Grownkid Designs
+projTagline: Graphics/Print
+projHero: 'https://designsbyrand.gumlet.io/projects/grownkid/projects.png'
+projBio: "Grownkid is a social club for grownkids who believe the meaning of life is play. They host weekly events in NYC to help provide a community for young adults centered around internet and gen-z culture. I help support as their lead designer with all creative and design needs."
+projYear: 2026
+projCredits: "
+<div class='Credits'>
+    <span>Client</span>
+    <span>Grownkid</span>
+</div>
+<div class='Credits'>
+    <span>Year</span>
+    <span>2026</span>
+</div>
+<div class='Credits'>
+    <span>Role</span>
+    <span>Lead Designer</span>
+</div>"
+files: ""
+---
+
+<span id="gallery" style="display:none"></span>
+
+<style>
+.pg-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px;
+  row-gap: 100px;
+  align-items: start;
+}
+.pg-gallery img {
+  width: 100%;
+  display: block;
+}
+</style>
+
+<div class="pg-gallery" id="gk-gallery"></div>
+
+<script>
+(function() {
+  var images = [
+    'GK_EDS_graphic-flyer.jpg',
+    'GK_EDS_graphic-flyer-02.jpg',
+    'GK_EDS_graphic-flyer-03.jpg',
+    'GK_LAN_graphic-flyer_05.jpg',
+    'GK_LAN_graphic-flyer_06.jpg',
+    'GK_LAN_what2do-post-02.png',
+    '01_GK_LAN_djsNmaps.png',
+    'GK_LAN_djNmap-04.png',
+    'GK_CC_graphic-flyer_01.png',
+    'GK_SS_Graphic-Flyer_draft-3.jpg',
+    'GK_SS_graphic-flyer_draft-03.jpg',
+    'GK_BTOW_FLYER.png',
+    'GK_YLBnew_graphic-flyer_02.png',
+    'GK_YearnRoof_graphic-flyer_0422_new.png',
+    'GK_CHD.png',
+    'GK_QWSD_photo-flyer-03.png',
+    'GK_ELP-02_graphic-flyer_02.png',
+    'GK_PSP_8.5x11_Paper-Flyer_V4_300ppi.jpg',
+    'GK_PSP_Proteinmaxxing-Post_00.jpg',
+    'GK_PSP_Proteinmaxxing-Post_03.jpg',
+    'GK_Bench_Stretching.png',
+    'GK_Bench_Bicep-Curl.png',
+    'GK_Bench_Press-02.png',
+    'gk_bench_flyer_final.png',
+    'ELJ_Paper-flyer_Draft_02.21.png',
+    'DS_Paper-flyer_Textured_V2.png',
+    'Copy%20of%20GK_NatA_graphic-flyer_02.png',
+    'Consent%20Form%20Front.png'
+  ];
+
+  // shuffle
+  for (var i = images.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = images[i]; images[i] = images[j]; images[j] = tmp;
+  }
+
+  var base = 'https://designsbyrand.gumlet.io/projects/grownkid/';
+  var gallery = document.getElementById('gk-gallery');
+
+  images.forEach(function(file) {
+    var span = Math.random() < 0.3 ? 2 : 1;
+    var img = document.createElement('img');
+    img.src = base + file;
+    img.style.gridColumn = 'span ' + span;
+    gallery.appendChild(img);
+  });
+})();
+</script>

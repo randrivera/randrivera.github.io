@@ -59,13 +59,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-// every click steps to the next duo in order (only when colorify is on)
-document.addEventListener("click", function() {
-  if (!colorifyOn) return;
-  duoIndex = (duoIndex + 1) % colorDuos.length;
-  sessionStorage.setItem("duoIndex", duoIndex);
-  applyDuo(colorDuos[duoIndex]);
-});
   
 
 //award fireworks code
@@ -185,13 +178,27 @@ for (let i=0; i<thumbnails.length; i++){
 
   //div in which all the preview images live in
   let target = document.getElementById("target");
-  let targetImg = document.querySelector("#target img");
   const scroller = document.querySelector(".Content");
+  const previewLinksNav = [...document.querySelectorAll(".previews > a")];
 
   for (let i=0; i<projects.length; i++){
     if (!projects[i]) continue;
     projects[i].addEventListener("mouseenter", function(){
-      target.style.top = `-${targetImg.clientHeight*i}` - `-${scroller.scrollTop}` + "px";
+      if (!previewLinksNav[i] || !scroller) return;
+      const containerTop = scroller.getBoundingClientRect().top;
+      const elTop = previewLinksNav[i].getBoundingClientRect().top - containerTop + scroller.scrollTop;
+      const start = scroller.scrollTop;
+      const dist = elTop - start;
+      const duration = 700;
+      const t0 = performance.now();
+      let raf;
+      function step(now) {
+        const t = Math.min((now - t0) / duration, 1);
+        const ease = t < 0.5 ? 2*t*t : -1+(4-2*t)*t;
+        scroller.scrollTop = start + dist * ease;
+        if (t < 1) raf = requestAnimationFrame(step);
+      }
+      raf = requestAnimationFrame(step);
     });
   }
 
