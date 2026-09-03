@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Designs - {{page.projTitle}}</title>
+  <link href="/assets/css/fonts.css" rel="stylesheet">
+  <link href="/assets/css/main.css" rel="stylesheet">
+  <link href="/assets/css/mainMobile.css" rel="stylesheet">
+  <link href="/assets/css/project.css" rel="stylesheet">
+  <link href="/assets/css/project-editorial.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/assets/images/rand_favicon.png">
+  <script type="text/javascript">
+    window.GUMLET_CONFIG = {
+        hosts: [{
+            current: "{{designsbyrand.com}}",
+            gumlet: "designsbyrand.gumlet.io"
+        }],
+        lazy_load: true
+    };
+    (function(){d=document;s=d.createElement("script");s.src="https://cdn.gumlet.com/gumlet.js/2.1/gumlet.min.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+  </script>
+</head>
+
+<body class="noScrollBar editorial">
+  <div class="header sticky">
+    {% include header.html %}
+  </div>
+
+  <div class="navMobile mobile">
+    {% include navigationMobile.html %}
+  </div>
+
+  <div class="container">
+    <div class="Nav desktopOnly" style="opacity: 0.3" id="projectNav">
+      {% include navigation.html %}
+      <div style="text-align: left; position: sticky; bottom: 0px; background-color: var(--background-color); padding-top: 5px;">entire site coded by <span style="color:var(--my-variable); transition:.4s;">me!</span> @rkrivera2024</div>
+    </div>
+
+    <div class="Content noScrollBar">
+      <div class="ed-header">
+        <div class="ed-title">{{page.projTitle}}</div>
+        <div class="ed-tagline">{{page.projTagline}}</div>
+      </div>
+
+      {% if page.projHero %}
+      <div class="ed-hero">
+        {% if page.projHero contains '.mp4' %}
+        <video src="{{page.projHero}}" autoplay muted loop playsinline></video>
+        {% else %}
+        <img src="{{page.projHero}}" alt="{{page.projTitle}}">
+        {% endif %}
+      </div>
+      {% endif %}
+
+      <div class="ed-meta">
+        <div class="ed-description">{{page.projBio}}</div>
+        <div class="ed-credits">{{page.projCredits}}</div>
+      </div>
+
+      {{content}}
+      <span id="gallery"></span>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.10.1/tsparticles.confetti.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+  <script src="/assets/js/project.js"></script>
+  {% include imageGallery.html %}
+  {% include nextprev.html %}
+</body>
+</html>

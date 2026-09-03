@@ -276,8 +276,8 @@ function closePanel() {
   if (panelToClose._positionPanel) window.removeEventListener("resize", panelToClose._positionPanel);
   panelToClose.addEventListener("transitionend", () => {
     if (panelToClose.parentNode) panelToClose.parentNode.removeChild(panelToClose);
+    if (contentArea) contentArea.scrollTop = 0;
   }, { once: true });
-  if (navArea) navArea.removeEventListener("mouseenter", closePanel);
 }
 
 function loadProjectCSS() {
@@ -285,6 +285,12 @@ function loadProjectCSS() {
     const link = document.createElement("link");
     link.rel = "stylesheet";
     link.href = "/assets/css/project.css";
+    document.head.appendChild(link);
+  }
+  if (!document.querySelector('link[href="/assets/css/project-editorial.css"]')) {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "/assets/css/project-editorial.css";
     document.head.appendChild(link);
   }
 }
@@ -358,19 +364,11 @@ if (contentArea) {
           }, 60);
 
           panel.querySelector(".back-btn").addEventListener("click", closePanel);
-          if (navArea) navArea.addEventListener("mouseenter", closePanel);
 
-          let bottomTriggered = false;
+          const backBtn = panel.querySelector(".back-btn");
           panel.addEventListener("scroll", function() {
             const atBottom = panel.scrollTop + panel.clientHeight >= panel.scrollHeight - 40;
-            if (atBottom && !bottomTriggered) {
-              bottomTriggered = true;
-              if (previews) {
-                previews.style.opacity = "1";
-                previews.style.transition = "opacity 0.5s ease-in-out";
-              }
-              setTimeout(closePanel, 500);
-            }
+            if (backBtn) backBtn.style.color = atBottom ? 'var(--my-variable)' : '';
           });
         });
     });

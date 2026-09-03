@@ -32,8 +32,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex: 1;
+    flex: 3;
     min-width: 0;
+}
+.projRightColumn {
+    flex: 1;
 }
 .projCredits {
     display: flex;
