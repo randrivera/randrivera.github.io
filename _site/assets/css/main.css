@@ -23,9 +23,9 @@
   display: none;
 }
 :root {
-    --my-variable: #E8531C;
-    --background-color: #121212;
-    --text-color: whitesmoke;
+    --my-variable: #E85520;
+    --background-color: #F8F7F5;
+    --text-color: #111111;
 }
 
 [data-theme="dark"]{
@@ -475,6 +475,13 @@ input:checked + .slider:before {
   opacity: 0.2;
   transition: opacity 0.4s ease-in-out;
   pointer-events: none;
+}
+.nav-dimmed {
+  opacity: 0.3;
+  transition: opacity 0.4s ease;
+}
+.nav-dimmed:hover {
+  opacity: 1;
 }
 .back-btn {
   display: block;

@@ -7,10 +7,10 @@ let button = document.querySelector("#enterBtn");
 let hello = document.getElementById("hello");
 let r = document.querySelector(':root');
 
-// color duos pulled from photo reference, in order top-left → bottom-right
+// color duos — first is dark (toggle ON state), rest for future cycling
 const colorDuos = [
-  { bg: '#DEDAD0', text: '#121212', accent: '#E85520' },  // cream + black
-  { bg: '#E85520', text: '#3D1200', accent: '#DEDAD0' },  // orange + dark brown
+  { bg: '#111111', text: '#F8F7F5', accent: '#E85520' },  // dark / near-black
+  { bg: '#E85520', text: '#3D1200', accent: '#F8F7F5' },  // orange + dark brown
   { bg: '#6EC9A2', text: '#1B2040', accent: '#E85520' },  // teal + dark navy
   { bg: '#AEC028', text: '#1A3008', accent: '#F0C020' },  // light green + dark green
   { bg: '#E06878', text: '#8B1020', accent: '#F0C020' },  // pink + deep red
@@ -26,8 +26,8 @@ function applyDuo(duo) {
 }
 
 // colorify toggle
-const defaultBg   = '#121212';
-const defaultText = '#f5f5f5';
+const defaultBg   = '#F8F7F5';  // near-white, slightly warm
+const defaultText = '#111111';
 let colorifyOn = sessionStorage.getItem("colorifyOn") === "true";
 let duoIndex   = parseInt(sessionStorage.getItem("duoIndex") || "0");
 
@@ -207,7 +207,7 @@ function closePanel() {
     previews.style.opacity = "";
     previews.style.transition = "";
   }
-  if (navArea) navArea.style.opacity = "";
+  if (navArea) navArea.classList.remove('nav-dimmed');
   if (panelToClose._positionPanel) window.removeEventListener("resize", panelToClose._positionPanel);
   panelToClose.addEventListener("transitionend", () => {
     if (panelToClose.parentNode) panelToClose.parentNode.removeChild(panelToClose);
@@ -295,10 +295,7 @@ if (contentArea) {
 
           // fade previews, then fade panel in
           if (previews) previews.classList.add("exiting");
-          if (navArea) {
-            navArea.style.transition = "opacity 0.6s ease";
-            navArea.style.opacity = "0.3";
-          }
+          if (navArea) navArea.classList.add('nav-dimmed');
           panel.getBoundingClientRect();
           setTimeout(() => {
             panel.classList.add("active");
